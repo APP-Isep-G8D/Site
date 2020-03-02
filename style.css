@@ -1,19 +1,20 @@
 #logo {
     width: 5em;
 }
+
+#logoAppli {
+    width: 2.5em;
+}
 html{
-	overflow-x: hidden;
 	background-color: black;
 	
 }
 body{
-	min-height: 400px;
-	min-width:600px;
 	margin: 0;
 	background-color: white;
 }
 
-#entete ul{
+ul{
 	height: 15%;
 	list-style-type: none;
 	margin: 0;
@@ -26,14 +27,14 @@ body{
 
 
 }
-#entete li{
+li{
 	display: inline-block;
 	width: 11%;
 	vertical-align: middle;
 	margin: 0;
 
 }
-#entete li a{
+li a{
 	
 	text-decoration: none;
 	color:white;
@@ -44,80 +45,40 @@ body{
 	height: 100vh;
 	width: 100vw;
 }
+
+#footer{
+
+	height: 100vh;
+	width: 100vw;
+}
+
+#footer li{
+	width: 9%;
+}
+
 #opening{
 		padding: 1%;
 		height: 84%;
 		width: 100%;
         font-size: 20px; 
-        font-family: Georgia;          
+        font-family: helvetica;          
         margin: 0;          
         background-color: #64a4ed; 
         color:white; 
-        padding-bottom: 15px;
 }
-#texteOp{
+#opening p{
 
-	height: 100%;
-	float:left;
-	width: 60%;
 	text-align: center;
 	color: white;
-	font-family: Georgia;
-	vertical-align: middle;
+	font-family: helvetica;
+	font-size: 23px;	
 }
-#texteOp h4{
-	height: 20%;
-	text-align: center;
-	color: white;
-	font-family: Georgia;
-	font-size: 36px;	
-}
-#texteOp p{
-	margin-left: 10%;
-	text-align: justify;
-	height: 30%;
-	color: white;
-	font-family: Georgia;
-	font-size: 27px;
-	
-}
-
 
 #login{
-	border-radius: 20%;
+	border-radius: 15%;
 	border-color: transparent;
 	border-style:solid;
 	background-color: orange;
 	border-width: 10px;
 	font-weight: bold;
-}
-#productImage{
-
-
-	height: 100%;
- 	width: 40%;
-
-	
-}
-#productImage img{
-	width: 30em;
-	margin-top:5%;
-
-}
-
-}
-p{
-	padding: 5px;
-}
-#decouvrir{
-	
-	height: 40%;
-	width: 15%;
-	text-decoration: none;
-	color:white;
-	border-radius: 20%;
-	padding: 10px;
-	font-weight: bold;
-	background-color: orange;
-
 }

@@ -49,6 +49,14 @@ header li a{
 #logo {
     width: 5em;
 }
+#login{
+	border-radius: 20%;
+	border-color: transparent;
+	border-style:solid;
+	background-color: orange;
+	border-width: 10px;
+	font-weight: bold;
+}
 /*FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU */
 
 /*---------------------------------------------------------------------------------*/
@@ -95,28 +103,6 @@ header li a{
 
 /*---------------------------------------------------------------------------------*/
 
-#opening{
-		padding: 1%;
-		height: 90;
-		width: 100%;
-        font-size: 120%; 
-        font-family: Georgia;          
-        margin: 0;          
-        background-color: #64a4ed; 
-        color:white; 
-        padding-bottom: 15px;
-}
-
-
-
-#login{
-	border-radius: 20%;
-	border-color: transparent;
-	border-style:solid;
-	background-color: orange;
-	border-width: 10px;
-	font-weight: bold;
-}
 
 
 
@@ -163,3 +149,15 @@ header li a{
 	width: 38em;
 	margin-top:5%;
 	}
+#opening{
+		padding: 1%;
+		height: 90;
+		width: 100%;
+        font-size: 120%; 
+        font-family: Georgia;          
+        margin: 0;          
+        background-color: #64a4ed; 
+        color:white; 
+        padding-bottom: 15px;
+}
+

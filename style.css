@@ -1,15 +1,54 @@
 #logo {
     width: 5em;
 }
+#logoAppli {
+    width: 2.5em;
+}
+#footer{
+
+	height: auto;
+	width: 100%;
+}
+
+#footer li{
+	display: inline-block;
+	width: 10%;
+	vertical-align: middle;
+	margin: 0;
+
+}
+#footer li a{
+	text-decoration: none;
+	color:white;
+	font-weight: bold;
+
+}
+#footer ul{
+	height: 15%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	padding-top: 20px;
+	padding-bottom: 0;
+	overflow: hidden;
+	background-color:  	#787878;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
 html{
 	overflow-x: hidden;
 	background-color: black;
+	margin: 0;
+	padding:0;
 	
 }
 body{
 	min-height: 400px;
 	min-width:600px;
 	margin: 0;
+	padding: 0;
 	background-color: white;
 }
 
@@ -22,7 +61,7 @@ body{
 	background-color: #64a4ed;
 	width: 100%;
 	text-align: center;
-	vertical-align: all;
+	vertical-align: middle;
 
 
 }
@@ -100,8 +139,9 @@ body{
 	
 }
 #productImage img{
-	width: 30em;
+	width: 38em;
 	margin-top:5%;
+	
 
 }
 

@@ -1,10 +1,59 @@
 
+html{
+	overflow-x: hidden;
+	background-color: black;
+	margin: 0;
+	padding:0;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+p{
+	padding: 5px;
+}
+
+
+/*DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU */
+header{
+	padding: 0;
+	margin: 0;
+	height: 10%;
+}
+header ul{
+	height: 10%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #64a4ed;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	min-height: 75px;
+}
+
+header li{
+	display: inline-block;
+	width: 11%;
+	vertical-align: middle;
+	margin: 0;
+}
+
+header li a{
+	text-decoration: none;
+	color:white;
+}
 #logo {
     width: 5em;
 }
-#logoAppli {
-    width: 2.5em;
-}
+/*FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU */
+
+/*---------------------------------------------------------------------------------*/
+
+/* DEBUT FOOTER DEBUT FOOTER DEBUT FOOTER DEBUT FOOTER DEBUT FOOTER DEBUT FOOTER */
 #footer{
 
 	height: auto;
@@ -38,55 +87,17 @@
 	vertical-align: middle;
 }
 
-html{
-	overflow-x: hidden;
-	background-color: black;
-	margin: 0;
-	padding:0;
-	
-}
-body{
-
-	margin: 0;
-	padding: 0;
-	background-color: white;
+#logoAppli {
+    width: 2.5em;
 }
 
-header{
-	padding: 0;
-	margin: 0;
-	height: 10%;
+/* FIN FOOTER FIN FOOTER FIN FOOTER FIN FOOTER FIN FOOTER FIN FOOTER FIN FOOTER */
 
-}
-header ul{
-	height: 10%;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #64a4ed;
-	width: 100%;
-	text-align: center;
-	vertical-align: middle;
-	min-height: 75px;
+/*---------------------------------------------------------------------------------*/
 
-}
-header li{
-	display: inline-block;
-	width: 11%;
-	vertical-align: middle;
-	margin: 0;
-
-}
-header li a{
-	
-	text-decoration: none;
-	color:white;
-
-}
 #opening{
 		padding: 1%;
-		height: 90%;
+		height: 90;
 		width: 100%;
         font-size: 120%; 
         font-family: Georgia;          
@@ -95,8 +106,22 @@ header li a{
         color:white; 
         padding-bottom: 15px;
 }
-#texteOp{
 
+
+
+#login{
+	border-radius: 20%;
+	border-color: transparent;
+	border-style:solid;
+	background-color: orange;
+	border-width: 10px;
+	font-weight: bold;
+}
+
+
+
+/* apparence produit page accueil*/
+#texteOp{
 	height: 100%;
 	float:left;
 	width: 60%;
@@ -119,17 +144,16 @@ header li a{
 	color: white;
 	font-family: Georgia;
 	font-size: 120%;
-	
 }
-
-
-#login{
+#decouvrir{
+	height: 40%;
+	width: 15%;
+	text-decoration: none;
+	color:white;
 	border-radius: 20%;
-	border-color: transparent;
-	border-style:solid;
-	background-color: orange;
-	border-width: 10px;
+	padding: 10px;
 	font-weight: bold;
+	background-color: orange;
 }
 #productImage{
 	height: 100%;
@@ -139,19 +163,3 @@ header li a{
 	width: 38em;
 	margin-top:5%;
 	}
-
-p{
-	padding: 5px;
-}
-#decouvrir{
-	
-	height: 40%;
-	width: 15%;
-	text-decoration: none;
-	color:white;
-	border-radius: 20%;
-	padding: 10px;
-	font-weight: bold;
-	background-color: orange;
-
-}

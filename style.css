@@ -12,9 +12,10 @@
 
 #footer li{
 	display: inline-block;
-	width: 10%;
+	width: 8%;
 	vertical-align: middle;
 	margin: 0;
+	padding-bottom: 20px;
 
 }
 #footer li a{

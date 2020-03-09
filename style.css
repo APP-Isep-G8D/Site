@@ -160,16 +160,30 @@ header li a{
         color:white; 
         padding-bottom: 15px;
 }
-
-
 /* Connexion */
-
 label {
     display: block;
     font: 1rem 'Fira Sans', sans-serif;
 }
 
-input,
+input[type='submit'],
 label {
-    margin: .4rem 0;
+	margin: .4rem 0;
+	display: block;
+}
+#connexion{
+	text-align: center;
+}
+
+/*page profil*/
+#imageperso img {
+	width: 30em;
+	margin-top: 5%;
+}
+
+#info {
+	float: left;
+	width: 240px;
+	background-color: white;
+	align-self: left;
 }

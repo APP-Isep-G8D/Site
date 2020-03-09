@@ -15,7 +15,7 @@
 		<li><a href ="#">Patients</a></li>
 		<li><a href ="#">FAQ</a></li>
 		<li><a href ="#">Recherche</a></li> <!-- Recherche a modifier pour integrer une animation : #javascript ou autre-->
-		<li><a id="login" href ="#">Se connecter</a></li>
+		<li><a id="login" href ="#">Se connecter</a></li>
 	</ul>
 </header>
 
@@ -27,14 +27,21 @@
 		</h1>
 		<label for="mail"></label>
 		<input type="text" id="name" name="name" required
-			minlength="4" maxlength="8" size="10" placeholder="Adresse mail">
-		<br>
-		<label for="mdp"></label>
-		<input type="text" id="mdp" name="mdp" required
-			minlength="4" maxlength="8" size="10" placeholder="Mot de passe">
+			minlength="1" maxlength="30" size="20" placeholder="Adresse mail">
 
-		<label for="sign"></label>	
-		<input type="submit" id="sign" value="Connexion">
+		<br>
+
+		<label for="mdp"></label>
+		<input type="password" id="mdp" name="mdp" required
+			minlength="1" maxlength="30" size="20" placeholder="Mot de passe">
+		<br> 
+		<br> 
+
+		<label for="sign"></label>
+		<ul>
+			<li><a id="login" href ="#">Connexion</a></li>
+		</ul>
+		
 	</div>
 </body>
 

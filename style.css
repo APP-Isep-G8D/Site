@@ -50,12 +50,18 @@ header li a{
     width: 5em;
 }
 #login{
-	border-radius: 20%;
+	border-radius: 20% / 50% ;
 	border-color: transparent;
-	border-style:solid;
+	border-style:groove;
 	background-color: orange;
 	border-width: 10px;
 	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+#login:hover{
+	background-color: rgb(218, 150, 24);
 }
 /*FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU */
 
@@ -86,8 +92,8 @@ header li a{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	padding-top: 20px;
-	padding-bottom: 0;
+	padding-top: 0px;
+	padding-bottom: 0px;
 	overflow: hidden;
 	background-color:  	#787878;
 	width: 100%;
@@ -136,7 +142,7 @@ header li a{
 	width: 15%;
 	text-decoration: none;
 	color:white;
-	border-radius: 20%;
+	border-radius: 10%;
 	padding: 10px;
 	font-weight: bold;
 	background-color: orange;
@@ -160,20 +166,43 @@ header li a{
         color:white; 
         padding-bottom: 15px;
 }
-/* Connexion */
+/* Connexion............................................ */
 label {
-    display: block;
-    font: 1rem 'Fira Sans', sans-serif;
+	display: block;
+	margin: .4rem 0;
+	font: 1rem 'Fira Sans', sans-serif;
+	text-align: center;
+	font-size: xx-large;	
 }
 
 input[type='submit'],
-label {
-	margin: .4rem 0;
-	display: block;
+
+input {
+	text-align: left;
+	font-size: x-large;
 }
+
 #connexion{
+	padding-top: 3	0px;
+	height: 70vh;
 	text-align: center;
+	background-color: #FFFFFF;
+	font-size: xx-large;
 }
+#connexion ul{
+	display: block;
+	padding-inline-start: 0px;
+}
+
+#connexion li a{
+	text-decoration: none;
+	color:white;
+	font: 1rem 'Fira Sans', sans-serif;
+	font-size: xx-large;
+	padding: 5px;
+}
+/*......................................................*/
+
 
 /*page profil*/
 #imageperso img {

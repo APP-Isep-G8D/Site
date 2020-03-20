@@ -244,3 +244,88 @@ input {
          margin: 4px 2px;
          cursor: pointer;
          }
+
+/*FAQ---------------------------------------------------------------------------------*/
+
+
+
+#faq {
+        text-align: center;
+	color: black; 
+	background-color: #F2F2F2;
+
+
+         }
+
+#titre {
+        text-align: center;
+	font-size: 60 px ;
+	color: #6495ED; 
+	font-weight: bold;
+	font-size: 325%;
+	padding-top: 2%;
+	padding-bottom: 1%;
+	font-family: Arial, sans-serif
+
+         }
+
+#question {
+        text-align: center;
+	color: #FF7F50; 
+	font-size: x-large ;
+	font-weight: bold;
+	padding-top: 2%;
+	padding-bottom: 1%;
+	font-family: Trebuchet MS, sans-serif;
+
+         }
+
+#reponse {
+        text-align: center;
+	color: #464646; 
+	font-size: large ;
+	padding-top: 1%;
+	padding-bottom: 2%;
+	font-weight: bold;
+	font-family: Trebuchet MS, sans-serif;
+
+
+         }
+
+/*Professionnel------------------------------------------------------------------------------------*/
+
+
+.description_produit {
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	color: #464646; 
+
+
+         }
+
+.image_texte {
+	padding-right:4%;
+	padding-left: 4%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+
+.texte_image {
+	padding-right:4%;
+	padding-left: 4%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+
+.image_texte_capteur {
+	padding-right:4%;
+	padding-left: 4%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+

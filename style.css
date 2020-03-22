@@ -1,6 +1,6 @@
 
 html, body {
-	background-color: #F5F5F5;
+	background-color: white;
   	text-align: center;
 	font-size: medium;
 	font-family: Trebuchet MS, sans-serif;
@@ -165,7 +165,7 @@ header li a{
         padding-bottom: 15px;
 }
 /* Connexion............................................ */
-label {
+#connexion label {
 	display: block;
 	margin: .4rem 0;
 	font: 1rem 'Fira Sans', sans-serif;
@@ -173,16 +173,17 @@ label {
 	font-size: xx-large;	
 }
 
-input[type='submit'],
+#connexion input[type='submit'],
 
-input {
+#connexion input {
 	text-align: left;
 	font-size: x-large;
 }
 
 #connexion{
 	padding-top: 3	0px;
-	height: 70vh;
+	padding-bottom: 20px;
+	height: flex;
 	text-align: center;
 	background-color: #FFFFFF;
 	font-size: xx-large;
@@ -190,6 +191,7 @@ input {
 #connexion ul{
 	display: block;
 	padding-inline-start: 0px;
+	margin-bottom: 40px;
 }
 
 #connexion li a{
@@ -199,6 +201,70 @@ input {
 	font-size: xx-large;
 	padding: 5px;
 }
+/*......................................................*/
+
+
+/* Inscription............................................ */
+
+p {
+	margin-top: 0px;
+	font-size: x-large;
+  }
+   
+  fieldset {
+	margin-bottom: 15px;
+	padding: 10px;
+	font-size: xx-large;
+  }
+   
+  legend {
+	padding: 0px 3px;
+	font-weight: bold;
+	font-variant: small-caps;
+	font-size: xx-large;
+  }
+   
+  label {
+	width: 110px;
+	display: inline-flexbox;
+	margin: 6px;
+  }
+   
+  em {
+	font-weight: bold;
+	font-style: normal;
+	color: #f00;
+  }
+   
+  input:focus {
+	background: #eaeaea;
+  }
+   
+  input, textarea {
+	width: 249px;
+	height: 30px;
+	font-size: x-large;
+	margin: 10px;
+  }
+   
+  textarea {
+	height: 100px;
+  }
+   
+  select {
+	width: 254px;
+  }
+   
+  input[type=checkbox] {
+	width: 10px;
+  }
+   
+  input[type=submit] {
+	width: auto;
+	height: auto;
+	padding: 10px;
+  }
+
 /*......................................................*/
 
 

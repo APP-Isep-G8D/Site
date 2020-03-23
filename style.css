@@ -226,7 +226,7 @@ p {
    
   label {
 	width: 110px;
-	display: inline-flexbox;
+	display: inline-flexbox; 
 	margin: 6px;
   }
    

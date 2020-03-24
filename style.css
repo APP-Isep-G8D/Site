@@ -520,3 +520,22 @@ p {
 }
 
 /*------------------------------------------------------------------------------------*/
+
+/*page CGU ----------------------------------------------------------------------------*/
+
+#texteInfoPageCGU{
+	height: 100%;
+	float:left;
+	width: 80%;
+	text-align: center;
+	color: white;
+	font-family: Georgia;
+	vertical-align: middle;
+}
+#CGU{
+	background-color:white;
+	padding:5px;
+	margin:5px;
+}
+
+/*------------------------------------------------------------------------------------*/

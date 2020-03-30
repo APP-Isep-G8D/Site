@@ -56,10 +56,13 @@ header li a{
 	color: white;
 	text-align: center;
 	text-decoration: none;
+	display: inline-flex;
 }
 
 #login:hover{
 	background-color: rgb(218, 150, 24);
+	transition:.7s;
+	transform: scale(1.1);
 }
 /*FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU */
 
@@ -111,33 +114,56 @@ header li a{
 
 
 /* apparence produit page accueil*/
-#texteOp{
+
+.opening{  /*Conteneur*/
+	display:flex;
+	flex-wrap: wrap;
+	background-color: #64a4ed;	
+	font-size: 120%;
+	padding-bottom: 0;
+	overflow: hidden;
 	height: 100%;
-	float:left;
-	width: 60%;
-	text-align: center;
+	align-items: center;
+}
+
+.texteMain{/*ITEM 1*/
 	color: white;
 	font-family: Georgia;
-	vertical-align: middle;
+	flex: 1;
+	padding-left: 10%;
+	padding-right: 10%;
+	object-fit: contain;
+	align-items: center;
+	margin-bottom: 5%;
+	
 }
-#texteOp h4{
-	height: 20%;
+.productImage{  /*ITEM 2*/
+	flex:1;
+	padding-top: 5%;
+	min-width: 400px;
+	object-fit: contain;
+	align-items: center;
+
+	
+}
+.productImage img{
+	max-width: 100%;
+}
+
+.texteMain h4{
+
 	text-align: center;
 	color: white;
 	font-family: Georgia;
 	font-size: 180%;	
 }
-#texteOp p{
-	margin-left: 10%;
+.texteMain p{
 	text-align: justify;
-	height: 30%;
 	color: white;
 	font-family: Georgia;
 	font-size: 120%;
 }
 #decouvrir{
-	height: 40%;
-	width: 15%;
 	text-decoration: none;
 	color:white;
 	border-radius: 10%;
@@ -145,25 +171,76 @@ header li a{
 	font-weight: bold;
 	background-color: orange;
 }
-#productImage{
-	height: 100%;
- 	width: 40%;
+.capteuratorMain img{
+	transition: 1s;
+	border-radius: 15%;
 }
-#productImage img{
-	width: 38em;
-	margin-top:5%;
-	}
-#opening{
-		padding: 1%;
-		height: 90;
-		width: 100%;
-        font-size: 120%; 
-        font-family: Georgia;          
-        margin: 0;          
-        background-color: #64a4ed; 
-        color:white; 
-        padding-bottom: 15px;
+.capteuratorMain img:hover{
+	transform: scale(.8);
+	filter:grayscale(100%)	
 }
+
+
+.capteuratorMain{
+	padding:5%;
+}
+.blueBox{
+	width: 100%;
+	background-color:#A7C8E9;
+	margin:0;
+	justify-items: center;
+	padding-bottom: 5%;
+	padding-top: 5%;
+}
+.blueBox p{
+	color:white;
+	font-size: x-large;
+	font-weight: bold;
+}
+.santeBox {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25%;
+	max-width: 500px;
+}
+
+.santeBox img {
+	width: 100%;
+	
+	height: auto;
+	border-radius: 15%;
+	
+
+	
+}
+  
+.santeBox .btn {
+	position: absolute;
+	top: 80%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color: white;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 15px;
+	text-align: center;
+}
+  
+.santeBox .btn:hover {
+	background-color: rgb(218, 150, 24);
+	transition: 1s;
+	padding: 16px 28px;
+	
+
+
+}
+
 /* Connexion............................................ */
 #connexion label {
 	display: block;

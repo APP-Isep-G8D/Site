@@ -69,8 +69,14 @@ header li a{
 /*---------------------------------------------------------------------------------*/
 
 /* DEBUT FOOTER DEBUT FOOTER DEBUT FOOTER DEBUT FOOTER DEBUT FOOTER DEBUT FOOTER */
-#footer{
+#footerCGU{
+	position: fixed;
+	height: auto;
+	bottom: 0;
+	width: 100%;
+}
 
+#footer{
 	height: auto;
 	width: 100%;
 }
@@ -597,5 +603,6 @@ p {
 	font-size: large;
 
 }
+
 
 /*------------------------------------------------------------------------------------*/

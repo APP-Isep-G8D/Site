@@ -8,11 +8,6 @@ html, body {
 	
 }
 
-p{
-	padding: 5px;
-}
-
-
 
 /*DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU */
 header{
@@ -656,4 +651,59 @@ hr.new1 {
 	width:50%;
 	height:50%;
 }
+
+.paragraphe_SAV {
+	display: flex;
+	padding-bottom: 2%;
+	padding-top: 2%;
+  	justify-content: space-around;
+}
+
+.texte_paragraphe_SAV  {
+	padding-left: 4%;
+	padding-right: 4%;
+	text-align: right;
+	font-size: medium;
+	width: 75%;
+	text-align: justify;
+	line-height: 2em;
+	display: block;
+
+}
+
+.titre_SAV {
+	font-weight: bold;
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-top: 5px;
+	color: orange;
+	width: 25%;
+	font-size: x-large;
+	text-align: left;
+
+}
+
+.paragraphe_block {
+	display: block;
+	padding-left: 4%;
+	padding-right: 4%;
+	text-align: right;
+	font-size: medium;
+	width: 75%;
+	text-align: justify;
+	line-height: 2em;
+	display: block;
+
+}
+
+.paragraphe_block p{
+	text-align: right;
+	font-size: medium;
+	text-align: justify;
+	line-height: 2em;
+	display: block;
+
+}
+
+/*---------------------------------------------------------------------------------------*/
 

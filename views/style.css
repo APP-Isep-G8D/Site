@@ -5,6 +5,7 @@ html, body {
 	font-size: medium;
 	font-family: Trebuchet MS, sans-serif;
 	margin: 0;
+
 	
 }
 
@@ -17,7 +18,6 @@ p{
 /*DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU */
 header{
 	width: 100%;
-	position: fixed;
 }
 header ul{
 	height: 10%;
@@ -99,7 +99,7 @@ header li a{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	padding-top: 0px;
+	padding-top: 20px;
 	padding-bottom: 0px;
 	overflow: hidden;
 	background-color:  	#787878;
@@ -107,7 +107,15 @@ header li a{
 	text-align: center;
 	vertical-align: middle;
 }
-
+#footer p{
+	background-color:  	#787878;
+	margin:0;
+	padding:0;
+	color:white;
+	font-size: small;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
 #logoAppli {
     width: 2.5em;
 }
@@ -126,11 +134,11 @@ header li a{
 	flex-wrap: wrap;
 	background-color: #64a4ed;	
 	font-size: 120%;
-	padding-bottom: 0;
+	min-height: 900px;
 	overflow: hidden;
-	height: 100%;
+	height: 100vh;
 	align-items: center;
-	padding-top: 8.5%;
+
 }
 
 .texteMain{/*ITEM 1*/
@@ -140,21 +148,18 @@ header li a{
 	padding-left: 10%;
 	padding-right: 10%;
 	object-fit: contain;
+
 	align-items: center;
-	margin-bottom: 5%;
-	
 }
 .productImage{  /*ITEM 2*/
 	flex:1;
-	padding-top: 5%;
-	min-width: 400px;
-	object-fit: contain;
-	align-items: center;
-
 	
+
 }
 .productImage img{
-	max-width: 100%;
+
+	height: auto;
+
 }
 
 .texteMain h4{
@@ -173,81 +178,118 @@ header li a{
 #decouvrir{
 	text-decoration: none;
 	color:white;
-	border-radius: 10%;
-	padding: 10px;
+	border-radius: 20% / 50% ;
+	padding: 30px;
 	font-weight: bold;
 	background-color: orange;
 }
+#decouvrir:hover{
+	padding:50px;
+	transition:.4s;
+}
+
+
+
+.capteuratorMain{
+	height: 100%;
+	
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: white;
+	padding-top: 15vh;
+	padding-bottom: 15vh;
+
+}
+.capteuratorMain a{
+	margin: auto;
+	
+}
+
 .capteuratorMain img{
+	
 	transition: 1s;
 	border-radius: 15%;
+
 }
 .capteuratorMain img:hover{
 	transform: scale(.8);
 	filter:grayscale(100%)	
 }
-
-
-.capteuratorMain{
-	padding:5%;
-}
 .blueBox{
 	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 	background-color:#A7C8E9;
 	margin:0;
-	justify-items: center;
 	padding-bottom: 5%;
 	padding-top: 5%;
+	align-items: center;
 }
 .blueBox p{
-	color:white;
+	flex:1;
+	color:black;
 	font-size: x-large;
-	font-weight: bold;
 }
 .santeBox {
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	width: 25%;
-	max-width: 500px;
-}
-
-.santeBox img {
-	width: 100%;
-	
-	height: auto;
-	border-radius: 15%;
-	
-
+	display: flex;
+	background-image:url('2241.jpg');
+	background-position: center;
+	background-size: cover;
+	padding-top: 30vh;
+	padding-bottom:30vh;		
+	width: 60%;
+	border-radius: 20% / 50% ;
 	
 }
-  
-.santeBox .btn {
-	position: absolute;
-	top: 80%;
-	left: 25%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
+
+
+.santeBox button {
 	background-color: white;
 	color: black;
 	font-size: 16px;
 	font-weight: bold;
-	padding: 12px 24px;
+	margin-left: 7%;
+	padding:3%;
+	width: 25%;
 	border: none;
 	cursor: pointer;
 	border-radius: 15px;
 	text-align: center;
+	
 }
   
 .santeBox .btn:hover {
 	background-color: rgb(218, 150, 24);
-	transition: 1s;
-	padding: 16px 28px;
-	
-
-
+	color:white;
+	transition: .4s;
+	transform: scale(1.1);
 }
 
+/*Responsive du main*/
+@media all and (max-device-width: 600px) {
+	
+	.santeBox {
+		width: 90%;
+		padding-top: 15vh;
+		padding-bottom:15vh;
+	}
+	
+	.texteMain{
+		margin:auto;
+
+	}
+	.productImage{
+		height: auto;
+	}
+	.productImage img{
+		margin-top: 0;
+		height: auto;
+	}
+	
+
+}
 /* Connexion............................................ */
 #connexion label {
 	display: block;

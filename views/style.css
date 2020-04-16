@@ -5,7 +5,7 @@ html, body {
 	font-size: medium;
 	font-family: Trebuchet MS, sans-serif;
 	margin: 0;
-
+	scroll-behavior: smooth;
 	
 }
 
@@ -35,6 +35,7 @@ header ul{
 header li{
 	display: inline-block;
 	width: 11%;
+	word-wrap: normal;
 	vertical-align: middle;
 	margin: 0;
 }
@@ -42,6 +43,9 @@ header li{
 header li a{
 	text-decoration: none;
 	color:white;
+	font-weight: bold;
+	font-size: 14px;
+
 }
 #logo {
     width: 5em;
@@ -64,6 +68,47 @@ header li a{
 	transition:.7s;
 	transform: scale(1.1);
 }
+#connexionB{
+	background-color: orange;
+	color:white;
+	padding: 5%;
+}
+/*Floating Back-To-Top Button*/
+#gotop {
+	position: fixed;
+	bottom: 10vh;
+	float: right;
+	right: 3vh;
+	left: 95%;
+	max-width: 30px;
+	width: 100%;
+	font-size: 40px;
+	background-color:black;
+	border-radius: 50%;
+	border: none;
+	opacity: 60%;
+	padding-right: 30px;
+	
+}
+#gotop a{
+
+	color:white;
+	text-decoration: none;
+}
+/*On Hover Color Change*/
+#gotop:hover {
+	background-color: gray;
+	border-color: rgba(85, 85, 85, 0.2);
+	transition: .2s;
+	
+
+}
+#gotop a:hover {
+	color:black;
+}
+
+
+
 /*FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU */
 
 /*---------------------------------------------------------------------------------*/
@@ -291,6 +336,7 @@ header li a{
 
 }
 /* Connexion............................................ */
+
 #connexion label {
 	display: block;
 	margin: .4rem 0;
@@ -308,7 +354,7 @@ header li a{
 
 #connexion{
 	padding-top: 3	0px;
-	padding-bottom: 20px;
+	padding-bottom: 5vh;
 	height: flex;
 	text-align: center;
 	background-color: #F5F5F5;
@@ -325,8 +371,9 @@ header li a{
 	color:white;
 	font: 1rem 'Fira Sans', sans-serif;
 	font-size: xx-large;
-	padding: 5px;
+	padding: 200px;
 }
+
 /*......................................................*/
 
 
@@ -412,16 +459,14 @@ p {
 	padding-left: 50;
 }
 
-#info {
+#infoProfil {
 	border: 1px black solid;
 	background-color: white;
 	padding-bottom: 15px;
-	padding-top: 15px;
-	padding-right: 15px;
-	padding-left: 20px;
-	border-radius:50px;
+	
 	margin-left:150px;
-	margin-right:800px;
+	margin-right:150px;
+
 }
 #button {
 	background-color: white;
@@ -524,7 +569,45 @@ p {
 .image_texte_capteur:hover {
 	transform: scale(1.2);
 }
+.contactPro{
+	display: flex;
+	flex-direction: column;
+	background-image: url("2241.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	margin:0;
+	padding: 8%;
+	align-items: center;
+	text-decoration-color: black;
+	margin: auto;
+}
+#solutionProContact{
+	font-size: 26px;
+	padding-bottom: 1%;
+}
+#titreProContact{
+	font-size: 50px;
+	font-weight: bold;
+	padding-bottom: 3%;
 
+
+}
+	
+#buttonPro{
+	
+	width: fit-content;
+	flex: 2;
+	color:white;
+	font-weight: bold;
+	border: none;
+	padding: 2% 3% 2% 3%;
+	border-radius: 30%;
+	background-color: orange;
+	text-align: center;
+	font-size: 26px;
+	cursor: pointer;
+	text-decoration: none;
+}
 @keyframes fadein {
     from {
         opacity:0;
@@ -605,6 +688,43 @@ p {
 	opacity: .5;
 }
 
+#erreure_boutong {
+	padding: 10px 30px;
+	background: gray;
+	color: #FFFFFF;
+	border-radius: 11px;
+	text-decoration:none;
+	opacity: 1;
+}
+
+#erreure_boutong:hover {
+	border-radius: 11px;
+	background-color: white;
+	border:2px solid gray;
+	color:gray;
+	
+
+}
+#erreure_boutonr {
+	padding: 10px 30px;
+	background: red;
+	color: #FFFFFF;
+	border-radius: 11px;
+	text-decoration:none;
+	opacity: 1;
+}
+
+#erreure_boutonr:hover {
+	border-radius: 11px;
+	border:2px solid red;
+	background-color: white;
+	color:red;
+	
+
+}
+
+
+
 
 /*------------------------------------------------------------------------------------*/
 
@@ -643,6 +763,8 @@ p {
 	background: #65A0FF;
 	color: #FFFFFF;
 	border-radius: 11px;
+	border: 2px solid white;
+
 	text-decoration:none;
 	opacity: 1;
 	font-size: x-large;
@@ -685,6 +807,293 @@ p {
 	font-size: large;
 
 }
+
+
+/*------------------------------------------------------------------------------------*/
+
+
+
+
+/*page NOUS CONTACTER ----------------------------------------------------------------------------*/
+
+
+.mail {
+	font-weight: bold;
+	display: block;
+  	align-items: center;
+	padding-top: 1%;
+}
+
+.ReseauSociaux {
+	font-weight: bold;
+	display: flex;
+  	align-items: center;
+	padding-top: 2%;
+}
+
+.contacter_image {
+	width: 100px; 
+	height: 100px;
+	padding: 1%;
+}
+
+.contacter_image:hover {
+	transition: 1s;
+	transform: scale(1.1);
+}
+
+#contacter_block {
+	display: block;
+	width: 25%;
+	height: 120%;
+}
+
+/*------------------------------------------------------------------------------------*/
+
+
+
+/*page SAV ----------------------------------------------------------------------------*/
+
+.camion_SAV {
+	display: flex;
+	padding: 5%;  
+  	justify-content: space-around;
+}
+
+.texte_SAV {
+	padding-left: 5%;  
+	text-align: right;
+}
+
+hr.new1 {
+	border: 1.5px solid #6495ED;
+}
+
+.camion_SAV img{
+	width:50%;
+	height:50%;
+}
+
+.paragraphe_SAV {
+	display: flex;
+	padding-bottom: 2%;
+	padding-top: 2%;
+  	justify-content: space-around;
+}
+
+.texte_paragraphe_SAV  {
+	padding-left: 4%;
+	padding-right: 4%;
+	text-align: right;
+	font-size: medium;
+	width: 75%;
+	text-align: justify;
+	line-height: 2em;
+	display: block;
+
+}
+
+.titre_SAV {
+	font-weight: bold;
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-top: 5px;
+	color: orange;
+	width: 25%;
+	font-size: x-large;
+	text-align: left;
+
+}
+
+.paragraphe_block {
+	display: block;
+	padding-left: 4%;
+	padding-right: 4%;
+	text-align: right;
+	font-size: medium;
+	width: 75%;
+	text-align: justify;
+	line-height: 2em;
+	display: block;
+
+}
+
+.paragraphe_block p{
+	text-align: right;
+	font-size: medium;
+	text-align: justify;
+	line-height: 2em;
+	display: block;
+
+}
+
+/*------------------------------------------------------------------------------------*/
+
+
+
+
+/*page ADMIN ----------------------------------------------------------------------------*/
+#conteneurMainAdmin{
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	background-image: url("dataViz.jpg");
+	background-size: cover;
+	align-items: center;
+}
+
+#conteneur1Admin{
+	height: fit-content;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+#infoAdmin{
+	flex:1;
+	margin:2vh;
+	height: fit-content;
+	background-color: #64a4ed;
+	border-radius: 3%;
+
+}
+
+#conteneur3Admin{
+	height: fit-content;
+	display: flex;
+	flex-direction: row;
+	width: 90%;
+}
+#SepConteneurCentre{
+	flex:1;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+}
+#infoCentreBoitier{
+	flex:1;
+
+}
+#infoCentreMedecins{
+	flex:1;
+
+}
+#conteneurCentreC{
+	flex:1;
+	margin:2vh;
+	border-radius: 5%;
+	background-color: orange;
+	flex-direction: column;
+	padding-bottom: 2%;
+}
+
+#conteneur2Admin{
+	width: 90%;
+	height: 50%;
+	display: flex;
+	flex-direction: row;
+}
+#mapAdmin{
+	flex:1;
+	margin:2vh;
+	background-color: #64a4ed;
+	border-radius: 10%;
+
+}
+
+#conteneurCentreAdmin{
+	flex:1;
+	margin:2vh;
+	background-color: orange;
+	border-radius: 3%;
+
+	flex-direction: column;
+	padding-bottom: 2%;
+}
+#infoBoitier{
+	flex:1;
+}
+#listeCentres{
+	flex:5;
+	text-align: justify;
+	margin: auto;
+	
+}
+#listeCentres a{
+	margin-left: 2%;
+	
+}
+#listeCentres h1{
+	text-align: center;
+}
+
+#buttonAdminCentre{
+	flex:1;
+}
+#infoCentre{
+	text-align: center;
+}
+#conteneurBoutonCentre{
+	display:flex;
+	flex-direction: column;
+}
+
+#conteneurAddMed{
+	width: 100%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	background-image: url("dataViz.jpg");
+	background-size: cover;
+	align-items: center;
+	background-color: transparent;
+}
+#itemMed{
+	width: 90%;
+	height: fit-content;
+	display: flex;
+	flex-direction: row;
+	background-color: #64a4ed;
+	border-radius: 3%;
+	margin: auto;
+}
+#itemMed2{
+	
+	margin: auto;
+	height: fit-content;
+	background-color: #64a4ed;
+
+	margin-bottom: 5%;
+	margin-top: 5%;
+	text-align: justify;
+	width: 50;
+}
+
+
+
+/*------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/*page Medecin ----------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*page Patient/profil ----------------------------------------------------------------------------*/
 
 
 /*------------------------------------------------------------------------------------*/

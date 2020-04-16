@@ -6,18 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <!--<script src="script.js"></script>-->
   </head>
-  <header>
-		<ul>
-			<li><a href="main.html"><img id="logo" src="im.gif"></a></li>
-			<li><a href ="main.html">Accueil</a></li>
-			<li><a href ="Professionnel.html">Professionnels</a></li>
-			<li><a href ="Produits.html">Produit</a></li>
-			<li><a href ="#">Patients</a></li>
-			<li><a href ="faq.html">FAQ</a></li>
-			<li><a href ="PageErreur.html">Recherche</a></li> <!-- Recherche a modifier pour integrer une animation : #javascript ou autre-->
-			<li><a id="login" href="Connexion.html">Se&nbsp;connecter</a></li>
-		</ul>
-	</header>
+  <?php require_once "menu.php";?>
+
     <body>
     <div id="centre" style="background-color:#F5F5F5;">
       <div id="généralité">
@@ -69,6 +59,17 @@
         <br>
         <br>
       </div>
+      
+      <div class="contactPro">
+        <h1 id="titreProContact">Intéressé par nos solutions ?</h1>
+        <h1 id="solutionProContact">Prenez contact avec nous :</h1>
+        
+        <a id="buttonPro" href="NousContacter.html">Contact</a>
+
+        
+      </div>
+      <button id="gotop"><a href="#top">&#8743</a></button>
+
       <div id="cardiaque" style="background-color:#8FC5FF;">
         <div id="titre"><span style="color: #980000;">Mesure du rythme cardiaque<br>
           </span></div>
@@ -100,21 +101,9 @@
         <br>
         <br>
       </div>
+      
     </div>
   </body>
-  <footer>
-    <div id="footer">
-      <ul>
-        <li><a href ="#">INFINITE MEASURES</a></li>
-        <li><a href="https://www.instagram.com/infinite_measures_society/"><img id="logoAppli" src="logoInsta.png"></a></li>
-        <li><a href="https://twitter.com/InfiniteMeasur2"><img id="logoAppli" src="logoTwitter.png"></a></li>
-        <li><a href="https://www.linkedin.com/in/infinite-measures-8454771a5/"><img id="logoAppli" src="logoLinked.png"></a></li>
-        <li><a href="https://www.facebook.com/Infinite-Measures-107016680954018/"><img id="logoAppli" src="logoFacebook.png"></a></li>
-        <li><a href ="#">SAV</a></li>
-        <li><a href ="CGU.html">CGU</a></li>
-        <li><a href ="#">Nous Contacter</a></li>
-        <li><a href="#"><img id="logo" src="logoStartup.png"></a></li> <!-- Recherche a modifier pour integrer une animation : #javascript ou autre-->
-      </ul>
-    </div>
-  </footer>
+  <?php require_once "footer.php";?>
+
 </html>

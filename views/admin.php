@@ -57,7 +57,7 @@ $adresse=$user->adresse;
 		
 		<div id="infoAdmin">
 			<h1>
-				Information profil admin:
+				Mes informations :
 			</h1>
 			<br>
 			<br>
@@ -68,13 +68,13 @@ $adresse=$user->adresse;
 		<div id="conteneurCentreAdmin">
 			<div id="listeCentres">
 				<h1>
-					Liste des centres:
+					Liste des centres :
 				</h1>
 				<?php
 				
 					$donnee = $bdd->query("SELECT * FROM centremedical WHERE 1");
 					while($row=$donnee->fetch_array() ){
-						?><a href="centre.php?id=<?php echo $row["numero"];?>" style="text-decoration:none;color:black;font-weight:bold;" name=<?php  $row["numero"];?>><?php echo $row["numero"], " ", $row["nom"], " ", $row["adresse"];?></a>
+						?><a href="centre.php?id=<?php echo $row["numero"];?>" style="text-decoration:none;color:black;font-weight:bold;" name=<?php  $row["numero"];?>><?php echo  "- ", $row["nom"], " ", $row["adresse"];?></a>
 						<br><br><?php
 					}
 				?>

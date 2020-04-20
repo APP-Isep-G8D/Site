@@ -30,7 +30,19 @@ $centreQ->execute();
 $centreR=$centreQ->get_result();
 $centre=$centreR->fetch_object();
 $idcentre=$centre->numero;
-mysqli_query($bdd,"DELETE FROM `centremedical` WHERE numero= $idcentre");
+
+$RQ= $bdd->prepare("UPDATE medecin SET idCentre = '0' WHERE idCentre = ?");
+$RQ -> bind_param('s',$idcentre);
+$RQ -> execute();
+    
+
+
+$delCentre = $bdd->prepare("DELETE FROM `centremedical` WHERE numero= ?");
+$delCentre -> bind_param('s',$idcentre);
+$delCentre -> execute();
+
+
+
 header("Location: admin.php");
 
 

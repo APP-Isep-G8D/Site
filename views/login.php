@@ -36,7 +36,7 @@
                 header("Location: medecin.php");
             }
             else{
-                header("Location: profile.php");
+                header("Location: profil.php");
             }
 
         } else {

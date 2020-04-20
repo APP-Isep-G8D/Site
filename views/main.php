@@ -32,15 +32,14 @@
 			<p>
 				Appareil connecté de mesures psychotechniques
 			</p>
-			<a href ="faq.html#"><img src="capteur.jpeg"></a>
+			<a href ="faq.php"><img src="capteur.jpeg"></a>
 		</div>
 		<div class="blueBox">
 			<br>
-			<p>La <b>santé</b> à porter de main</p>
-			<div class="santeBox">
-				
+			<p>La <b>santé</b> à portée de main</p>
+			<form action="profil.php" class="santeBox">
 					<button class="btn">Accèder à mes résultats</button>
-			</div>
+			</form>
 			<br>
 		</div>
 

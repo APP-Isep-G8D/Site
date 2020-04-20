@@ -88,7 +88,7 @@ if (isset($_POST['enregistrerMed'])) {
             <form method="post" action="addCentre.php">
 
                 <div class="input-group">
-                    <label>Nom</label>
+                    <label>Nom  &nbsp  &nbsp </label>
                     <input type="text" name="nom" required minlength="1" value="<?php echo $nom; ?>">
                 </div>
 
@@ -101,10 +101,15 @@ if (isset($_POST['enregistrerMed'])) {
 
                 <div class="input-group">
                     <br>
-                    <button type="submit" class="btn" name="enregistrerMed" >Enregistrer le Medecin</button>
+                    <button id="erreure_boutong" type="submit" class="btn" name="enregistrerMed" >Enregistrer le Medecin</button>
                 </div>
 
             </form>
+            <br>
+            <br>
+            <div id="boxCentre1"> 
+                    <a href="profil.php" id="erreure_boutong" >Retour</a>
+                </div>
         </div>
     </div>
 

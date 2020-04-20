@@ -96,10 +96,15 @@ if (isset($_POST['enregistrerMed'])) {
 
                 <div class="input-group">
                     <br>
-                    <button type="submit" class="btn" name="enregistrerMed" >Ajouter le boitier</button>
+                    <button id="erreure_boutong" type="submit" class="btn" name="enregistrerMed" >Ajouter le boitier</button>
                 </div>
 
             </form>
+            <br>
+            <br>
+            <div id="boxCentre1"> 
+                    <a href="profil.php" id="erreure_boutong" >Retour</a>
+                </div>
         </div>
     </div>
 

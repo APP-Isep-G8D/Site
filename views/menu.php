@@ -28,10 +28,10 @@ if ( isset( $_SESSION['idUtilisateur'] ) ) {
 
 <header>
 	<ul>
-		<li><a href="main.php"><img id="logo" src="im.gif"></a></li>
+		<li><a href="main.php"><img id="logo" class="erreure_image" src="im.gif"></a></li>
 		<li><a href ="main.php">Accueil</a></li>
 		<li><a href ="Professionnel.php">Professionnels</a></li>
-		<li><a href ="#">Qui sommes nous ?</a></li>
+		<li><a href ="NousContacter.php">Nous contacter</a></li>
 		<li><a href ="faq.php">FAQ</a></li>
 		<li><a href ="PageErreur.html">Recherche</a></li> <!-- Recherche a modifier pour integrer une animation : #javascript ou autre-->
 		<li><a id="login" href="login.php"><?php echo $loginMsg;?></a></li>

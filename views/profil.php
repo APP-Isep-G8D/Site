@@ -38,14 +38,19 @@ $db_user="root";
 $db_pass="";
 $db_name="appinfo";
 $bdd = new mysqli($db_host, $db_user, $db_pass, $db_name);
+
 $value = $bdd->prepare("SELECT * FROM utilisateur WHERE idUtilisateur = ?");
 $value ->bind_param('s',$_SESSION['idUtilisateur']);
 $value->execute();
 $result = $value->get_result();
 $user = $result->fetch_object();
-$nom=$user->nom;
 $prenom=$user->prenom;
+$nom=$user->nom;
 $adresse=$user->adresse;
+
+
+
+
 
 $newReq = $bdd->prepare("SELECT * FROM patient WHERE idUtilisateur = ?");
 $newReq ->bind_param('s',$user->idUtilisateur);
@@ -53,7 +58,7 @@ $newReq -> execute();
 $resultat = $newReq->get_result();
 $patient=$resultat->fetch_object();
 $numeroSecu=$patient->numeroSS;
-
+$idPatient=$patient->idPatient;
 
 ?>
 
@@ -69,7 +74,7 @@ $numeroSecu=$patient->numeroSS;
 			
 			<div id="infoProfil"> 
 			<h1>
-				Information profil patient:
+				Mon profil:
 			</h1>
 				<br>
 				<br>
@@ -79,13 +84,32 @@ $numeroSecu=$patient->numeroSS;
 				<p>numéro de sécurité sociale :<?php echo $numeroSecu;?></p>
 				
 				
-				<br/>
-				
+	
+				<br><br><br><br>
+				<p>mes tests  :</p>
+
+				<div id="listeTests">
+                            <?php
+                            $testQ = $bdd->query("SELECT * FROM test WHERE idPatient=$idPatient");
+                            while($test=$testQ->fetch_array() ){
+                                $idTest = $test["idTest"];
+                                ?>
+                                <div id="testPreviewMed">
+                                    <br>
+                                    <img src="testIcon.png" alt="apercu image" ><br> 
+
+                                    <a href="test.php?idTest=<?php echo $idTest;?>" style="font-size:16px;text-decoration:none;color:black;font-weight:bold" ><?php echo "date :<br>", $test["date"]?></a>
+                                    <a href="test.php?idTest=<?php echo $idTest;?>" style="font-size:16px;text-decoration:none;color:black;font-weight:bold" ><?php echo "resultat obtenu :<br>", $test["resultat"]?></a>
+
+                                </div>
+                                <?php
+                                }
+                                ?>
+                        </div>
 			</div>
+
+			
 		</p>
-		<p>
-			<a href="testsPatients.html" id="erreure_bouton">Accèder à mes tests</a>
-		</p>	
 </body>
 <?php require_once "footer.php";?>
 

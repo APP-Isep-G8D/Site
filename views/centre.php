@@ -59,7 +59,7 @@ $adresse=$user->adresse;
                 </h1>
                 <p>
                     <?php echo $adresse,"<br><br>" ?>
-                <br>
+                </p>
             </div>
             <div id="SepConteneurCentre">
                 <div id="infoCentreBoitier">

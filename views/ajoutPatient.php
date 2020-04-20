@@ -20,7 +20,15 @@ if ( isset( $_SESSION['idUtilisateur'] ) ) {
     $value->execute();
     $result = $value->get_result();
     $user = $result->fetch_object();
-    if($user->role == "administrateur"){
+    if($user->role == "medecin"){
+        $rqe = $bdd->prepare("SELECT * FROM medecin WHERE idUtilisateur = ?");
+        $rqe ->bind_param('s',$_SESSION['idUtilisateur']);
+        $rqe->execute();
+        $rslt = $rqe->get_result();
+        $medecin = $rslt->fetch_array();
+        $idMedecin=$medecin["idMedecin"];
+        $idCentre=$medecin["idCentre"];
+
     }
     
     else{
@@ -41,14 +49,13 @@ $username=$email="";
 
 try{
 
-    if ( isset( $_GET['idM'] ) ) {
-        $first= $bdd->prepare("UPDATE medecin SET idCentre = ? WHERE idMedecin = ?");
+    if ( isset( $_GET['idP'] ) ) {
+        $first= $bdd->prepare("UPDATE patient SET idMedecin = ? WHERE idPatient = ?");
         $idMedecin=$_GET["idM"];
-        $idCentreT=$_GET['idC'];
-
-        $first -> bind_param('ss',$idCentreT, $_GET["idM"]);
+        $idPatient=$_GET['idP'];
+        $first -> bind_param('ss',$idMedecin,$idPatient);
         $first->execute();
-        header("Location: centre.php?id=".$idCentreT);
+        header("Location: medecin.php");
     }
     
 } catch(Exception $e){
@@ -64,6 +71,7 @@ $email = "";
 $password_1 = "";
 $password_2 = "";
 $errors="";
+
 
 
 if (isset($_POST['enregistrerMed'])) {
@@ -93,20 +101,20 @@ if (isset($_POST['enregistrerMed'])) {
 
   // Finally, register user if there are no errors in the form
   if ($errors == "") {
-  	$query = "INSERT INTO Utilisateur (mail,prenom,nom,adresse,role,motdepasse) VALUES('$email', '$prenom', '$nom','$adresse','medecin', '$password_1')";
+  	$query = "INSERT INTO Utilisateur (mail,prenom,nom,adresse,role,motdepasse) VALUES('$email', '$prenom', '$nom','$adresse','patient', '$password_1')";
     mysqli_query($bdd, $query);
     $Reqbdd2 = $bdd->prepare("SELECT * FROM utilisateur WHERE mail = ?");
     $Reqbdd2 ->bind_param('s',$email);
     $Reqbdd2->execute();
     $resultReq2 = $Reqbdd2->get_result();
-    $medecin = $resultReq2->fetch_object();
+    $patient = $resultReq2->fetch_object();
     $idUser="";
-    $idCentre=$_GET["idC"];
-    $idUser=$medecin->idUtilisateur;
-    $query2 = "INSERT INTO medecin (idUtilisateur,idCentre,numeroSS) VALUES('$idUser', '$idCentre', '$numeroSS')";
+    
+    $idUser=$patient->idUtilisateur;
+    $query2 = "INSERT INTO patient (idUtilisateur,idCentre,numeroSS,idMedecin) VALUES('$idUser', '$idCentre', '$numeroSS','$idMedecin')";
     mysqli_query($bdd, $query2);
     
-    header("Location: admin.php");
+    header("Location: profil.php");
 }
 
 }
@@ -117,13 +125,13 @@ if (isset($_POST['enregistrerMed'])) {
 <body>
 <div id="conteneurAddMed">
     <div id="itemMed">
-        <h1>Ajout d'un medecin : </h1>
+        <h1>Ajout d'un patient : </h1>
         <div id="itemMed4">
             <div id="itemMed2">
                 <h3>
                     Nouveau medecin :
                 </h3>
-                <form method="post" action="ajoutMedecin.php?idC=<?php echo $_GET['idC'];?>">
+                <form method="post" action="ajoutPatient.php">
                     <div class="input-group">
                         <label>Prénom</label>
                         <input type="text" name="prenom" required minlength="1" value="<?php echo $prenom; ?>">
@@ -162,34 +170,35 @@ if (isset($_POST['enregistrerMed'])) {
 
                     <div class="input-group">
                         <br>
-                        <button id="erreure_boutong" type="submit" class="btn" name="enregistrerMed" >Enregistrer le Medecin</button>
+                        <button id="erreure_boutong" type="submit" class="btn" name="enregistrerMed" >Enregistrer le patient</button>
                     </div>
                 </form>
             </div>
             <div id="itemMed3">
-                <h1>
-                    Ajouter un medecin déjà inscrit :
-                </h1>
+                <h2>
+                    Autre patients du centre :
+                </h2>
                 <?php
-                        $medecinRQ = $bdd->prepare("SELECT * FROM medecin WHERE idCentre= ?");
-                        $id0=0;
-                        $medecinRQ->bind_param('s',$id0);
+                        $medecinRQ = $bdd->prepare("SELECT * FROM patient WHERE idCentre= ? AND idMedecin != ?");
+                        
+                        $medecinRQ->bind_param('ss',$idCentre, $idMedecin);
                         $medecinRQ->execute();
                         $medecin = $medecinRQ->get_result();
                         while($row=$medecin->fetch_array() ){
-                            $medecinInfoRQ = $bdd->prepare("SELECT * FROM utilisateur WHERE idUtilisateur= ?");
+                            $medecinInfoRQ = $bdd->prepare("SELECT * FROM utilisateur WHERE idUtilisateur= ? ");
                             $medecinInfoRQ -> bind_param('s',$row["idUtilisateur"]);
                             $medecinInfoRQ->execute();
                             $medecinInfoR = $medecinInfoRQ->get_result();
                             $medecinInfo = $medecinInfoR->fetch_array();
-                            ?><a href="ajoutMedecin.php?idC=<?php echo $_GET["idC"];?>&idM=<?php echo $row["idMedecin"];?>" style="text-decoration:none;color:black;font-weight:bold;" name=<?php  $row["idUtilisateur"];?>><?php echo "-Dr. " , $medecinInfo["prenom"], " ", $medecinInfo["nom"]," (",$medecinInfo["adresse"],")";?></a>
+                            $idPatient=$row["idPatient"];
+                            ?><a href="ajoutPatient.php?idP=<?php echo $idPatient;?>&idM=<?php echo $idMedecin;?>" style="text-decoration:none;color:black;font-weight:bold;" name=<?php  $row["idUtilisateur"];?>><?php echo "" , $medecinInfo["prenom"], " ", $medecinInfo["nom"]," (",$medecinInfo["adresse"],")";?></a>
                             <br><br><?php
                         }
                     ?>
             </div>
         </div>
         <div id="boxCentre1"> 
-                <a href="centre.php?id=<?php echo $_GET["idC"]; ?>" id="erreure_boutong" >Retour</a>
+                <a href="profil.php" id="erreure_boutong" >Retour</a>
             </div>
             <br>
             <br>

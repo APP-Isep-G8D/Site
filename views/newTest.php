@@ -79,8 +79,8 @@ if (isset($_POST['idBoitier'])) {
 
     $idTest=$testResult["idTest"];
 
-    $fq=$temp=$audio=50;
-    $reactivite=.5;
+    $fq=$temp=$audio=100;
+    $reactivite=100;
     $query = "INSERT INTO mesure (idTest,fq,temp,audio,reactivite) VALUES($idTest, $fq,$temp,$audio,$reactivite)";
     mysqli_query($bdd, $query);
     

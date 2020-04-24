@@ -101,7 +101,7 @@ if (isset($_POST['enregistrerMed'])) {
 
                 <div class="input-group">
                     <br>
-                    <button id="erreure_boutong" type="submit" class="btn" name="enregistrerMed" >Enregistrer le Medecin</button>
+                    <button id="erreure_boutong" type="submit" class="btn" name="enregistrerMed" >Enregistrer le centre</button>
                 </div>
 
             </form>

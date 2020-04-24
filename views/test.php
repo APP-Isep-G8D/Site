@@ -65,10 +65,10 @@ if ( isset( $_SESSION['idUtilisateur'] ) ) {
 
 
 $dataPoints = array( 
-	array("y" => $mesures["fq"], "label" => "Fréquence Cardiaque (bpm)" ),
-	array("y" => $mesures["temp"], "label" => "Température (°C)" ),
-	array("y" => $mesures["audio"], "label" => "Cohérence audio (%)" ),
-	array("y" => $mesures["reactivite"]*100, "label" => "Réactivité (s 10^-2)" )
+	array("y" => $mesures["fq"], "label" => "Fréquence Cardiaque" ),
+	array("y" => $mesures["temp"], "label" => "Température" ),
+	array("y" => $mesures["audio"], "label" => "Cohérence audio" ),
+	array("y" => $mesures["reactivite"], "label" => "Réactivité" )
 	
 );
 $nom=$prenom=$adresse=$numeroSecu="OUI";

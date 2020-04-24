@@ -129,7 +129,7 @@ if (isset($_POST['enregistrerMed'])) {
         <div id="itemMed4">
             <div id="itemMed2">
                 <h3>
-                    Nouveau medecin :
+                    Nouveau patient :
                 </h3>
                 <form method="post" action="ajoutPatient.php">
                     <div class="input-group">

@@ -57,7 +57,7 @@ $adresse=$user->adresse;
 		
 		<div id="infoAdmin">
 			<h1>
-				Mes information :
+				Mes informations :
 			</h1>
 			<br>
 			<br>

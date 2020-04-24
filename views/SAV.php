@@ -7,19 +7,12 @@
   <!--<script src="script.js"></script>-->
 </head>
 <body>
-<header>
-	<ul>
-		<li><a href="main.html"><img id="logo" class="erreure_image" src="im.gif"></a></li>
-		<li><a href ="main.html">Accueil</a></li>
-		<li><a href ="Professionnel.html">Professionnels</a></li>
-		<li><a href ="Produits.html">Produit</a></li>
-		<li><a href ="#">Patients</a></li>
-		<li><a href ="faq.html">FAQ</a></li>
-		<li><a href ="PageErreur.html">Recherche</a></li> <!-- Recherche a modifier pour integrer une animation : #javascript ou autre-->
-		<li><a id="login" href="Connexion.html">Se&nbsp;connecter</a></li>
-	</ul>
-</header>
+    <?php require_once "menu.php";?>
+
+
 	<div id="contenuSAV">
+        <button id="gotop"><a href="#top">&#8743</a></button>
+
 		<div id="titre">
 			Service&nbsp;Après-Vente
         </div>
@@ -84,20 +77,7 @@
             </div>
         </div>
 	</div>
-<footer>
-    <div id="footer">
-        <ul>
-            <li><a href ="#">INFINITE MEASURES</a></li>
-            <li><a href="https://www.instagram.com/infinite_measures_society/"><img id="logoAppli" src="logoInsta.png"></a></li>
-            <li><a href="https://twitter.com/InfiniteMeasur2"><img id="logoAppli" src="logoTwitter.png"></a></li>
-            <li><a href="https://www.linkedin.com/in/infinite-measures-8454771a5/"><img id="logoAppli" src="logoLinked.png"></a></li>
-            <li><a href="https://www.facebook.com/Infinite-Measures-107016680954018/"><img id="logoAppli" src="logoFacebook.png"></a></li>
-            <li><a href ="SAV.html">SAV</a></li>
-            <li><a href ="CGU.html">CGU</a></li>
-            <li><a href ="NousContacter.html">Nous Contacter</a></li>
-            <li><a href="#"><img id="logo" src="logoStartup.png"></a></li> <!-- Recherche a modifier pour integrer une animation : #javascript ou autre-->
-        </ul>
-    </div>
-</footer>
+	<?php require_once "footer.php";?>
+
 </body>
 </html>

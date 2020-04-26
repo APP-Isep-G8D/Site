@@ -61,9 +61,9 @@ $adresse=$user->adresse;
 			</h1>
 			<br>
 			<br>
-			<p>prénom : <?php echo $prenom;?></p>
-			<p>nom : <?php echo $nom;?></p>
-			<p>adresse : <?php echo $adresse;?></p>		
+			<p>Prénom : <?php echo $prenom;?></p>
+			<p>Nom : <?php echo $nom;?></p>
+			<p>Adresse : <?php echo $adresse;?></p>		
 		</div>
 		<div id="conteneurCentreAdmin">
 			<div id="listeCentres">

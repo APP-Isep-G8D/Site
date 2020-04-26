@@ -76,7 +76,7 @@ $adresse=$user->adresse;
                         <br>
                         <br>
                     <div id="boxCentre1">
-                    <p style="font-size:10px;">*pour enlever un boitier de la liste, cliquez sur son ID</p>
+                    <p style="font-size:10px;">*Pour enlever un boitier de la liste, cliquez sur son ID</p>
 
                         <a href="ajoutBoitier.php?idC=<?php echo $_GET["id"] ?>" id="erreure_bouton">Ajouter un boitier</a>
                     </div>
@@ -84,7 +84,7 @@ $adresse=$user->adresse;
                 <div id="infoCentreMedecins">
                     <?php
                     
-                    echo "<p>liste des medecins : </p><br>";
+                    echo "<p>Liste des medecins : </p><br>";
 
 
                     echo "<br><br>";
@@ -100,7 +100,7 @@ $adresse=$user->adresse;
                     </p>
 
                     <div id="conteneurBoutonCentre">
-                    <p style="font-size:10px;">*pour enlever un medecin de la liste, cliquez sur son nom</p>
+                    <p style="font-size:10px;">*Pour enlever un medecin de la liste, cliquez sur son nom</p>
                     
                     <div id="boxCentre1">
                         <a href="ajoutMedecin.php?idC=<?php echo $_GET["id"] ?>" id="erreure_bouton">Ajouter un medecin</a>

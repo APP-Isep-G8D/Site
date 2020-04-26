@@ -135,12 +135,12 @@ if (isset($_POST['enregistrerMed'])) {
                     </div>
 
                     <div class="input-group">
-                        <label>adresse</label>
+                        <label>Adresse</label>
                         <input type="text" name="adresse" required minlength="1" value="<?php echo $adresse; ?>">
                     </div>
 
                     <div class="input-group">
-                        <label>numero de sécurité sociale</label>
+                        <label>Numéro de sécurité sociale</label>
                         <input type="text" name="numeroSS" required minlength="1" value="<?php echo $numeroSS; ?>">
                     </div>
 

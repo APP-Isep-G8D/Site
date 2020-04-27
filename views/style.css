@@ -48,6 +48,11 @@ header li a{
 #logo {
     width: 5em;
 }
+
+#loupe {
+	width: 1.5em;
+}
+
 #login{
 	border-radius: 20% / 50% ;
 	border-color: transparent;
@@ -105,7 +110,10 @@ header li a{
 	color:black;
 }
 
-
+.search:hover{
+	transform: scale(1.7);
+	transition:.7s;
+}
 
 /*FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU */
 

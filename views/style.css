@@ -645,14 +645,14 @@ p {
 
 /*Erreur------------------------------------------------------------------------------------*/
 
-#erreure {
+#erreur {
         text-align: center;
 	font-size: xx-large;
 	font-family: Trebuchet MS, sans-serif;
 
       }
 
-.erreure {
+.erreur {
 	display: flex;
     flex-direction: column;
   	justify-content: center;
@@ -663,13 +663,13 @@ p {
 	padding-bottom: 2%;
 }
 
-.erreure_image:hover {
+.erreur_image:hover {
 	transform: rotate(18000deg);
 	transition-duration: 10s;
 	transition-timing-function: linear;
 }
 
-#erreure_bouton {
+#erreur_bouton {
 	padding: 10px 30px;
 	background: #65A0FF;
 	color: #FFFFFF;
@@ -680,7 +680,7 @@ p {
 	opacity: 1;
 }
 
-#erreure_bouton:hover {
+#erreur_bouton:hover {
 	background: #FFFFFF;
 	color: #65A0FF;
 	border-radius: 11px;
@@ -689,11 +689,11 @@ p {
 
 }
 
-#erreure_bouton:active {
+#erreur_bouton:active {
 	opacity: .5;
 }
 
-#erreure_boutong {
+#erreur_boutong {
 	padding: 10px 30px;
 	background: gray;
 	color: #FFFFFF;
@@ -704,7 +704,7 @@ p {
 	opacity: 1;
 }
 
-#erreure_boutong:hover {
+#erreur_boutong:hover {
 	border-radius: 11px;
 	background-color: white;
 	border:2px solid gray;
@@ -713,7 +713,7 @@ p {
 
 
 }
-#erreure_boutonr {
+#erreur_boutonr {
 	padding: 10px 30px;
 	background: red;
 	color: #FFFFFF;
@@ -724,7 +724,7 @@ p {
 	opacity: 1;
 }
 
-#erreure_boutonr:hover {
+#erreur_boutonr:hover {
 	border-radius: 11px;
 	border:2px solid red;
 	background-color: white;

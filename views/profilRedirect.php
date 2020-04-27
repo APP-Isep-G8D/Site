@@ -25,4 +25,3 @@ if ( isset( $_SESSION['idUtilisateur'] ) ) {
     // Redirect them to the login page
     header("Location: login.php");
 }
-?>

@@ -28,7 +28,7 @@ if (isset($_SESSION['idUtilisateur'])) {
 
 <header>
 	<ul>
-		<li><a href="main.php"><img id="logo" class="erreure_image" src="im.gif"></a></li>
+		<li><a href="main.php"><img id="logo" class="erreur_image" src="im.gif"></a></li>
 		<li><a href="main.php">Accueil</a></li>
 		<li><a href="Professionnel.php">Professionnels</a></li>
 		<li><a href="NousContacter.php">Nous contacter</a></li>

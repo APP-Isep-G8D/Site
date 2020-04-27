@@ -70,7 +70,7 @@ $adresse = $user->adresse;
                         ?>
                         <div id="boxCentre">
                             <p style="font-size:10px;">*Pour enlever un boitier de la liste, cliquez sur son ID</p>
-                            <a href="ajoutBoitier.php?idC=<?php echo $_GET["id"] ?>" id="erreure_bouton">Ajouter un boitier</a>
+                            <a href="ajoutBoitier.php?idC=<?php echo $_GET["id"] ?>" id="erreur_bouton">Ajouter un boitier</a>
                         </div>
                     </div>
                     <div id="infoCentreMedecins">
@@ -87,7 +87,7 @@ $adresse = $user->adresse;
                         ?>
                         <div id="boxCentre">
                             <p style="font-size:10px;">*Pour enlever un médecin de la liste, cliquez sur son nom</p>
-                            <a href="ajoutMedecin.php?idC=<?php echo $_GET["id"] ?>" id="erreure_bouton">Ajouter un médecin</a>
+                            <a href="ajoutMedecin.php?idC=<?php echo $_GET["id"] ?>" id="erreur_bouton">Ajouter un médecin</a>
                         </div>
                     </div>
                 </div>
@@ -95,12 +95,12 @@ $adresse = $user->adresse;
                 <br><br>
                 <div id="boxCentre2">
                     <br>
-                    <a href="verifDelCentre.php?idC=<?php echo $_GET["id"] ?>" id="erreure_boutonr">Supprimer le centre</a>
+                    <a href="verifDelCentre.php?idC=<?php echo $_GET["id"] ?>" id="erreur_boutonr">Supprimer le centre</a>
                 </div>
                 <br>
                 <br>
                 <div id="boxCentre2">
-                    <a href="admin.php" id="erreure_boutong">Retour</a>
+                    <a href="admin.php" id="erreur_boutong">Retour</a>
                 </div>
                 <br>
             </div>

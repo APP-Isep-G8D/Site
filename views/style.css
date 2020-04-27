@@ -987,16 +987,29 @@ hr.new1 {
 }
 #SepConteneurCentre{
 	flex:1;
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	width: 100%;
+	color: #095228;
+	justify-content: space-around;
 }
 #infoCentreBoitier{
-	flex:1;
-	
+	display: table;
+	justify-content: space-between;
 
 }
+#infoCentreMedecins{
+	display: table;
+	justify-content: space-between;
+
+}
+
+#boxCentre{
+	padding-top: 8%;
+	padding-bottom: 6%;
+}
+
 #listeTests{
 	display: flex;
 	flex-wrap: wrap;
@@ -1029,10 +1042,7 @@ hr.new1 {
 	flex:1;
 	width: 100px;
 }
-#infoCentreMedecins{
-	flex:1;
 
-}
 #conteneurCentreC{
 	flex:1;
 	margin:2vh;
@@ -1087,6 +1097,7 @@ hr.new1 {
 }
 #infoCentre{
 	text-align: center;
+	color: white;
 }
 #conteneurBoutonCentre{
 	display:flex;

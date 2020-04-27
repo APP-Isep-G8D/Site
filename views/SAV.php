@@ -1,28 +1,32 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>SAV</title>
-  <link rel="stylesheet" href="style.css">
-  <!--<script src="script.js"></script>-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>SAV</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="script.js"></script>-->
 </head>
+
 <body>
-    <?php require_once "menu.php";?>
+    <?php require_once "menu.php"; ?>
 
 
-	<div id="contenuSAV">
+    <div id="contenuSAV">
         <button id="gotop"><a href="#top">&#8743</a></button>
 
-		<div id="titre">
-			Service&nbsp;Après-Vente
+        <div id="titre">
+            Service&nbsp;Après-Vente
         </div>
         <div class="camion_SAV">
             <img src="camionSAV.png">
             <div class="texte_SAV">
                 <p>
-                    <b><FONT color="orange">LE SERVICE APRÈS-VENTE INFINITE&nbsp;MEASURES&nbsp;:
-                    <br>
-                    DES TECHNICIENS À VOTRE SERVICE</FONT> </b>
+                    <b>
+                        <FONT color="orange">LE SERVICE APRÈS-VENTE INFINITE&nbsp;MEASURES&nbsp;:
+                            <br>
+                            DES TECHNICIENS À VOTRE SERVICE</FONT>
+                    </b>
                     <hr class="new1">
                     Vous rencontrez des problèmes avec votre appareil ? Qu'il soit sous garantie ou non, nos techniciens SAV sont à votre écoute pour vous aider à trouver une solution.
                 </p>
@@ -34,7 +38,7 @@
             </div>
             <hr class="new1">
             <p class="texte_paragraphe_SAV">
-                La complexité de création du Capteurator implique une manœuvre de réparation des plus difficiles. 
+                La complexité de création du Capteurator implique une manœuvre de réparation des plus difficiles.
                 C'est pourquoi, <b>INFINITE MEASURES</b> forme des techniciens ultras-performants connaissant le moindre ressort de la machine.
                 Une seconde vie sera alors donnée à votre appareil, un geste important pour notre planète.
             </p>
@@ -45,7 +49,7 @@
             </div>
             <hr class="new1">
             <p class="texte_paragraphe_SAV">
-                En cas de problèmes, notre Service Après-Ventes est ouvert <b>7j/7</b> et <b>24h/24</b>. 
+                En cas de problèmes, notre Service Après-Ventes est ouvert <b>7j/7</b> et <b>24h/24</b>.
                 Contactez nous au <b> 01&nbsp;44&nbsp;75&nbsp;47&nbsp;00&nbsp;(prix d'un appel local)</b> ou par mail à <b>infinitemeasures.society@gmail.com</b>.
             </p>
         </div>
@@ -55,7 +59,7 @@
             </div>
             <hr class="new1">
             <div class="paragraphe_block">
-                <p >
+                <p>
                     Si une panne survient, vous pouvez beneficer de votre service <b>SAV&nbsp;INFINITE&nbsp;MEASURES</b> valable jusqu'à <b>10 ans</b> après votre achat.
                     <br>
                     Ce service comprend&nbsp;:
@@ -76,8 +80,9 @@
                 </p>
             </div>
         </div>
-	</div>
-	<?php require_once "footer.php";?>
+    </div>
+    <?php require_once "footer.php"; ?>
 
 </body>
+
 </html>

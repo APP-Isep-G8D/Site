@@ -52,9 +52,10 @@ $adresse = $user->adresse;
 	<div id="conteneurMainAdmin">
 		<div id="conteneur1Admin">
 			<div id="infoAdmin">
-				<h1 style="color: orange">
+				<h1 id="pageadmin_titre1">
 					Mes informations :
 				</h1>
+				<hr class="trait3">
 				<br>
 				<br>
 				<p><b>
@@ -69,18 +70,24 @@ $adresse = $user->adresse;
 			</div>
 			<div id="conteneurCentreAdmin">
 				<div id="listeCentres">
-					<h1>
+					<h1 id="pageadmin_titre2">
 						Liste des centres :
 					</h1>
+					<hr class="trait2">
+					<br>
+					<br>
 					<?php
 					$donnee = $bdd->query("SELECT * FROM centremedical WHERE 1");
 					while ($row = $donnee->fetch_array()) {
-					?><a href="centre.php?id=<?php echo $row["numero"]; ?>" style="text-decoration:none;color:white;font-weight:bold;" name=<?php $row["numero"]; ?>><?php echo  "- ", $row["nom"], " ", $row["adresse"]; ?></a>
-						<br><br><?php
-							}
-								?>
+					?><a class="listeCentres" href="centre.php?id=<?php echo $row["numero"]; ?>" name=<?php $row["numero"]; ?>><?php echo  "- ", $row["nom"], " ", $row["adresse"]; ?></a>
+						<br>
+						<br>
+					<?php
+					}
+					?>
 				</div>
 				<div id="buttonAdminCentre">
+					<br>
 					<br>
 					<a href="addCentre.php" id="erreure_bouton">Ajouter un centre</a>
 				</div>

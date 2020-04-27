@@ -16,7 +16,7 @@
 				<h4>
 					Un condensé de design et de technologie
 				</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet magna at orci sollicitudin, rutrum aliquam est auctor. Sed hendrerit, nulla eu ultricies molestie, mi ante tincidunt velit, in sodales nunc justo a massa. Duis ac tortor in erat dictum convallis. Duis ipsum lacus, gravida eu rhoncus nec, efficitur porttitor dui. Cras eleifend vitae neque quis suscipit.</p>
+				<p> Infinite Measures présente un tout nouveau type d'appareil de mesures. Ergonomique, design, léger, abordable, laissez-vous tenter par notre boitier de mesures psychotechniques : Le capteurator ! Rejoignez dès maintenant 10 000 médecins en France !</p>
 				<br>
 				<br>
 				<a id="decouvrir" href ="Professionnel.html">Découvrir</a>

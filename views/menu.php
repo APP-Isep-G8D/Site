@@ -4,7 +4,7 @@
 session_start();
 if ( isset( $_SESSION['idUtilisateur'] ) ) {
     $loginMsg="mon profil";
-	$profilconnecte="Se deconnecter";
+	$profilconnecte="Se déconnecter";
 	?>
 	<style>
 		#login{

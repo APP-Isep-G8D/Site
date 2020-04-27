@@ -83,15 +83,13 @@ header li a{
 	float: right;
 	right: 3vh;
 	left: 95%;
-	max-width: 30px;
-	width: 100%;
-	font-size: 40px;
-	background-color:black;
-	border-radius: 50%;
+	background-color: #474747;
 	border: none;
 	opacity: 60%;
-	padding-right: 30px;
-	
+	width: 40px;
+    height: 40px;
+	border-radius: 20px;
+	font-size: xx-large;
 }
 #gotop a{
 

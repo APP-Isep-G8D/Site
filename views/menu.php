@@ -33,7 +33,7 @@ if ( isset( $_SESSION['idUtilisateur'] ) ) {
 		<li><a href ="Professionnel.php">Professionnels</a></li>
 		<li><a href ="NousContacter.php">Nous contacter</a></li>
 		<li><a href ="faq.php">FAQ</a></li>
-		<li><a href ="PageErreur.html">Recherche</a></li> <!-- Recherche a modifier pour integrer une animation : #javascript ou autre-->
+		<li><a href ="PageErreur.html"><img id="loupe" class="search" src="loupe.png"></a></li> 
 		<li><a id="login" href="login.php"><?php echo $loginMsg;?></a></li>
 		<li><a id="logout" href="logout.php"><?php echo $profilconnecte;?></a></li>
 

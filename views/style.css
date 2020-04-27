@@ -338,7 +338,6 @@ header li a{
 		height: auto;
 	}
 	
-
 }
 /* Connexion............................................ */
 
@@ -347,7 +346,7 @@ header li a{
 	margin: .4rem 0;
 	font: 1rem 'Fira Sans', sans-serif;
 	text-align: center;
-	font-size: xx-large;	
+	font-size: x-large;	
 }
 
 #connexion input[type='submit'],
@@ -363,7 +362,7 @@ header li a{
 	height: flex;
 	text-align: center;
 	background-color: #F5F5F5;
-	font-size: xx-large;
+	font-size: large;
 }
 #connexion ul{
 	display: block;
@@ -974,6 +973,7 @@ hr.new1 {
 	height: fit-content;
 	background-color: #64a4ed;
 	border-radius: 3%;
+	color: white;
 
 }
 
@@ -1080,6 +1080,7 @@ hr.new1 {
 	flex:5;
 	text-align: justify;
 	margin: auto;
+	color: #64a4ed;
 	
 }
 #listeCentres a{

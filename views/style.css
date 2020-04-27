@@ -13,8 +13,6 @@ p{
 	padding: 5px;
 }
 
-
-
 /*DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU DEBUT MENU */
 header{
 	width: 100%;
@@ -482,8 +480,6 @@ p {
 
 /*FAQ---------------------------------------------------------------------------------*/
 
-
-
 #faq {
     text-align: center;
 	color: black; 
@@ -496,7 +492,7 @@ p {
 	color: #6495ED; 
 	font-weight: bold;
 	font-size: 325%;
-	padding-top: 8.5%;
+	padding-top: 1%;
 	padding-bottom: 1%;
 	font-family: Arial, sans-serif
 }

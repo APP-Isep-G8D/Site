@@ -89,7 +89,7 @@ $adresse = $user->adresse;
 				<div id="buttonAdminCentre">
 					<br>
 					<br>
-					<a href="addCentre.php" id="erreure_bouton">Ajouter un centre</a>
+					<a href="addCentre.php" id="erreur_bouton">Ajouter un centre</a>
 				</div>
 
 			</div>

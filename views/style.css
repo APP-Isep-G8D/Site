@@ -110,7 +110,10 @@ header li a{
 	color:black;
 }
 
-
+.search:hover{
+	transform: scale(1.7);
+	transition:.7s;
+}
 
 /*FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU */
 

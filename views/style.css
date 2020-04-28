@@ -912,6 +912,17 @@ hr.trait3 {
 	width: 50%;
 }
 
+hr.trait4 {
+	border: 1.5px solid #6495ED;
+	margin: 0;
+	text-align: center;
+}
+
+hr.trait5 {
+	border: 1.5px solid #464646;
+	width: 50%;
+}
+
 .camion_SAV img{
 	width:50%;
 	height:50%;
@@ -988,13 +999,13 @@ hr.trait3 {
 }
 
 #pageadmin_titre1 {
-text-shadow: 2px 2px 0 orange, 2px -2px 0 orange, -2px 2px 0 orange, -2px -2px 0 orange, 2px 0px 0 orange, 0px 2px 0 orange, -2px 0px 0 orange, 0px -2px 0 orange;
-color: #FFFFFF;
+	text-shadow: 2px 2px 0 orange, 2px -2px 0 orange, -2px 2px 0 orange, -2px -2px 0 orange, 2px 0px 0 orange, 0px 2px 0 orange, -2px 0px 0 orange, 0px -2px 0 orange;
+	color: white;
 }
 
 #pageadmin_titre2 {
-text-shadow: 2px 2px 0 #64a4ed, 2px -2px 0 #64a4ed, -2px 2px 0 #64a4ed, -2px -2px 0 #64a4ed, 2px 0px 0 #64a4ed, 0px 2px 0 #64a4ed, -2px 0px 0 #64a4ed, 0px -2px 0 #64a4ed;
-color: #FFFFFF;
+	text-shadow: 2px 2px 0 #64a4ed, 2px -2px 0 #64a4ed, -2px 2px 0 #64a4ed, -2px -2px 0 #64a4ed, 2px 0px 0 #64a4ed, 0px 2px 0 #64a4ed, -2px 0px 0 #64a4ed, 0px -2px 0 #64a4ed;
+	color: white;
 }
 
 #conteneur1Admin{
@@ -1026,14 +1037,30 @@ color: #FFFFFF;
 	flex-wrap: wrap;
 	flex-direction: row;
 	width: 100%;
-	color: #095228;
-	justify-content: space-around;
+	color: #464646;
+	justify-content: space-evenly;
 }
 #infoCentreBoitier{
 	display: table;
 	justify-content: space-between;
 
 }
+
+.verifBoitier{
+	font-size:16px;
+	text-decoration:none;
+	font-weight:bold;
+	color:white;
+	padding-top: 1%;
+	padding-bottom: 1%;
+
+}
+
+.verifBoitier:hover{
+	transition-duration: 0.2s;
+	color: #6495ED;	
+}
+
 #infoCentreMedecins{
 	display: table;
 	justify-content: space-between;
@@ -1132,7 +1159,7 @@ color: #FFFFFF;
 }
 
 .listeCentres:hover {
-	transition-duration: 0.5s;
+	transition-duration: 0.2s;
 	color: #6495ED;	
 }
 
@@ -1145,6 +1172,7 @@ color: #FFFFFF;
 }
 #infoCentre{
 	text-align: center;
+	text-shadow: 2px 2px 0 #64a4ed, 2px -2px 0 #64a4ed, -2px 2px 0 #64a4ed, -2px -2px 0 #64a4ed, 2px 0px 0 #64a4ed, 0px 2px 0 #64a4ed, -2px 0px 0 #64a4ed, 0px -2px 0 #64a4ed;
 	color: white;
 }
 #conteneurBoutonCentre{

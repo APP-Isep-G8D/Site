@@ -55,13 +55,12 @@ $medecin = $medecinQ->fetch_array();
     <div id="conteneurMainAdmin">
         <div id="conteneur1Admin">
             <div id="conteneurCentreAdmin">
-                <p style="width:70%;margin:auto;margin-top:2%;margin-bottom:2%;">Etes vous sur de vouloir enlever <?php echo $medecin["prenom"], " ", $medecin["nom"] ?> de la liste des medecin ?</p>
-                <a id="erreur_bouton" style="width:30%;margin:auto;" href="removeMedecin.php?id=<?php echo $medecin["idUtilisateur"]; ?>">oui</a>
+                <p style="width:70%;margin:auto;margin-top:2%;margin-bottom:2%;color:white">Êtes-vous sur de vouloir enlever <?php echo $medecin["prenom"], " ", $medecin["nom"] ?> de la liste des medecin ?</p>
+                <a id="erreur_bouton" style="width:30%;margin:auto;" href="removeMedecin.php?id=<?php echo $medecin["idUtilisateur"]; ?>">Oui</a>
                 <br>
                 <br>
                 <br>
-                <a id="erreur_bouton" style="width:30%;margin:auto;" href="centre.php?id=<?php echo $user->idCentre; ?>">Retour</a>
-
+                <a id="erreur_boutonr" style="width:30%;margin:auto;" href="centre.php?id=<?php echo $user->idCentre; ?>">Annuler</a>
             </div>
         </div>
     </div>

@@ -59,12 +59,17 @@ $adresse = $user->adresse;
                 </div>
                 <div id="SepConteneurCentre">
                     <div id="infoCentreBoitier">
-                        <?php echo "<p>Liste des boitiers utilisés :</p>";
+                        <?php echo "<p>Liste des boitiers utilisés : </p>";
                         $boitierQ = $bdd->query("SELECT * FROM boitier WHERE idCentre=$id");
+                        ?>
+                        <hr class="trait5">
+                        <br>
+                        <br>
+                        <?php
                         while ($boitier = $boitierQ->fetch_array()) {
                             $idboitier = $boitier["idBoitier"];
                         ?>
-                            <a href="verifDelBoitier.php?idB=<?php echo $idboitier; ?>" style="font-size:16px;text-decoration:none;font-weight:bold;color:white"><?php echo "Id boitier: #", $boitier["idBoitier"], "<br>" ?></a>
+                            <a class="verifBoitier" href="verifDelBoitier.php?idB=<?php echo $idboitier; ?>"><?php echo "Id boitier: #", $boitier["idBoitier"], "<br>", "<br>" ?></a>
                         <?php
                         }
                         ?>
@@ -73,15 +78,21 @@ $adresse = $user->adresse;
                             <a href="ajoutBoitier.php?idC=<?php echo $_GET["id"] ?>" id="erreur_bouton">Ajouter un boitier</a>
                         </div>
                     </div>
+                    <hr class="trait4">
                     <div id="infoCentreMedecins">
                         <?php
                         echo "<p>Liste des médecins : </p>";
                         $donnee = $bdd->query("SELECT * FROM medecin WHERE idCentre=$id");
+                        ?>
+                        <hr class="trait5">
+                        <br>
+                        <br>
+                        <?php
                         while ($row = $donnee->fetch_array()) {
                             $idUser = $row["idUtilisateur"];
                             $medecinQ = $bdd->query("SELECT * FROM utilisateur WHERE idUtilisateur=$idUser");
                             $medecin = $medecinQ->fetch_array();
-                        ?><a href="verifDelMedecin.php?id=<?php echo $medecin["idUtilisateur"]; ?>" style="font-size:16px;text-decoration:none;color:white;font-weight:bold"><?php echo "", $medecin["prenom"], " ", $medecin["nom"], ",  ", $medecin["mail"], "<br>"; ?></a>
+                        ?><a class="verifBoitier" href="verifDelMedecin.php?id=<?php echo $medecin["idUtilisateur"]; ?>"><?php echo "", $medecin["prenom"], " ", $medecin["nom"], ",  ", $medecin["mail"], "<br>", "<br>"; ?></a>
                         <?php
                         }
                         ?>

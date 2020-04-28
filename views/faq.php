@@ -5,7 +5,6 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title>IOTnov</title>
   <link rel="stylesheet" href="style.css">
-  <!--<script src="script.js"></script>-->
 </head>
 
 <?php require_once "menu.php"; ?>

@@ -49,6 +49,7 @@ $adresse = $user->adresse;
     <div id="conteneurMainAdmin">
         <div id="conteneur3Admin">
             <div id="conteneurCentreC">
+                
                 <div id="infoCentre">
                     <h1>
                         <?php echo $nom ?>
@@ -57,6 +58,7 @@ $adresse = $user->adresse;
                         <?php echo $adresse, "<br><br>" ?>
                     </p>
                 </div>
+
                 <div id="SepConteneurCentre">
                     <div id="infoCentreBoitier">
                         <?php echo "<p>Liste des boitiers utilisés : </p>";
@@ -78,6 +80,7 @@ $adresse = $user->adresse;
                             <a href="ajoutBoitier.php?idC=<?php echo $_GET["id"] ?>" id="erreur_bouton">Ajouter un boitier</a>
                         </div>
                     </div>
+                    
                     <hr class="trait4">
                     <div id="infoCentreMedecins">
                         <?php

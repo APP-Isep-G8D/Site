@@ -18,24 +18,23 @@ header{
 	width: 100%;
 	background-color: #64a4ed;
 	display: flex;
-	justify-content: space-around;
 	flex-wrap: wrap;
-	max-height: 78px;
-
+	height: fit-content;
+	align-items: center;
+	
+	
 }
 
 .header2{
+	padding:1.5%;
 	text-decoration: none;
-	padding-bottom: 0%;
-	padding-top: 0%;
-	padding-left: 2%;
-	padding-right: 2%;
 	font-size: 14px;
 	font-weight: bold;
 	color:white;
-	vertical-align: middle;
-	line-height: 78px;
-	margin: 0;
+	margin-left:auto ;
+	margin-top: 0;
+	margin-right:auto;	
+	
 }
 
 .header2:hover{
@@ -46,16 +45,11 @@ header{
 
 .header3{
 	text-decoration: none;
-	padding-bottom: 0%;
-	padding-top: 0%;
-	padding-left: 2%;
-	padding-right: 2%;
+	padding:1.5%;
 	font-size: 14px;
 	font-weight: bold;
 	color:white;
-	vertical-align: middle;
-	line-height: 78px;
-	margin: 0;
+	margin:auto;
 	background-color: #787878;
 }
 
@@ -66,9 +60,16 @@ header{
 }
 
 #logo {
-    width: 5em;
+	
+	width: 5em;
 }
-
+.headerlogo{
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color:white;
+	margin:auto;
+}
 #loupe {
 	width: 1.5em;
 }
@@ -910,6 +911,7 @@ hr.trait3 {
 }
 
 hr.trait4 {
+	
 	border: 1.5px solid #6495ED;
 	margin: 0;
 	text-align: center;
@@ -1041,9 +1043,10 @@ hr.trait6 {
 	flex-direction: row;
 	width: 100%;
 	color: #464646;
-	justify-content: space-evenly;
+
 }
 #infoCentreBoitier{
+	width: 49%;
 	display: table;
 	justify-content: space-between;
 
@@ -1081,6 +1084,7 @@ hr.trait6 {
 
 .groupe_medecin{
 	justify-content: space-between;
+	align-items: center;
 	display: flex;
 	vertical-align: bottom;
 
@@ -1094,6 +1098,7 @@ hr.trait6 {
 }
 
 #infoCentreMedecins{
+	width: 49%;
 	display: table;
 	justify-content: space-between;
 
@@ -1144,6 +1149,7 @@ hr.trait6 {
 	background-color: orange;
 	flex-direction: column;
 	padding-bottom: 2%;
+	
 }
 
 #conteneur2Admin{

@@ -18,7 +18,7 @@ header{
 	width: 100%;
 	background-color: #64a4ed;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	max-height: 78px;
 
@@ -36,10 +36,30 @@ header{
 	vertical-align: middle;
 	line-height: 78px;
 	margin: 0;
-
 }
 
 .header2:hover{
+	background-color: orange;
+	transition-duration: 0.7s;
+
+}
+
+.header3{
+	text-decoration: none;
+	padding-bottom: 0%;
+	padding-top: 0%;
+	padding-left: 2%;
+	padding-right: 2%;
+	font-size: 14px;
+	font-weight: bold;
+	color:white;
+	vertical-align: middle;
+	line-height: 78px;
+	margin: 0;
+	background-color: #787878;
+}
+
+.header3:hover{
 	background-color: orange;
 	transition-duration: 0.7s;
 

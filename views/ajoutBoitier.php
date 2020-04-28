@@ -77,28 +77,28 @@ if (isset($_POST['enregistrerMed'])) {
     <div id="conteneurAddMed">
         <div id="itemMed">
             <div id="itemMed2">
-                <h1>
-                    Fromulaire d'ajout d'un nouveau boitier :
+                <h1 id="ajoutBoitier">
+                    Formulaire d'ajout d'un nouveau boitier :
                 </h1>
+                <br>
+                <br>
                 <form method="post" action="ajoutBoitier.php?idC=<?php echo $_GET['idC'] ?>">
 
                     <div class="input-group">
-                        <label>Numéro du boitier :</label>
+                        <label style="color: white"><b>Numéro du boitier :</b> </label>
                         <input type="text" name="numeroBoitier" required minlength="1" value="<?php echo $numBoitier; ?>">
                     </div>
-
                     <?php echo $errors; ?>
-
                     <div class="input-group">
+                        <br>
                         <br>
                         <button id="erreur_boutong" type="submit" class="btn" name="enregistrerMed">Ajouter le boitier</button>
                     </div>
-
                 </form>
                 <br>
                 <br>
                 <div id="boxCentre1">
-                    <a href="profil.php" id="erreur_boutong">Retour</a>
+                    <a href="profil.php" id="erreur_boutonr">Retour</a>
                 </div>
             </div>
         </div>

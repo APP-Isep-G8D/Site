@@ -113,7 +113,11 @@ if (isset($_POST['enregistrerMed'])) {
 <body>
     <div id="conteneurAddMed">
         <div id="itemMed">
-            <h1>Ajout d'un medecin : </h1>
+            <br>
+            <h1 id="ajoutBoitier">Ajout d'un medecin : </h1>
+            <br>
+            <hr class="trait3">
+            <br>
             <div id="itemMed4">
                 <div id="itemMed2">
                     <h3>
@@ -162,10 +166,14 @@ if (isset($_POST['enregistrerMed'])) {
                         </div>
                     </form>
                 </div>
+                <hr class="trait6">
                 <div id="itemMed3">
-                    <h1>
+                    <h1 style="color: orange">
                         Ajouter un medecin déjà inscrit :
                     </h1>
+                    <hr class="trait3">
+                    <br>
+                    <br>
                     <?php
                     $medecinRQ = $bdd->prepare("SELECT * FROM medecin WHERE idCentre= ?");
                     $id0 = 0;
@@ -178,26 +186,21 @@ if (isset($_POST['enregistrerMed'])) {
                         $medecinInfoRQ->execute();
                         $medecinInfoR = $medecinInfoRQ->get_result();
                         $medecinInfo = $medecinInfoR->fetch_array();
-                    ?><a href="ajoutMedecin.php?idC=<?php echo $_GET["idC"]; ?>&idM=<?php echo $row["idMedecin"]; ?>" style="text-decoration:none;color:black;font-weight:bold;" name=<?php $row["idUtilisateur"]; ?>><?php echo "-Dr. ", $medecinInfo["prenom"], " ", $medecinInfo["nom"], " (", $medecinInfo["adresse"], ")"; ?></a>
+                    ?><a href="ajoutMedecin.php?idC=<?php echo $_GET["idC"]; ?>&idM=<?php echo $row["idMedecin"]; ?>" class="ancienMedecin" name=<?php $row["idUtilisateur"]; ?>><?php echo "-Dr. ", $medecinInfo["prenom"], " ", $medecinInfo["nom"], " (", $medecinInfo["adresse"], ")"; ?></a>
                         <br><br><?php
                             }
                                 ?>
                 </div>
             </div>
+            <br>
+            <br>
             <div id="boxCentre1">
-                <a href="centre.php?id=<?php echo $_GET["idC"]; ?>" id="erreur_boutong">Retour</a>
+                <a href="centre.php?id=<?php echo $_GET["idC"]; ?>" id="erreur_boutonr">Retour</a>
             </div>
             <br>
             <br>
-
-
-
         </div>
-
-
-
     </div>
-
 
 </body>
 <?php require_once "footer.php"; ?>

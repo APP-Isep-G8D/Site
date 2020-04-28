@@ -70,26 +70,25 @@ if (isset($_POST['enregistrerMed'])) {
     }
 }
 
-
-
 ?>
 
 <body>
     <div id="conteneurAddMed">
         <div id="itemMed">
             <div id="itemMed2">
-                <h1 style="color: white">
+                <h1 id="ajoutBoitier">
                     Ajouter un centre :
                 </h1>
+                <br>
+                <br>
                 <form method="post" action="addCentre.php">
-
                     <div class="input-group" style="color: white">
-                        <label>Nom &nbsp &nbsp </label>
+                        <label><b>Nom &nbsp&nbsp&nbsp&nbsp</b> </label>
                         <input type="text" name="nom" required minlength="1" value="<?php echo $nom; ?>">
                     </div>
 
                     <div class="input-group" style="color: white">
-                        <label>Adresse</label>
+                        <label><b>Adresse</b> </label>
                         <input type="text" name="adresse" required minlength="1" value="<?php echo $adresse; ?>">
                     </div>
 
@@ -104,7 +103,7 @@ if (isset($_POST['enregistrerMed'])) {
                 <br>
                 <br>
                 <div id="boxCentre1">
-                    <a href="profil.php" id="erreur_boutong">Retour</a>
+                    <a href="profil.php" id="erreur_boutonr">Retour</a>
                 </div>
             </div>
         </div>

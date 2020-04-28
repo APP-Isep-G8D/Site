@@ -923,6 +923,12 @@ hr.trait5 {
 	width: 50%;
 }
 
+hr.trait6 {
+	border: 1.5px solid #464646;
+	margin: 0;
+	text-align: center;
+}
+
 .camion_SAV img{
 	width:50%;
 	height:50%;
@@ -1059,6 +1065,28 @@ hr.trait5 {
 .verifBoitier:hover{
 	transition-duration: 0.2s;
 	color: #6495ED;	
+}
+
+.ancienMedecin{
+	font-size:16px;
+	text-decoration:none;
+	font-weight:bold;
+	color:white;
+	padding-top: 1%;
+	padding-bottom: 1%;
+
+}
+
+.ancienMedecin:hover{
+	transition-duration: 0.2s;
+	color: orange;	
+}
+
+#ajoutBoitier{
+	text-align: center;
+	text-shadow: 2px 2px 0 orange, 2px -2px 0 orange, -2px 2px 0 orange, -2px -2px 0 orange, 2px 0px 0 orange, 0px 2px 0 orange, -2px 0px 0 orange, 0px -2px 0 orange;
+	color: white;
+	margin: 0;
 }
 
 #infoCentreMedecins{
@@ -1198,8 +1226,9 @@ hr.trait5 {
 	display: flex;
 	flex-direction: column;
 	background-color: #64a4ed;
-	border-radius: 3%;
 	margin: auto;
+	border-radius: 5%;
+
 }
 
 #itemMed4{
@@ -1211,26 +1240,19 @@ hr.trait5 {
 }
 #itemMed2{
 	flex:1;
-	padding:2%;
+	padding:3%;
 	height: fit-content;
 	background-color: #64a4ed;
-	margin-right: 5%;
-
-	margin-bottom: 5%;
-	margin-top: 5%;
 	text-align: justify;
-	width: 50;
-	
+	border-radius: 5%;
+	color: white;
+
 }
 #itemMed3{
 	flex:1;
-	margin-left: 5%;
 	height: fit-content;
 	background-color: #64a4ed;
-
 	padding:2%;
-	margin-bottom: 5%;
-	margin-top: 5%;
 	text-align: center;
 	width: 50;
 }

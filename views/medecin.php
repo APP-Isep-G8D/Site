@@ -51,24 +51,29 @@ $adresse = $user->adresse;
 <body>
     <div id="conteneurMainAdmin">
         <div id="conteneur1Admin">
-
             <div id="infoAdmin">
-                <h1>
+                <h1 id="pageadmin_titre1">
                     Mes informations :
                 </h1>
+                <hr class="trait3">
                 <br>
-                <br>
-                <p>prénom : <?php echo $prenom; ?></p>
-                <p>nom : <?php echo $nom; ?></p>
-                <p>adresse : <?php echo $adresse; ?></p>
+                <p><b>
+                        <font color="orange">Prénom :</font>
+                    </b> <?php echo $prenom; ?></p>
+                <p><b>
+                        <font color="orange">Nom :</font>
+                    </b><?php echo $nom; ?></p>
+                <p><b>
+                        <font color="orange">Adresse :</font>
+                    </b><?php echo $adresse; ?></p>
             </div>
             <div id="conteneurCentreAdmin">
                 <div id="listeCentres">
-                    <h1>
+                    <h1 id="pageadmin_titre2">
                         Mes patients :
                     </h1>
+                    <br>
                     <?php
-
                     $medecinRQ = $bdd->prepare("SELECT * FROM medecin WHERE idUtilisateur= ?");
                     $medecinRQ->bind_param('s', $_SESSION["idUtilisateur"]);
                     $medecinRQ->execute();
@@ -88,13 +93,13 @@ $adresse = $user->adresse;
                         $patientR = $patientRQ->get_result();
                         $patient = $patientR->fetch_array();
                         $idPatient = $row["idPatient"]
-                    ?><a href="profilPatient?idP=<?php echo $row["idPatient"]; ?>" style="text-decoration:none;color:black;font-weight:bold;" name=<?php $row["idMedecin"]; ?>><?php echo  "- ", $patient["prenom"], " ", $patient["nom"], " (numéro : ", $row["numeroSS"], ")"; ?></a>
+                    ?><a class="listePatients" href="profilPatient?idP=<?php echo $row["idPatient"]; ?>" name=<?php $row["idMedecin"]; ?>><?php echo  "- ", $patient["prenom"], " ", $patient["nom"], " (numéro : ", $row["numeroSS"], ")"; ?></a>
                         <br><br><?php
                             }
                                 ?>
                 </div>
                 <div id="buttonAdminCentre">
-
+                    <br>
                     <br>
                     <a href="ajoutPatient.php" id="erreur_bouton">Ajouter ou retrouver un patient</a>
                 </div>

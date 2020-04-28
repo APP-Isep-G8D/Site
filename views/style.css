@@ -1202,6 +1202,17 @@ hr.trait6 {
 	color: #6495ED;	
 }
 
+.listePatients {
+	color: white;	
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.listePatients:hover {
+	transition-duration: 0.2s;
+	color: #6495ED;	
+}
+
 #listeCentres h1{
 	text-align: center;
 }

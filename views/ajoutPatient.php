@@ -113,66 +113,70 @@ if (isset($_POST['enregistrerMed'])) {
     }
 }
 
-
-
 ?>
 
 <body>
     <div id="conteneurAddMed">
         <div id="itemMed">
-            <h1>Ajout d'un patient : </h1>
+            <h1 id="pageadmin_titre1">Ajout d'un patient : </h1>
+            <hr class="trait3">
+            <br>
             <div id="itemMed4">
                 <div id="itemMed2">
-                    <h3>
+                    <h1 id="ajoutBoitier">
                         Nouveau patient :
-                    </h3>
+                    </h1>
+                    <br>
+                    <br>
                     <form method="post" action="ajoutPatient.php">
-                        <div class="input-group">
+                        <div class="groupe_medecin">
                             <label>Prénom</label>
                             <input type="text" name="prenom" required minlength="1" value="<?php echo $prenom; ?>">
                         </div>
 
-                        <div class="input-group">
+                        <div class="groupe_medecin">
                             <label>Nom</label>
                             <input type="text" name="nom" required minlength="1" value="<?php echo $nom; ?>">
                         </div>
 
-                        <div class="input-group">
-                            <label>adresse</label>
+                        <div class="groupe_medecin">
+                            <label>Adresse</label>
                             <input type="text" name="adresse" required minlength="1" value="<?php echo $adresse; ?>">
                         </div>
 
-                        <div class="input-group">
-                            <label>numero de sécurité sociale</label>
+                        <div class="groupe_medecin">
+                            <label>Numéro de Sécurité Sociale</label>
                             <input type="text" name="numeroSS" required minlength="1" value="<?php echo $numeroSS; ?>">
                         </div>
 
-                        <div class="input-group">
+                        <div class="groupe_medecin">
                             <label>Email</label>
                             <input type="email" required minlength="1" name="email" value="<?php echo $email; ?>">
                         </div>
 
-                        <div class="input-group">
-                            <label>Password</label>
+                        <div class="groupe_medecin">
+                            <label>Mot de passe</label>
                             <input type="password" required minlength="1" name="password_1">
                         </div>
 
-                        <div class="input-group">
-                            <label>Confirm password</label>
+                        <div class="groupe_medecin">
+                            <label>Confirmer Mot de passe</label>
                             <input type="password" required minlength="1" name="password_2">
                         </div>
                         <?php echo $errors; ?>
-
+                        <br>
+                        <br>
                         <div class="input-group">
-                            <br>
-                            <button id="erreur_boutong" type="submit" class="btn" name="enregistrerMed">Enregistrer le patient</button>
+                            <center> <button id="erreur_boutong" type="submit" class="btn" name="enregistrerMed">Enregistrer le patient</button>
+                            </center>
                         </div>
                     </form>
                 </div>
+                <hr class="trait6">
                 <div id="itemMed3">
-                    <h2>
-                        Autre patients du centre :
-                    </h2>
+                    <h1 id="ajoutBoitier">
+                        Autre(s) patient(s) du centre :
+                    </h1>
                     <?php
                     $medecinRQ = $bdd->prepare("SELECT * FROM patient WHERE idCentre= ? AND idMedecin != ?");
 
@@ -192,21 +196,15 @@ if (isset($_POST['enregistrerMed'])) {
                                 ?>
                 </div>
             </div>
+            <br>
+            <br>
             <div id="boxCentre1">
-                <a href="profil.php" id="erreur_boutong">Retour</a>
+                <a href="profil.php" id="erreur_boutonr">Retour</a>
             </div>
             <br>
             <br>
-
-
-
         </div>
-
-
-
     </div>
-
-
 </body>
 <?php require_once "footer.php"; ?>
 

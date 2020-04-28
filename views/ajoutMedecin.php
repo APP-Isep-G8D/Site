@@ -140,7 +140,7 @@ if (isset($_POST['enregistrerMed'])) {
                         </div>
 
                         <div class="input-group">
-                            <label>Numéro de sécurité sociale</label>
+                            <label>Numéro de sécurité sociale</label>
                             <input type="text" name="numeroSS" required minlength="1" value="<?php echo $numeroSS; ?>">
                         </div>
 
@@ -162,7 +162,8 @@ if (isset($_POST['enregistrerMed'])) {
 
                         <div class="input-group">
                             <br>
-                            <button id="erreur_boutong" type="submit" class="btn" name="enregistrerMed">Enregistrer le Medecin</button>
+                            <br>
+                            <center><button id="erreur_boutong" type="submit" class="btn" name="enregistrerMed">Enregistrer le Medecin</button></center>
                         </div>
                     </form>
                 </div>

@@ -748,9 +748,6 @@ p {
 	background-color: white;
 	color:red;
 	cursor:pointer;
-
-	
-
 }
 
 
@@ -1082,6 +1079,13 @@ hr.trait6 {
 	color: orange;	
 }
 
+.input-group{
+	justify-content: space-between;
+	display: flex;
+	vertical-align: bottom;
+
+}
+
 #ajoutBoitier{
 	text-align: center;
 	text-shadow: 2px 2px 0 orange, 2px -2px 0 orange, -2px 2px 0 orange, -2px -2px 0 orange, 2px 0px 0 orange, 0px 2px 0 orange, -2px 0px 0 orange, 0px -2px 0 orange;
@@ -1243,9 +1247,9 @@ hr.trait6 {
 	padding:3%;
 	height: fit-content;
 	background-color: #64a4ed;
-	text-align: justify;
 	border-radius: 5%;
 	color: white;
+	text-align: left;
 
 }
 #itemMed3{

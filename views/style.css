@@ -70,7 +70,9 @@ header{
 
 #loupe {
 	width: 1.5em;
+	vertical-align: middle;
 }
+
 
 #login{
 	border-radius: 20% / 50% ;
@@ -122,11 +124,6 @@ header{
 }
 #gotop a:hover {
 	color:black;
-}
-
-.search:hover{
-	transform: scale(1.7);
-	transition:.7s;
 }
 
 /*FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU */
@@ -984,9 +981,6 @@ hr.trait6 {
 }
 
 /*------------------------------------------------------------------------------------*/
-
-
-
 
 /*page ADMIN ----------------------------------------------------------------------------*/
 #conteneurMainAdmin{

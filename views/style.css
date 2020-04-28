@@ -1002,13 +1002,17 @@ hr.trait6 {
 }
 
 #pageadmin_titre1 {
-	text-shadow: 2px 2px 0 orange, 2px -2px 0 orange, -2px 2px 0 orange, -2px -2px 0 orange, 2px 0px 0 orange, 0px 2px 0 orange, -2px 0px 0 orange, 0px -2px 0 orange;
-	color: white;
+	text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white;
+	color: orange;
+	font-weight: bolder;
+
 }
 
 #pageadmin_titre2 {
-	text-shadow: 2px 2px 0 #64a4ed, 2px -2px 0 #64a4ed, -2px 2px 0 #64a4ed, -2px -2px 0 #64a4ed, 2px 0px 0 #64a4ed, 0px 2px 0 #64a4ed, -2px 0px 0 #64a4ed, 0px -2px 0 #64a4ed;
-	color: white;
+	text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white;
+	color: #64a4ed;
+	font-weight: bolder;
+
 }
 
 #conteneur1Admin{
@@ -1046,6 +1050,7 @@ hr.trait6 {
 #infoCentreBoitier{
 	display: table;
 	justify-content: space-between;
+	width: 49%;
 
 }
 
@@ -1083,20 +1088,23 @@ hr.trait6 {
 	justify-content: space-between;
 	display: flex;
 	vertical-align: bottom;
+	align-items: center;
+	font-weight: bold;
 
 }
 
 #ajoutBoitier{
 	text-align: center;
-	text-shadow: 2px 2px 0 orange, 2px -2px 0 orange, -2px 2px 0 orange, -2px -2px 0 orange, 2px 0px 0 orange, 0px 2px 0 orange, -2px 0px 0 orange, 0px -2px 0 orange;
-	color: white;
+	text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white;
+	color: orange;
 	margin: 0;
+	font-weight: bolder;
 }
 
 #infoCentreMedecins{
 	display: table;
 	justify-content: space-between;
-
+	width: 49%;
 }
 
 #boxCentre{
@@ -1204,8 +1212,10 @@ hr.trait6 {
 }
 #infoCentre{
 	text-align: center;
-	text-shadow: 2px 2px 0 #64a4ed, 2px -2px 0 #64a4ed, -2px 2px 0 #64a4ed, -2px -2px 0 #64a4ed, 2px 0px 0 #64a4ed, 0px 2px 0 #64a4ed, -2px 0px 0 #64a4ed, 0px -2px 0 #64a4ed;
-	color: white;
+	text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white;
+	color: #64a4ed;
+	font-weight: bolder;
+
 }
 #conteneurBoutonCentre{
 	display:flex;

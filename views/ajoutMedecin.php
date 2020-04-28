@@ -106,22 +106,20 @@ if (isset($_POST['enregistrerMed'])) {
     }
 }
 
-
-
 ?>
 
 <body>
     <div id="conteneurAddMed">
         <div id="itemMed">
             <br>
-            <h1 id="ajoutBoitier">Ajout d'un medecin : </h1>
+            <h1 id="ajoutBoitier">Ajout d'un médecin : </h1>
             <br>
             <hr class="trait3">
             <br>
             <div id="itemMed4">
                 <div id="itemMed2">
                     <h1 id="ajoutBoitier">
-                        Nouveau medecin :
+                        Nouveau médecin :
                     </h1>
                     <br>
                     <br>
@@ -152,26 +150,26 @@ if (isset($_POST['enregistrerMed'])) {
                         </div>
 
                         <div class="groupe_medecin">
-                            <label>Password</label>
+                            <label>Mot de passe</label>
                             <input type="password" required minlength="1" name="password_1">
                         </div>
 
                         <div class="groupe_medecin">
-                            <label>Confirm password</label>
+                            <label>Confirmer mot de passe</label>
                             <input type="password" required minlength="1" name="password_2">
                         </div>
                         <?php echo $errors; ?>
                         <br>
                         <br>
                         <div>
-                            <center><button id="erreur_boutong" type="submit" class="btn" name="enregistrerMed">Enregistrer le Medecin</button></center>
+                            <center><button id="erreur_boutong" type="submit" class="btn" name="enregistrerMed">Enregistrer le Médecin</button></center>
                         </div>
                     </form>
                 </div>
                 <hr class="trait6">
                 <div id="itemMed3">
                     <h1 id="ajoutBoitier">
-                        Ajouter un medecin déjà inscrit :
+                        Ajouter un médecin déjà inscrit :
                     </h1>
                     <br>
                     <br>

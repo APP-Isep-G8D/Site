@@ -79,6 +79,7 @@ if (isset($_POST['enregistrerMed'])) {
                 <h1 id="ajoutBoitier">
                     Ajouter un centre :
                 </h1>
+                <hr class="trait3">
                 <br>
                 <br>
                 <form method="post" action="addCentre.php">

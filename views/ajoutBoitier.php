@@ -81,6 +81,7 @@ if (isset($_POST['enregistrerMed'])) {
                     Formulaire d'ajout d'un nouveau boitier :
                 </h1>
                 <br>
+                <hr class="trait3">
                 <br>
                 <form method="post" action="ajoutBoitier.php?idC=<?php echo $_GET['idC'] ?>">
 

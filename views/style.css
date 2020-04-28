@@ -20,7 +20,6 @@ header{
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	max-height: 78px;
 
 }
 
@@ -1035,7 +1034,7 @@ hr.trait6 {
 	width: 90%;
 }
 #SepConteneurCentre{
-	flex:1;
+	flex-wrap: wrap;
 	display: inline-flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -1046,6 +1045,7 @@ hr.trait6 {
 #infoCentreBoitier{
 	display: table;
 	justify-content: space-between;
+	width: 49%;
 
 }
 
@@ -1083,7 +1083,7 @@ hr.trait6 {
 	justify-content: space-between;
 	display: flex;
 	vertical-align: bottom;
-
+	align-items: center;
 }
 
 #ajoutBoitier{
@@ -1096,7 +1096,7 @@ hr.trait6 {
 #infoCentreMedecins{
 	display: table;
 	justify-content: space-between;
-
+	width: 49%;
 }
 
 #boxCentre{

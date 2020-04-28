@@ -120,59 +120,59 @@ if (isset($_POST['enregistrerMed'])) {
             <br>
             <div id="itemMed4">
                 <div id="itemMed2">
-                    <h3>
+                    <h1 id="ajoutBoitier">
                         Nouveau medecin :
-                    </h3>
+                    </h1>
+                    <br>
+                    <br>
                     <form method="post" action="ajoutMedecin.php?idC=<?php echo $_GET['idC']; ?>">
-                        <div class="input-group">
+                        <div class="groupe_medecin">
                             <label>Prénom</label>
                             <input type="text" name="prenom" required minlength="1" value="<?php echo $prenom; ?>">
                         </div>
 
-                        <div class="input-group">
+                        <div class="groupe_medecin">
                             <label>Nom</label>
                             <input type="text" name="nom" required minlength="1" value="<?php echo $nom; ?>">
                         </div>
 
-                        <div class="input-group">
+                        <div class="groupe_medecin">
                             <label>Adresse</label>
                             <input type="text" name="adresse" required minlength="1" value="<?php echo $adresse; ?>">
                         </div>
 
-                        <div class="input-group">
+                        <div class="groupe_medecin">
                             <label>Numéro de sécurité sociale</label>
                             <input type="text" name="numeroSS" required minlength="1" value="<?php echo $numeroSS; ?>">
                         </div>
 
-                        <div class="input-group">
+                        <div class="groupe_medecin">
                             <label>Email</label>
                             <input type="email" required minlength="1" name="email" value="<?php echo $email; ?>">
                         </div>
 
-                        <div class="input-group">
+                        <div class="groupe_medecin">
                             <label>Password</label>
                             <input type="password" required minlength="1" name="password_1">
                         </div>
 
-                        <div class="input-group">
+                        <div class="groupe_medecin">
                             <label>Confirm password</label>
                             <input type="password" required minlength="1" name="password_2">
                         </div>
                         <?php echo $errors; ?>
-
-                        <div class="input-group">
-                            <br>
-                            <br>
+                        <br>
+                        <br>
+                        <div>
                             <center><button id="erreur_boutong" type="submit" class="btn" name="enregistrerMed">Enregistrer le Medecin</button></center>
                         </div>
                     </form>
                 </div>
                 <hr class="trait6">
                 <div id="itemMed3">
-                    <h1 style="color: orange">
+                    <h1 id="ajoutBoitier">
                         Ajouter un medecin déjà inscrit :
                     </h1>
-                    <hr class="trait3">
                     <br>
                     <br>
                     <?php

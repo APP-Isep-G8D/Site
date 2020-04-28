@@ -1079,7 +1079,7 @@ hr.trait6 {
 	color: orange;	
 }
 
-.input-group{
+.groupe_medecin{
 	justify-content: space-between;
 	display: flex;
 	vertical-align: bottom;
@@ -1256,7 +1256,7 @@ hr.trait6 {
 	flex:1;
 	height: fit-content;
 	background-color: #64a4ed;
-	padding:2%;
+	padding:3%;
 	text-align: center;
 	width: 50;
 }

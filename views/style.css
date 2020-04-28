@@ -20,7 +20,6 @@ header{
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	max-height: 78px;
 
 }
 
@@ -1039,7 +1038,7 @@ hr.trait6 {
 	width: 90%;
 }
 #SepConteneurCentre{
-	flex:1;
+	flex-wrap: wrap;
 	display: inline-flex;
 	flex-wrap: wrap;
 	flex-direction: row;

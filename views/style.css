@@ -294,10 +294,12 @@ header{
 	padding-top: 5%;
 	align-items: center;
 }
+
 .blueBox p{
 	flex:1;
-	color:black;
-	font-size: x-large;
+	color:white;
+	font-size: xx-large;
+	font-weight: bolder;
 }
 .santeBox {
 	display: flex;

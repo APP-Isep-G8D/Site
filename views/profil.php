@@ -75,7 +75,7 @@ $idPatient = $patient->idPatient;
                     <font color="orange">Adresse :</font>
                 </b><?php echo $adresse; ?></p>
             <p><b>
-                    <font color="orange">Numéro de Sécurité Sociale :</font>
+                    <font color="orange">Numéro de Sécurité Sociale :</font>
                 </b><?php echo $numeroSecu; ?></p>
         </div>
         <div id="listeTests">
@@ -85,27 +85,25 @@ $idPatient = $patient->idPatient;
             <hr class="trait2">
             <br>
             <br>
-            <?php
-            $testQ = $bdd->query("SELECT * FROM test WHERE idPatient=$idPatient");
-            while ($test = $testQ->fetch_array()) {
-                $idTest = $test["idTest"];
-            ?>
-                <div class="previewTest">
-                    test
-                </div>
-                <div id="testPreviewMed">
-                    <br>
-                    <img src="testIcon.png" alt="apercu image"><br>
-
-                    <a href="test.php?idTest=<?php echo $idTest; ?>" style="font-size:16px;text-decoration:none;color:black;font-weight:bold"><?php echo "Dâte :<br>", $test["date"] ?></a>
-                    <a href="test.php?idTest=<?php echo $idTest; ?>" style="font-size:16px;text-decoration:none;color:black;font-weight:bold"><?php echo "Résultats obtenus :<br>", $test["resultat"] ?></a>
-
-                </div>
-            <?php
-            }
-            ?>
+            <div class="listePreview">
+                <?php
+                $testQ = $bdd->query("SELECT * FROM test WHERE idPatient=$idPatient");
+                while ($test = $testQ->fetch_array()) {
+                    $idTest = $test["idTest"];
+                ?>
+                    <div class="previewTest">
+                        <a style="color: #4488f3" href="test.php?idTest=<?php echo $idTest; ?>"><?php echo $test["date"] ?></a>
+                        <br>
+                        <a href="test.php?idTest=<?php echo $idTest; ?>"><img src="testIcon.png" alt="apercu image"></a>
+                        <br>
+                        <br>
+                        <a style="color: #50b5a9" href="test.php?idTest=<?php echo $idTest; ?>">Résultats obtenus : <font color="#a51a4f"><?php echo  $test["resultat"] ?></font></a>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
         </div>
-
     </div>
 </body>
 <?php require_once "footer.php"; ?>

@@ -66,7 +66,7 @@
       <h1 id="titreProContact">Intéressé par nos solutions ?</h1>
       <h1 id="solutionProContact">Prenez contact avec nous :</h1>
 
-      <a id="buttonPro" href="NousContacter.php">Contact</a>
+      <a id="erreur_boutono" href="NousContacter.php">Contact</a>
 
 
     </div>

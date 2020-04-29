@@ -46,9 +46,6 @@ $nom = $user->nom;
 $adresse = $user->adresse;
 
 
-
-
-
 $newReq = $bdd->prepare("SELECT * FROM patient WHERE idUtilisateur = ?");
 $newReq->bind_param('s', $user->idUtilisateur);
 $newReq->execute();
@@ -60,53 +57,53 @@ $idPatient = $patient->idPatient;
 ?>
 
 <body>
-    <div id="opening">
-        <div id="texteInfoPageP">
-
-        </div>
-        <br>
-        <br>
-    </div>
-    <p>
-
+    <div id="conteneurProfil">
         <div id="infoProfil">
-            <h1>
+            <h1 id="pageadmin_titre1">
                 Mon profil:
             </h1>
+            <hr class="trait3">
             <br>
             <br>
-            <p>prénom : <?php echo $prenom; ?></p>
-            <p>nom : <?php echo $nom; ?></p>
-            <p>adresse : <?php echo $adresse; ?></p>
-            <p>numéro de sécurité sociale :<?php echo $numeroSecu; ?></p>
+            <p><b>
+                    <font color="orange">Prénom :</font>
+                </b><?php echo $prenom; ?></p>
+            <p><b>
+                    <font color="orange">Nom :</font>
+                </b><?php echo $nom; ?></p>
+            <p><b>
+                    <font color="orange">Adresse :</font>
+                </b><?php echo $adresse; ?></p>
+            <p><b>
+                    <font color="orange">Numéro de Sécurité Sociale :</font>
+                </b><?php echo $numeroSecu; ?></p>
+        </div>
+        <div id="listeTests">
+            <h1 id="pageadmin_titre2">
+                Mes tests :
+            </h1>
+            <hr class="trait2">
+            <br>
+            <br>
+            <?php
+            $testQ = $bdd->query("SELECT * FROM test WHERE idPatient=$idPatient");
+            while ($test = $testQ->fetch_array()) {
+                $idTest = $test["idTest"];
+            ?>
+                <div class="testPreviewMed">
+                    <br>
+                    <img src="testIcon.png" alt="apercu image"><br>
 
+                    <a href="test.php?idTest=<?php echo $idTest; ?>" style="font-size:16px;text-decoration:none;color:black;font-weight:bold"><?php echo "Dâte :<br>", $test["date"] ?></a>
+                    <a href="test.php?idTest=<?php echo $idTest; ?>" style="font-size:16px;text-decoration:none;color:black;font-weight:bold"><?php echo "Résultats obtenus :<br>", $test["resultat"] ?></a>
 
-
-            <br><br><br><br>
-            <p>mes tests :</p>
-
-            <div id="listeTests">
-                <?php
-                $testQ = $bdd->query("SELECT * FROM test WHERE idPatient=$idPatient");
-                while ($test = $testQ->fetch_array()) {
-                    $idTest = $test["idTest"];
-                ?>
-                    <div id="testPreviewMed">
-                        <br>
-                        <img src="testIcon.png" alt="apercu image"><br>
-
-                        <a href="test.php?idTest=<?php echo $idTest; ?>" style="font-size:16px;text-decoration:none;color:black;font-weight:bold"><?php echo "date :<br>", $test["date"] ?></a>
-                        <a href="test.php?idTest=<?php echo $idTest; ?>" style="font-size:16px;text-decoration:none;color:black;font-weight:bold"><?php echo "resultat obtenu :<br>", $test["resultat"] ?></a>
-
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
+                </div>
+            <?php
+            }
+            ?>
         </div>
 
-
-    </p>
+    </div>
 </body>
 <?php require_once "footer.php"; ?>
 

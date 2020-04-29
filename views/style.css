@@ -39,7 +39,7 @@ header{
 
 .header2:hover{
 	background-color: orange;
-	transition-duration: 0.7s;
+	transition-duration: 0.3s;
 
 }
 
@@ -61,7 +61,6 @@ header{
 .header3:hover{
 	background-color: orange;
 	transition-duration: 0.7s;
-
 }
 
 #logo {
@@ -69,8 +68,13 @@ header{
 }
 
 #loupe {
-	width: 1.5em;
+	width: 2.1em;
 	vertical-align: middle;
+}
+
+.loupe:hover {
+	transition:.7s;
+	transform: scale(1.5);
 }
 
 
@@ -459,12 +463,23 @@ p {
 
 
 /*page profil*/
+
+#conteneurProfil{
+	width: 100%;
+	height: fit-content;
+	min-height:80vh ;
+	display: flex;
+	flex-direction: row;
+	background-image: url("dataViz2.jpg");
+	background-size: cover;
+}
+
 #texteInfoPageP{
 	height: 100%;
 	float:left;
 	width: 80%;
 	text-align: center;
-	color: white;
+	color: black;
 	font-family: Georgia;
 	vertical-align: middle;
 }
@@ -477,14 +492,34 @@ p {
 }
 
 #infoProfil {
-	border: 1px black solid;
-	background-color: white;
-	padding-bottom: 15px;
-	
-	margin-left:150px;
-	margin-right:150px;
+	background-color: #64a4ed;
+	padding: 2%;
+	margin: 7vh 3vh;
+	border-radius: 5%;
+	color: white;
+	width: 25%;
+	max-height: 100%;
+	height: fit-content;
+
 
 }
+
+#infoProfil p{
+	font-size: medium;
+	text-align: justify;
+
+}
+
+#listeTests{
+	flex-wrap: wrap;
+	margin: 7vh 3vh;
+	padding: 2%;
+	background-color: lightgray;
+	border-radius: 2%;
+	width: 75%;
+
+}
+
 #button {
 	background-color: white;
 	border: 1px blue solid;
@@ -1105,14 +1140,7 @@ hr.trait6 {
 	padding-bottom: 6%;
 }
 
-#listeTests{
-	display: flex;
-	flex-wrap: wrap;
-	width: 90%;
-	margin:auto;
-	flex-direction: row;
-}
-#testPreviewMed{
+.testPreviewMed{
 	margin:auto;
 	width: 220px;
 	height: 120px;
@@ -1123,16 +1151,22 @@ hr.trait6 {
 	flex-direction: row;
 	align-items: center;
 	flex-wrap: wrap;
+	transition:.7s;
 
 }
-#testPreviewMed a{
+
+.testPreviewMed:hover{
+	transform: scale(1.2);
+}
+
+.testPreviewMed a{
 	flex:1;
 	margin-right: 10px;
 	text-align: center;
 	width: 100px;
 	
 }
-#testPreviewMed img{
+.testPreviewMed img{
 	margin-left: 10px;
 	flex:1;
 	width: 100px;

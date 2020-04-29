@@ -90,7 +90,10 @@ $idPatient = $patient->idPatient;
             while ($test = $testQ->fetch_array()) {
                 $idTest = $test["idTest"];
             ?>
-                <div class="testPreviewMed">
+                <div class="previewTest">
+                    test
+                </div>
+                <div id="testPreviewMed">
                     <br>
                     <img src="testIcon.png" alt="apercu image"><br>
 

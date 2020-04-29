@@ -39,7 +39,7 @@
 		<br>
 		<p>La <b>santé</b> à portée de main</p>
 		<form action="profil.php" class="santeBox">
-			<button class="btn">Accèder à mes résultats</button>
+			<button class="btn">Accéder à mes résultats</button>
 		</form>
 		<br>
 	</div>

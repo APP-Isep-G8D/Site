@@ -470,7 +470,7 @@ p {
 	min-height:80vh ;
 	display: flex;
 	flex-direction: row;
-	background-image: url("dataViz2.jpg");
+	background-image: url("dataViz2Transparent.png");
 	background-size: cover;
 }
 
@@ -492,7 +492,7 @@ p {
 }
 
 #infoProfil {
-	background-color: #64a4ed;
+	background-color: rgba(100, 164, 237, 0.8);
 	padding: 2%;
 	margin: 7vh 3vh;
 	border-radius: 5%;
@@ -500,7 +500,6 @@ p {
 	width: 25%;
 	max-height: 100%;
 	height: fit-content;
-
 
 }
 
@@ -514,7 +513,7 @@ p {
 	flex-wrap: wrap;
 	margin: 7vh 3vh;
 	padding: 2%;
-	background-color: lightgray;
+	background-color: rgb(211, 211, 211,0.9);
 	border-radius: 2%;
 	width: 75%;
 
@@ -1024,7 +1023,7 @@ hr.trait6 {
 	min-height:80vh ;
 	display: flex;
 	flex-direction: column;
-	background-image: url("dataViz.jpg");
+	background-image: url("dataVizTransparent.jpg");
 	background-size: cover;
 	align-items: center;
 }
@@ -1054,7 +1053,7 @@ hr.trait6 {
 	flex:1;
 	margin:2vh;
 	height: fit-content;
-	background-color: #64a4ed;
+	background-color: rgba(100, 164, 237, 0.8);
 	border-radius: 3%;
 	color: white;
 
@@ -1140,7 +1139,12 @@ hr.trait6 {
 	padding-bottom: 6%;
 }
 
-.testPreviewMed{
+.previewTest{
+	border:solid black 1px;
+
+}
+
+#testPreviewMed{
 	margin:auto;
 	width: 220px;
 	height: 120px;
@@ -1155,18 +1159,14 @@ hr.trait6 {
 
 }
 
-.testPreviewMed:hover{
-	transform: scale(1.2);
-}
-
-.testPreviewMed a{
+#testPreviewMed a{
 	flex:1;
 	margin-right: 10px;
 	text-align: center;
 	width: 100px;
 	
 }
-.testPreviewMed img{
+#testPreviewMed img{
 	margin-left: 10px;
 	flex:1;
 	width: 100px;
@@ -1176,7 +1176,7 @@ hr.trait6 {
 	flex:1;
 	margin:2vh;
 	border-radius: 5%;
-	background-color: orange;
+	background-color: rgba(255, 165, 0, 0.8);
 	flex-direction: column;
 	padding-bottom: 2%;
 }
@@ -1190,7 +1190,7 @@ hr.trait6 {
 #mapAdmin{
 	flex:1;
 	margin:2vh;
-	background-color: #64a4ed;
+	background-color: rgba(100, 164, 237, 0.8);
 	border-radius: 10%;
 
 }
@@ -1198,7 +1198,7 @@ hr.trait6 {
 #conteneurCentreAdmin{
 	flex:2;
 	margin:2vh;
-	background-color: orange;
+	background-color: rgba(255, 165, 0, 0.8);
 	border-radius: 3%;
 
 	flex-direction: column;
@@ -1267,20 +1267,21 @@ hr.trait6 {
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
-	background-image: url("dataViz.jpg");
+	background-image: url("dataVizTransparent.jpg");
 	background-size: cover;
 	align-items: center;
+	/*
 	background-color: transparent;
+	*/
 }
 #itemMed{
 	width: 90%;
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
-	background-color: #64a4ed;
+	background-color: rgba(100, 164, 237, 0.8);
 	margin: auto;
 	border-radius: 5%;
-
 }
 
 #itemMed4{
@@ -1294,7 +1295,6 @@ hr.trait6 {
 	flex:1;
 	padding:3%;
 	height: fit-content;
-	background-color: #64a4ed;
 	border-radius: 5%;
 	color: white;
 	text-align: left;
@@ -1303,7 +1303,6 @@ hr.trait6 {
 #itemMed3{
 	flex:1;
 	height: fit-content;
-	background-color: #64a4ed;
 	padding:3%;
 	text-align: center;
 	width: 50;

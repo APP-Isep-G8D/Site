@@ -32,16 +32,5 @@ if (isset($_SESSION['idUtilisateur'])) {
 
 <button id="gotop"><a href="#top">&#8743</a></button>
 
-<script type="text/javascript">
-	function cacher(id) {
-		var objet=document.getElementById(id);
-		objet.setAttribute("display", "none");
-	}
-
-	function montrer(id) {
-		var objet = document.getElementById(id);
-		objet.setAttribute("display", "default");
-	}
-</script>
-
+<script type="text/javascript" src="modificationDisplay.js"></script>
 

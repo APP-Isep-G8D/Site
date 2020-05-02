@@ -908,8 +908,6 @@ p {
 /*------------------------------------------------------------------------------------*/
 
 
-
-
 /*page NOUS CONTACTER ----------------------------------------------------------------------------*/
 
 
@@ -919,6 +917,43 @@ p {
   	align-items: center;
 	padding-top: 1%;
 }
+
+.mailEnvoye {
+	display: flex;
+    flex-direction: column;
+  	justify-content: center;
+    text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	color: #6495ED ;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.groupe_mail{
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	vertical-align: middle;
+	align-items: center;
+	font-weight: bold;
+	color: orange;
+}
+
+.mailPatiente{
+	justify-content: left;
+	position: absolute;
+}
+
+
+.patienter_image{
+	width: 185px; 
+	height: 170px;
+	transition-duration: 1.5s;
+	transition-timing-function: ease;
+	
+}
+
 
 .ReseauSociaux {
 	font-weight: bold;

@@ -921,14 +921,41 @@ p {
 .mailEnvoye {
 	display: flex;
     flex-direction: column;
-  	justify-content: center;
-    text-align: center;
-	vertical-align: middle;
+  	
 	font-weight: bold;
 	color: #6495ED ;
 	padding-top: 2%;
 	padding-bottom: 2%;
 }
+
+#mailPatiente {
+	display: flex;
+	-webkit-animation: slide-right 0.5s both;
+	        animation: slide-right 0.5s both;
+    
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(35%);
+            transform: translateX(35%);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(35%);
+            transform: translateX(35%);
+  }
+}
+
 
 .groupe_mail{
 	justify-content: center;
@@ -940,13 +967,8 @@ p {
 	color: orange;
 }
 
-.mailPatiente{
-	justify-content: left;
-	position: absolute;
-}
-
-
 .patienter_image{
+	
 	width: 185px; 
 	height: 170px;
 	transition-duration: 1.5s;

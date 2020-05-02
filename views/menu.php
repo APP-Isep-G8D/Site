@@ -12,17 +12,6 @@ if (isset($_SESSION['idUtilisateur'])) {
 }
 ?>
 
-<script>
-	function cacher(id) {
-		var objet=document.getElementById(id);
-		objet.setAttribute("display", "none");
-	}
-
-	function montrer(id) {
-		var objet = document.getElementById(id);
-		objet.setAttribute("display", "default");
-	}
-</script>
 
 <header>
 	<a href="main.php"><img id="logo" class="erreur_image" src="im.gif"></a>
@@ -42,5 +31,17 @@ if (isset($_SESSION['idUtilisateur'])) {
 </form>
 
 <button id="gotop"><a href="#top">&#8743</a></button>
+
+<script type="text/javascript">
+	function cacher(id) {
+		var objet=document.getElementById(id);
+		objet.setAttribute("display", "none");
+	}
+
+	function montrer(id) {
+		var objet = document.getElementById(id);
+		objet.setAttribute("display", "default");
+	}
+</script>
 
 

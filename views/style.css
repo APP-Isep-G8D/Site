@@ -68,11 +68,39 @@ header{
     width: 5em;
 }
 
-#loupe {
+.loupe {
 	width: 1.5em;
-	vertical-align: middle;
+	height:1.5em;
+
 }
 
+.loupe:hover {
+	transform: scale(1.7);
+	transition-duration:.7s;
+}
+
+
+#recherche {
+	vertical-align: middle;
+	display: none;
+}
+
+#texteRecherche {
+	background-color:#64a4ed;
+	color:white;
+	width: 40em;
+}
+
+#texteRecherche::placeholder {
+	color:white;
+}
+
+#bouttonloupe {
+	border: none;
+	vertical-align: middle;
+	background-color: #64a4ed;
+	display: default;
+}
 
 #login{
 	border-radius: 20% / 50% ;

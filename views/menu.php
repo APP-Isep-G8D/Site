@@ -14,11 +14,13 @@ if (isset($_SESSION['idUtilisateur'])) {
 
 <script>
 	function cacher(id) {
-		document.getElementById(id).setAttribute("display", "none");
+		var objet=document.getElementById(id);
+		objet.setAttribute("display", "none");
 	}
 
 	function montrer(id) {
-		document.getElementById(id).setAttribute("display", "default");
+		var objet = document.getElementById(id);
+		objet.setAttribute("display", "default");
 	}
 </script>
 

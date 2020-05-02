@@ -930,32 +930,9 @@ p {
 
 #mailPatiente {
 	display: flex;
-	-webkit-animation: slide-right 0.5s both;
-	        animation: slide-right 0.5s both;
+	justify-content: center;
     
 }
-
-@-webkit-keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(35%);
-            transform: translateX(35%);
-  }
-}
-@keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(35%);
-            transform: translateX(35%);
-  }
-}
-
 
 .groupe_mail{
 	justify-content: center;

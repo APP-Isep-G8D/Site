@@ -19,7 +19,7 @@ if (isset($_SESSION['idUtilisateur'])) {
 	<a class="header2" href="Professionnel.php">Professionnels</a>
 	<a class="header2" href="NousContacter.php">Nous contacter</a>
 	<a class="header2" href="faq.php">FAQ</a>
-	<button id="bouttonloupe" onclick="cacher('bouttonloupe'), montrer('recherche')"> 
+	<button id="bouttonloupe" onclick="cacher('bouttonloupe'); montrer('recherche')"> 
 		<img class="loupe" src="loupe.png"> 
 	</button>
 	<a class="header3" href="login.php"><?php echo $loginMsg; ?></a>

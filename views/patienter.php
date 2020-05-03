@@ -12,7 +12,8 @@
 
 <body>
     <?php require_once "menu.php";
-    header("Refresh: 4;URL=main.php");
+    /*header("Refresh: 4;URL=main.php");
+    */
     ?>
 
     <div class="mailEnvoye"> <br>
@@ -21,13 +22,28 @@
         </div>
         <br>
         <br>
-        <br>
         <div id="erreur"> Le Mail a été envoyé </div>
-        <br>
         <hr class="trait2">
         <br>
         <br>
-        <p style="color: orange; font-size:medium">Vous allez être redirigé dans quelques secondes</p>
+        <p style="color: #a51a4f; font-size: large">Vous allez être redirigé dans <span id="compteur">10</span> <span id="secondes">secondes</span>.</p>
+        <script type="text/javascript">
+            function decompte() {
+                var i = document.getElementById('compteur');
+                let seconde = document.getElementById('secondes');
+                if (parseInt(i.innerHTML) <= 0) {
+                    location.href = 'main.php';
+                    i.innerHTML = parseInt(i.innerHTML) + 1;
+                }
+                i.innerHTML = parseInt(i.innerHTML) - 1;
+                if (parseInt(i.innerHTML) <= 1) {
+                    seconde.innerHTML = 'seconde';
+                }
+            }
+            setInterval(function() {
+                decompte();
+            }, 1000);
+        </script>
         <br>
         <div><a class="erreur_boutonv" id="erreur_boutonv" href="main.php" .html> <b>Revenir à l'Accueil</b></a></div>
         <br>

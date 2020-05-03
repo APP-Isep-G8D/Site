@@ -5,6 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title>IOTnov</title>
   <link rel="stylesheet" href="LoginStyle.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
   <style>
     html {
       overflow: hidden;
@@ -88,37 +89,52 @@
   ?>
 
 
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
+    <br><br>
 
-  <form id="connexion" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <div class="form_wrapper">
+      
+    <div id="titre"> Connexion </div>
 
-    <div id="titre"> Connexion </div><label for="mail"></label>
-    
-    <div id="form_wrapper">
-          <h1>Login</h1>
               <label for="mail"></label>
                 <div class="input_container">
                     <i class="fas fa-envelope"></i>
-                    <input placeholder="Email" type="text" name="email" id="field_email" class='input_field'>
+                    <input type="text" name="email">
+                    <span data-placeholder="Email"></span>
                     <span class="error"> <?php echo $mailErr; ?></span>
                 </div>
 
               <label for="mdp"></label>
                 <div class="input_container">
                     <i class="fas fa-lock"></i>
-                    <input  placeholder="Mot de Passe" type="password" name="motdepasse" id="field_password" class='input_field'>
+                    <input  type="password" name="motdepasse">
+                    <span data-placeholder="Mot de passe"></span>
                     <span class="error"><?php echo $mdpErr; ?> </span>
                 </div>
-                
+              <br>
               <label for="sign"></label>
-                    <input type="submit" value="Se connecter" id='input_submit' class='submit_field'>
+                    <input type="submit" value="Se connecter" class='logbtn'>
                     <span class="result"><?php echo $resultat; ?> </span>
+              <br><br>
               <span>Forgot <a href="#"> Username / Password ?</a></span>
-                
+           
     </div>
-
   </form>
-<br><br><br><br><br><br>
+  
+  <script type="text/javascript">
+  
+  $(".input_container input").on("focus",function(){
+    $(this).addClass("focus");
+  });
+
+  $(".input_container input").on("blur",function(){
+    if($(this).val() == "")
+    $(this).removeClass("focus");
+  });
+
+  </script>
+
 </body>
 
 <?php require_once "footer.php"; ?>

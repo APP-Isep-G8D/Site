@@ -458,7 +458,7 @@ p {
   }
    
   input:focus {
-	background: #eaeaea;
+	background: none;
   }
    
   input, textarea {

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title>IOTnov</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="LoginStyle.css">
   <style>
     html {
       overflow: hidden;
@@ -93,27 +93,32 @@
   <form id="connexion" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
     <div id="titre"> Connexion </div><label for="mail"></label>
-    <br>
-    <input type="text" id="mail" name="email" required minlength="1" maxlength="30" size="20" placeholder="Adresse mail">
-    <span class="error">* <?php echo $mailErr; ?></span>
-    <br>
+    
+    <div id="form_wrapper">
+          <h1>Login</h1>
+              <label for="mail"></label>
+                <div class="input_container">
+                    <i class="fas fa-envelope"></i>
+                    <input placeholder="Email" type="text" name="email" id="field_email" class='input_field'>
+                    <span class="error"> <?php echo $mailErr; ?></span>
+                </div>
 
-    <label for="mdp"></label>
-    <input type="password" id="mdp" name="motdepasse" required minlength="1" maxlength="30" size="20" placeholder="Mot de passe">
-    <span class="error">*<?php echo $mdpErr; ?> </span>
-    <br>
-    <br>
-
-    <label for="sign"></label>
-
-    <input id="login" type="submit" name="submit" value="Se connecter">
-    <br><span class="result"><?php echo $resultat; ?> </span>
-
+              <label for="mdp"></label>
+                <div class="input_container">
+                    <i class="fas fa-lock"></i>
+                    <input  placeholder="Mot de Passe" type="password" name="motdepasse" id="field_password" class='input_field'>
+                    <span class="error"><?php echo $mdpErr; ?> </span>
+                </div>
+                
+              <label for="sign"></label>
+                    <input type="submit" value="Se connecter" id='input_submit' class='submit_field'>
+                    <span class="result"><?php echo $resultat; ?> </span>
+              <span>Forgot <a href="#"> Username / Password ?</a></span>
+                
+    </div>
 
   </form>
-
-  <br><br><br><br><br><br><br>
-
+<br><br><br><br><br><br>
 </body>
 
 <?php require_once "footer.php"; ?>

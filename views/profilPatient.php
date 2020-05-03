@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>IOTnov</title>
+    <title>Profil Patient</title>
     <link rel="stylesheet" href="style.css">
     <!--<script src="script.js"></script>-->
 </head>

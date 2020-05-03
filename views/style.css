@@ -805,6 +805,25 @@ p {
 	cursor:pointer;
 }
 
+#erreur_boutonv {
+	padding: 10px 30px;
+	background: green;
+	color: #FFFFFF;
+	border:2px solid transparent;
+	font-weight: bold;
+	border-radius: 11px;
+	text-decoration:none;
+	opacity: 1;
+}
+
+#erreur_boutonv:hover {
+	border-radius: 11px;
+	border:2px solid green;
+	background-color: white;
+	color:green;
+	cursor:pointer;
+}
+
 #erreur_boutono {
 	padding: 15px 45px;
 	background: orange;
@@ -912,8 +931,6 @@ p {
 /*------------------------------------------------------------------------------------*/
 
 
-
-
 /*page NOUS CONTACTER ----------------------------------------------------------------------------*/
 
 
@@ -923,6 +940,42 @@ p {
   	align-items: center;
 	padding-top: 1%;
 }
+
+.mailEnvoye {
+	display: flex;
+    flex-direction: column;
+  	
+	font-weight: bold;
+	color: #6495ED ;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+#mailPatiente {
+	display: flex;
+	justify-content: center;
+    
+}
+
+.groupe_mail{
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	vertical-align: middle;
+	align-items: center;
+	font-weight: bold;
+	color: orange;
+}
+
+.patienter_image{
+	
+	width: 185px; 
+	height: 170px;
+	transition-duration: 1.5s;
+	transition-timing-function: ease;
+	
+}
+
 
 .ReseauSociaux {
 	font-weight: bold;

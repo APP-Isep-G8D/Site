@@ -16,7 +16,8 @@
             Nous Contacter
         </div>
         <div class="mail">
-            <img src="mail.png" class="contacter_image" style="width: 140px; height: 100px;"></a>
+            <a href="envoieMail.php">
+                <img src="mail.png" class="contacter_image" style="width: 140px; height: 100px;"></a>
             <p>
                 <font size="+1">infinitemeasures.society@gmail.com</font>
             </p>

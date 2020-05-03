@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <?php require_once "menu.php"; ?>
+    <?php require_once "menu.php";
+    header("Refresh: 4;URL=main.php");
+    ?>
 
     <div class="mailEnvoye"> <br>
         <div id="mailPatiente">
@@ -19,9 +21,13 @@
         </div>
         <br>
         <br>
+        <br>
         <div id="erreur"> Le Mail a été envoyé </div>
         <br>
+        <hr class="trait2">
         <br>
+        <br>
+        <p style="color: orange; font-size:medium">Vous allez être redirigé dans quelques secondes</p>
         <br>
         <div><a class="erreur_boutonv" id="erreur_boutonv" href="main.php" .html> <b>Revenir à l'Accueil</b></a></div>
         <br>

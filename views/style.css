@@ -68,8 +68,10 @@ header{
 }
 
 .loupe {
-	width: 1.5em;
-	height:1.5em;
+	width: 2.5em;
+	height: 2.5em;
+	justify-content: center;
+	vertical-align: middle;
 
 }
 
@@ -98,7 +100,7 @@ header{
 	border: none;
 	vertical-align: middle;
 	background-color: #64a4ed;
-	display: default;
+	justify-content: center;
 }
 
 #login{

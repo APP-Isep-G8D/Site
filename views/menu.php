@@ -19,18 +19,17 @@ if (isset($_SESSION['idUtilisateur'])) {
 	<a class="header2" href="Professionnel.php">Professionnels</a>
 	<a class="header2" href="NousContacter.php">Nous contacter</a>
 	<a class="header2" href="faq.php">FAQ</a>
-	<button id="bouttonloupe" onclick="cacher('bouttonloupe'); montrer('recherche')"> 
-		<img class="loupe" src="loupe.png"> 
+	<button id="bouttonloupe" onclick="cacher('bouttonloupe'); montrer('recherche')">
+		<img class="loupe" src="loupe4.png">
 	</button>
 	<a class="header3" href="login.php"><?php echo $loginMsg; ?></a>
 	<a class="header2" href="logout.php"><?php echo $profilconnecte; ?></a>
 </header>
 
-<form methode ="get" action="PageErreur.html" id="recherche">
-   	<p> <input type="search" id="texteRecherche" placeholder="Que recherchez-vous ?"/></p>
+<form methode="get" action="PageErreur.html" id="recherche">
+	<p> <input type="search" id="texteRecherche" placeholder="Que recherchez-vous ?" /></p>
 </form>
 
 <button id="gotop"><a href="#top">&#8743</a></button>
 
 <script type="text/javascript" src="modificationDisplay.js"></script>
-

@@ -135,12 +135,6 @@
     }
   });
 
-  document.querySelectorAll(".input_container span").forEach(coco =>
-  {
-    coco.style.zIndex=String(Number(coco.style.zIndex)-1);
-  })
-   
-
   </script>
 
 </body>

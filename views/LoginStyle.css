@@ -52,26 +52,14 @@ input:focus {
 	left: 5px;
 	color: #adadad;
 	transform: translateY(-50%);
-	z-index: 0;
 	transition: .5s;
-}
-
-.input_container span::after{
-	content: '';
-	position: relative;
-	width: 0%;
-	height: 2px;
-	background: orange;
-	transition: 0.5s;
+	pointer-events: none;
 }
 
 .focus + span::before{
 	top: -5px;
 }
 
-.focus + span::after{
-	width: 100% ;
-}
 
 .logbtn{
 	display: block;

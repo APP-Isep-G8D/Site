@@ -5,7 +5,6 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title>IOTnov</title>
   <link rel="stylesheet" href="LoginStyle.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
   <style>
     html {
       overflow: hidden;
@@ -100,7 +99,7 @@
               <label for="mail"></label>
                 <div class="input_container">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" name="email">
+                    <input type="text" name="email" >
                     <span data-placeholder="Email"></span>
                     <span class="error"> <?php echo $mailErr; ?></span>
                 </div>
@@ -124,14 +123,23 @@
   
   <script type="text/javascript">
   
-  $(".input_container input").on("focus",function(){
-    $(this).addClass("focus");
+  document.querySelectorAll(".input_container input").forEach(coco => 
+  {
+    coco.onfocus = function(){
+     coco.classList.add("focus");
+    }
+
+    coco.onblur = function(){
+     if (coco.value==="") 
+     coco.classList.remove("focus");
+    }
   });
 
-  $(".input_container input").on("blur",function(){
-    if($(this).val() == "")
-    $(this).removeClass("focus");
-  });
+  document.querySelectorAll(".input_container span").forEach(coco =>
+  {
+    coco.style.zIndex=String(Number(coco.style.zIndex)-1);
+  })
+   
 
   </script>
 

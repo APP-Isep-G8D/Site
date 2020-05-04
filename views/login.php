@@ -3,12 +3,11 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>IOTnov</title>
+  <title>Login</title>
   <link rel="stylesheet" href="LoginStyle.css">
 </head>
 
 <?php require_once "menu.php"; ?>
-
 
 <body>
   <?php
@@ -88,53 +87,48 @@
     <br><br>
 
     <div class="form_wrapper">
-      
-    <div id="titre"> Connexion </div>
 
-              <label for="mail"></label>
-                <div class="input_container">
-                    <i class="fas fa-envelope"></i>
-                    <input type="mail" name="email" >
-                    <span data-placeholder="Email"></span>
-                    <span class="error"> <?php echo $mailErr; ?></span>
-                </div>
+      <div id="titre"> Connexion </div>
 
-              <label for="mdp"></label>
-                <div class="input_container">
-                    <i class="fas fa-lock"></i>
-                    <input  type="password" name="motdepasse">
-                    <span data-placeholder="Mot de passe"></span>
-                    <span class="error"><?php echo $mdpErr; ?> </span>
-                </div>
-              <br>
-              <label for="sign"></label>
-                    <input type="submit" value="Se connecter" class='logbtn'>
-                    <span class="result"><?php echo $resultat; ?> </span>
-              <br><br>
-              <span>Forgot <a href="#"> Username / Password ?</a></span>
-           
+      <label for="mail"></label>
+      <div class="input_container">
+        <i class="fas fa-envelope"></i>
+        <input type="mail" name="email">
+        <span data-placeholder="Email"></span>
+        <span class="error"> <?php echo $mailErr; ?></span>
+      </div>
+
+      <label for="mdp"></label>
+      <div class="input_container">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="motdepasse">
+        <span data-placeholder="Mot de passe"></span>
+        <span class="error"><?php echo $mdpErr; ?> </span>
+      </div>
+      <br>
+      <label for="sign"></label>
+      <input type="submit" value="Se connecter" class='logbtn'>
+      <span class="result"><?php echo $resultat; ?> </span>
+      <br><br>
+      <span>Forgot <a href="#"> Username / Password ?</a></span>
+
     </div>
   </form>
-  
+
   <script type="text/javascript">
-  
-  document.querySelectorAll(".input_container input").forEach(coco => 
-  {
-    coco.onfocus = function(){
-     coco.classList.add("focus");
-    }
+    document.querySelectorAll(".input_container input").forEach(coco => {
+      coco.onfocus = function() {
+        coco.classList.add("focus");
+      }
 
-    coco.onblur = function(){
-     if (coco.value==="") 
-     coco.classList.remove("focus");
-    }
-  });
-
+      coco.onblur = function() {
+        if (coco.value === "")
+          coco.classList.remove("focus");
+      }
+    });
   </script>
-
+  <?php require_once "footer.php"; ?>
 </body>
-
-<?php require_once "footer.php"; ?>
 
 
 </html>

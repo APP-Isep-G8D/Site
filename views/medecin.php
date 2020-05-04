@@ -72,6 +72,7 @@ $adresse = $user->adresse;
                     <h1 id="pageadmin_titre2">
                         Mes patients :
                     </h1>
+                    <hr class="trait2">
                     <br>
                     <?php
                     $medecinRQ = $bdd->prepare("SELECT * FROM medecin WHERE idUtilisateur= ?");

@@ -12,8 +12,6 @@
 
 <body>
     <?php require_once "menu.php";
-    /*header("Refresh: 4;URL=main.php");
-    */
     ?>
 
     <div class="mailEnvoye"> <br>
@@ -26,7 +24,7 @@
         <hr class="trait2">
         <br>
         <br>
-        <p style="color: #a51a4f; font-size: large">Vous allez être redirigé dans <span id="compteur">10</span> <span id="secondes">secondes</span>.</p>
+        <p style="color: #a51a4f; font-size: large">Vous allez être redirigé dans <span id="compteur">5</span> <span id="secondes">secondes</span>.</p>
         <script type="text/javascript">
             function decompte() {
                 var i = document.getElementById('compteur');

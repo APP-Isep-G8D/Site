@@ -1453,5 +1453,18 @@ hr.trait6 {
 
 /*page Patient/profil ----------------------------------------------------------------------------*/
 
+#ConteneurPatient{
+	text-align: center;
+	color: #64a4ed;
+	font-weight: bolder;
+	font-size: xx-large;
+	background-color: rgb(211, 211, 211,0.9);
+	margin-left: 4%;
+	margin-right: 4%;
+	border-radius: 5%;
+	padding-top: 2%;
+	padding-bottom: 3%;
+
+}
 
 /*------------------------------------------------------------------------------------*/

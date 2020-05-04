@@ -78,43 +78,37 @@ $idPatient = $_GET["idP"];
                     <h1>
                         <?php echo " ", $prenom, " ", $nom ?>
                     </h1>
-                    <p>
-                        <?php echo $adresse ?>
-                    </p>
-                    <p>
-                        <?php echo $mail ?>
-                    </p>
                 </div>
-                <div id="SepConteneurCentre">
-                    <div id="infoCentreBoitier">
-                        <?php echo "<p>Liste des tests effectués :<br><br><br> </p>"; ?>
-                        <div id="listeTests">
-                            <?php
-                            $testQ = $bdd->query("SELECT * FROM test WHERE idPatient=$idPatient");
-                            while ($test = $testQ->fetch_array()) {
-                                $idTest = $test["idTest"];
-                            ?>
-                                <div id="testPreviewMed">
-                                    <br>
-                                    <img src="testIcon.png" alt="apercu image"><br>
-
-                                    <a href="test.php?idTest=<?php echo $idTest; ?>" style="font-size:16px;text-decoration:none;color:black;font-weight:bold"><?php echo "date :<br>", $test["date"] ?></a>
-                                    <a href="test.php?idTest=<?php echo $idTest; ?>" style="font-size:16px;text-decoration:none;color:black;font-weight:bold"><?php echo "resultat obtenu :<br>", $test["resultat"] ?></a>
-
-                                </div>
-                            <?php
-                            }
-                            ?>
-                        </div>
-
-                        <br>
-                        <br>
-                        <br>
-                        <div id="boxCentre1">
-                            <p style="font-size:10px;">*Pour accèder à un test, cliquez dessus</p>
-
-                            <a href="newTest.php?idP=<?php echo $_GET["idP"] ?>" id="erreur_bouton">Nouveau Test</a>
-                        </div>
+                <div style="color: white; font-weight: bold;">
+                    <?php echo $adresse ?>
+                    <?php echo $mail ?>
+                </div>
+                <br>
+                <div id="ConteneurPatient">
+                    Liste tests
+                    <hr class="trait2">
+                    <div class="listePreview">
+                        <?php
+                        $testQ = $bdd->query("SELECT * FROM test WHERE idPatient=$idPatient");
+                        while ($test = $testQ->fetch_array()) {
+                            $idTest = $test["idTest"];
+                        ?>
+                            <div class="previewTest">
+                                <a style="color: #4488f3" href="test.php?idTest=<?php echo $idTest; ?>"><?php echo $test["date"] ?></a>
+                                <br>
+                                <a href="test.php?idTest=<?php echo $idTest; ?>"><img src="testIcon.png" alt="apercu image"></a>
+                                <br>
+                                <br>
+                                <a style="color: #50b5a9" href="test.php?idTest=<?php echo $idTest; ?>">Résultats obtenus : <font color="#a51a4f"><?php echo  $test["resultat"] ?></font></a>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                    <br>
+                    <div id="boxCentre1">
+                        <p style="font-size:10px;color:green">*Pour accèder à un test, cliquez dessus</p>
+                        <a style="font-size:x-large" href=" newTest.php?idP=<?php echo $_GET["idP"] ?>" id="erreur_boutonv">Nouveau Test</a>
                     </div>
                 </div>
                 <br><br>

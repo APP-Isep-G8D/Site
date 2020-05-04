@@ -24,7 +24,7 @@
         <hr class="trait2">
         <br>
         <br>
-        <p style="color: #a51a4f; font-size: large">Vous allez être redirigé dans <span id="compteur">5</span> <span id="secondes">secondes</span>.</p>
+        <p style="color: #a51a4f; font-size: large">Vous allez être redirigé dans <span id="compteur">5</span> <span id="secondes">secondes</span></p>
         <script type="text/javascript">
             function decompte() {
                 var i = document.getElementById('compteur');

@@ -96,9 +96,9 @@ $adresse = $user->adresse;
 		</div>
 		<div id="conteneur2Admin">
 			<div id="mapAdmin">
-				<br>
-				<p style="color: white"> Bientôt : une carte interactive</p>
-
+			<br>
+			<a href="CarteApp.php" > Carte des centres
+			<br>
 			</div>
 
 		</div>

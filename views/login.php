@@ -99,7 +99,7 @@
               <label for="mail"></label>
                 <div class="input_container">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" name="email" >
+                    <input type="mail" name="email" >
                     <span data-placeholder="Email"></span>
                     <span class="error"> <?php echo $mailErr; ?></span>
                 </div>

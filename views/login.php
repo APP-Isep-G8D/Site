@@ -5,11 +5,6 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title>IOTnov</title>
   <link rel="stylesheet" href="LoginStyle.css">
-  <style>
-    html {
-      overflow: hidden;
-    }
-  </style>
 </head>
 
 <?php require_once "menu.php"; ?>

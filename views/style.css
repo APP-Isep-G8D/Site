@@ -1200,7 +1200,6 @@ hr.trait6 {
 	color:white;
 	padding-top: 1%;
 	padding-bottom: 1%;
-
 }
 
 .ancienMedecin:hover{
@@ -1209,12 +1208,37 @@ hr.trait6 {
 }
 
 .groupe_medecin{
-	justify-content: space-between;
-	display: flex;
-	vertical-align: bottom;
-	align-items: center;
-	font-weight: bold;
+	border-bottom: 2px solid white;
+	position: relative;
+	width: 85%;
+	margin: 0 0;
+}
 
+.groupe_medecin input{
+	font-size: 20px;
+	color: white;
+	border: none;
+	width: 80%;
+	outline: none;
+	background: none;
+	padding: 0 0px;
+	height: 40px;
+}
+
+.groupe_medecin span::before{
+	content: attr(data-placeholder);
+	position: absolute;
+	font-size: 23px;
+	top:50%;
+	left: 5px;
+	color: rgb(250, 200, 106);
+	transform: translateY(-10%);
+	transition: 0.5s;
+	pointer-events: none;
+}
+
+.focus + span::before{
+	top: -5px;
 }
 
 #ajoutBoitier{
@@ -1422,6 +1446,7 @@ hr.trait6 {
 	text-align: left;
 
 }
+
 #itemMed3{
 	flex:1;
 	height: fit-content;

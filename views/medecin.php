@@ -93,7 +93,7 @@ $adresse = $user->adresse;
                         $patientR = $patientRQ->get_result();
                         $patient = $patientR->fetch_array();
                         $idPatient = $row["idPatient"]
-                    ?><a class="listePatients" href="profilPatient?idP=<?php echo $row["idPatient"]; ?>" name=<?php $row["idMedecin"]; ?>><?php echo  "- ", $patient["prenom"], " ", $patient["nom"], " (numéro : ", $row["numeroSS"], ")"; ?></a>
+                    ?><a class="listePatients" href="profilPatient.php?idP=<?php echo $row["idPatient"]; ?>" name=<?php $row["idMedecin"]; ?>><?php echo  "- ", $patient["prenom"], " ", $patient["nom"], " (numéro : ", $row["numeroSS"], ")"; ?></a>
                         <br><br><?php
                             }
                                 ?>

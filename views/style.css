@@ -721,11 +721,10 @@ p {
 /*Erreur------------------------------------------------------------------------------------*/
 
 #erreur {
-        text-align: center;
-	font-size: xx-large;
+    text-align: center;
+	font-size: x-large;
 	font-family: Trebuchet MS, sans-serif;
-
-      }
+}
 
 .erreur {
 	display: flex;

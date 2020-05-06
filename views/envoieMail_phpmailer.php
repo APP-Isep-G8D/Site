@@ -38,6 +38,6 @@ function envoyerMail($objet, $message, $envoyeur)
         echo '<p style="color: Green">Votre message a bien été envoyé.</p>';
         header("Location: patienter.php");
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        echo "<p style='color: red'><span>&#9888;</span> Erreur<br><br>Votre message n'a pas pu être envoyé<br><br>{$mail->ErrorInfo}</p>";
     }
 }

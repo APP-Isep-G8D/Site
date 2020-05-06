@@ -1,3 +1,8 @@
+<?php
+include_once('envoieMail_phpmailer.php');
+
+?>
+
 <!doctype html>
 <html lang="fr">
 
@@ -24,8 +29,12 @@
             <input type="text" name="nom" required>
         </div>
         <div class="groupe_mail">
-            <label>Email</label>
+            <label>Votre Email</label>
             <input type="email" name="email" required>
+        </div>
+        <div class="groupe_mail">
+            <label>Objet du Mail</label>
+            <input type="text" name="objet" required>
         </div>
         <div class="groupe_mail">
             <label>Message</label>
@@ -40,6 +49,17 @@
     <br>
     <?php
     if (isset($_POST['message'])) {
+        $message = '<h1>Message envoyé depuis la page Contact de infinitemeasures.fr</h1>
+        <p><b>Nom : </b>' . $_POST['nom'] . '<br>
+        <b>Email : </b>' . $_POST['email'] . '<br>
+        <b>Message : </b>' . $_POST['message'] . '</p>';
+
+        if (envoyerMail($_POST['objet'], $message, $_POST['email'])) {
+            echo '<p style="color: Green">Votre message a bien été envoyé.</p>';
+            header("Location: patienter.php");
+        }
+
+        /*
         $entete  = 'MIME-Version: 1.0' . "\r\n";
         $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
         $entete .= 'From: ' . $_POST['email'] . "\r\n";
@@ -54,6 +74,7 @@
             echo '<p style="color: Green">Votre message a bien été envoyé.</p>';
             header("Location: patienter.php");
         }
+        */
     }
     ?>
 

@@ -17,17 +17,18 @@ try {
     $mail->Host = gethostbyname('smtp.gmail.com'); // Set the SMTP server to send through
     $mail->SMTPAuth = true; // Enable SMTP authentication
     $mail->Username = 'infinitemeasures.society@gmail.com'; // SMTP username
-    $mail->Password = '1@Razertyuiop'; // SMTP password
-    $mail->SMTPSecure = 'ssl'; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Password = ''; // SMTP password
+    $mail->SMTPSecure = 'tls'; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port = 587; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User'); // Add a recipient
-    $mail->addAddress('ellen@example.com'); // Name is optional
+    $mail->setFrom('chiffrer@mail.com', 'Envoyeur');
+    $mail->addAddress('infinitemeasures.society@gmail.com', 'Receveur'); // Add a recipient
+    /*
     $mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');
     $mail->addBCC('bcc@example.com');
+    */
 
     // Attachments
     //$mail->addAttachment('/var/tmp/file.tar.gz'); // Add attachments
@@ -35,8 +36,8 @@ try {
 
     // Content
     $mail->isHTML(true); // Set email format to HTML
-    $mail->Subject = 'Ceci est un test';
-    $mail->Body = 'le texte est <b>en grasr</b>';
+    $mail->Subject = 'Autre test';
+    $mail->Body = 'le texte est <b>en gras</b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();

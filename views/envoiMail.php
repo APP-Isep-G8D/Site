@@ -1,6 +1,5 @@
 <?php
 include_once('envoieMail_phpmailer.php');
-
 ?>
 
 <!doctype html>
@@ -11,8 +10,6 @@ include_once('envoieMail_phpmailer.php');
     <title>Envoyer un Mail</title>
     <link rel="stylesheet" href="style.css">
     <!--<script src="script.js"></script>-->
-
-
 </head>
 
 <body>
@@ -54,27 +51,7 @@ include_once('envoieMail_phpmailer.php');
         <b>Email : </b>' . $_POST['email'] . '<br>
         <b>Message : </b>' . $_POST['message'] . '</p>';
 
-        if (envoyerMail($_POST['objet'], $message, $_POST['email'])) {
-            echo '<p style="color: Green">Votre message a bien été envoyé.</p>';
-            header("Location: patienter.php");
-        }
-
-        /*
-        $entete  = 'MIME-Version: 1.0' . "\r\n";
-        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-        $entete .= 'From: ' . $_POST['email'] . "\r\n";
-
-        $message = '<h1>Message envoyé depuis la page Contact de infinitemeasures.fr</h1>
-        <p><b>Nom : </b>' . $_POST['nom'] . '<br>
-        <b>Email : </b>' . $_POST['email'] . '<br>
-        <b>Message : </b>' . $_POST['message'] . '</p>';
-
-        $retour = mail('infinitemeasures.society@gmail.com', 'Envoi depuis page Contact par Mail', $message, $entete);
-        if ($retour) {
-            echo '<p style="color: Green">Votre message a bien été envoyé.</p>';
-            header("Location: patienter.php");
-        }
-        */
+        envoyerMail($_POST['objet'], $message, $_POST['email']);
     }
     ?>
 

@@ -35,7 +35,8 @@ function envoyerMail($objet, $message, $envoyeur)
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients'; //Texte si non HTML
 
         $mail->send();
-        echo 'Message has been sent';
+        echo '<p style="color: Green">Votre message a bien été envoyé.</p>';
+        header("Location: patienter.php");
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }

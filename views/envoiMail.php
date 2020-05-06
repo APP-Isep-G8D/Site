@@ -35,7 +35,7 @@ include_once('envoieMail_phpmailer.php');
         </div>
         <div class="groupe_mail">
             <label>Message</label>
-            <textarea name="message" required></textarea>
+            <textarea name="message" style="width:30em; height:10em" required></textarea>
         </div>
         <div>
             <br>

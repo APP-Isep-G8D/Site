@@ -328,7 +328,7 @@ header{
 }
 .santeBox {
 	display: flex;
-	background-image:url('2241.jpg');
+	background-image:url('../Image/2241.jpg');
 	background-position: center;
 	background-size: cover;
 	padding-top: 30vh;
@@ -497,7 +497,7 @@ p {
 	min-height:80vh ;
 	display: flex;
 	flex-direction: row;
-	background-image: url("dataViz2Transparent.png");
+	background-image: url("../Image/dataViz2Transparent.png");
 	background-size: cover;
 }
 
@@ -648,7 +648,7 @@ p {
 .contactPro{
 	display: flex;
 	flex-direction: column;
-	background-image: url("2241.jpg");
+	background-image: url("../Image/2241.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	margin:0;
@@ -1120,7 +1120,7 @@ hr.trait6 {
 	min-height:80vh ;
 	display: flex;
 	flex-direction: column;
-	background-image: url("dataVizTransparent.jpg");
+	background-image: url("../Image/dataVizTransparent.jpg");
 	background-size: cover;
 	align-items: center;
 }
@@ -1413,7 +1413,7 @@ hr.trait6 {
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
-	background-image: url("dataVizTransparent.jpg");
+	background-image: url("../Image/dataVizTransparent.jpg");
 	background-size: cover;
 	align-items: center;
 	/*

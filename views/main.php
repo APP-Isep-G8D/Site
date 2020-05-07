@@ -23,7 +23,7 @@
 			<a id="decouvrir" href="Professionnel.html">Découvrir</a>
 		</div>
 		<div class="productImage">
-			<a><img src="Image/product.png"></a>
+			<a><img src="../Image/product.png"></a>
 		</div>
 	</div>
 	<div class="capteuratorMain">
@@ -33,7 +33,7 @@
 		<p>
 			Appareil connecté de mesures psychotechniques
 		</p>
-		<a href="faq.php"><img src="Image/capteur.jpeg"></a>
+		<a href="faq.php"><img src="../Image/capteur.jpeg"></a>
 	</div>
 	<div class="blueBox">
 		<br>

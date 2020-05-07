@@ -14,7 +14,7 @@
     <div id="généralité">
       <div id="titre"> Le Capteurator </div>
       <div class="description_produit"> <br>
-        <img src="Image/capteur2.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 352px; height: 335px; ">
+        <img src="../Image/capteur2.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 352px; height: 335px; ">
         <dl class="texte_image" style="text-align: right;">
           <dd>
             <font size="+3"> Une&nbsp;carte&nbsp;mère <b>surpuissante</b>
@@ -42,13 +42,13 @@
               sonores peuvent être analysées jusqu'au <b>millième</b> de
               Hertz </span></font>
         </p>
-        <img src="Image/tonalite.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
+        <img src="../Image/tonalite.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
       </div>
     </div>
     <div id="température">
       <div id="titre"> Capteur de température </div>
       <div class="description_produit"> <br>
-        <img src="Image/temperature.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
+        <img src="../Image/temperature.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
         <p class="texte_image" style="text-align: right;">
           <font size="+3">
             Petit et incassable <br>
@@ -81,13 +81,13 @@
               La prise en main est des plus simple, <b>la&nbsp;création&nbsp;et&nbsp;la&nbsp;simplification</b>
               au service de tous.</span></font>
         </p>
-        <img src="Image/frequencecardiaque.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
+        <img src="../Image/frequencecardiaque.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
       </div>
     </div>
     <div id="reactivite">
       <div id="titre"> Mesure de la réactivité </div>
       <div class="description_produit"> <br>
-        <img src="Image/reactivite.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
+        <img src="../Image/reactivite.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
         <p class="texte_image" style="text-align: right;">
           <font size="+3">
             Un afficheur, une DEL, un haut-parleur et 3 boutons pour des <b>milliers&nbsp;de&nbsp;combinaisons</b><br>

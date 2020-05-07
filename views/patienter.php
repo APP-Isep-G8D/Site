@@ -16,7 +16,7 @@
 
     <div class="mailEnvoye"> <br>
         <div id="mailPatiente">
-            <img src="Image/mailEnvoye.png" style="width: 400px; height: 200px;" class="patienter_image">
+            <img src="../Image/mailEnvoye.png" style="width: 400px; height: 200px;" class="patienter_image">
         </div>
         <br>
         <br>

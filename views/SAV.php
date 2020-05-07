@@ -19,7 +19,7 @@
             Service&nbsp;Après-Vente
         </div>
         <div class="camion_SAV">
-            <img src="Image/camionSAV.png">
+            <img src="../Image/camionSAV.png">
             <div class="texte_SAV">
                 <p>
                     <b>

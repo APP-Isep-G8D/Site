@@ -16,67 +16,67 @@
     <div class="galerie">
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
 
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
 
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
 
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
 
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
 
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
 
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
 
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
 
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
 
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
 
         <div class="image">
             <a href="testIcon.png" target="_blank">
-                <img src="Image/testIcon.png">
+                <img src="../Image/testIcon.png">
             </a>
         </div>
     </div>

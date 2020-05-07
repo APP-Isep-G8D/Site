@@ -14,7 +14,7 @@
     <div id="généralité">
       <div id="titre"> Le Capteurator </div>
       <div class="description_produit"> <br>
-        <img src="capteur.jpeg" class="image_texte_capteur" alt="image_capteur" title="Capteurator" style="width: 352px; height: 335px; ">
+        <img src="capteur2.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 352px; height: 335px; ">
         <dl class="texte_image" style="text-align: right;">
           <dd>
             <font size="+3"> Une&nbsp;carte&nbsp;mère <b>surpuissante</b>

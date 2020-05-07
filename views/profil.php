@@ -94,7 +94,7 @@ $idPatient = $patient->idPatient;
                     <div class="previewTest">
                         <a style="color: #4488f3" href="test.php?idTest=<?php echo $idTest; ?>"><?php echo $test["date"] ?></a>
                         <br>
-                        <a href="test.php?idTest=<?php echo $idTest; ?>"><img src="testIcon.png" alt="apercu image"></a>
+                        <a href="test.php?idTest=<?php echo $idTest; ?>"><img src="Image/testIcon.png" alt="apercu image"></a>
                         <br>
                         <br>
                         <a style="color: #50b5a9" href="test.php?idTest=<?php echo $idTest; ?>">Résultats obtenus : <font color="#a51a4f"><?php echo  $test["resultat"] ?></font></a>

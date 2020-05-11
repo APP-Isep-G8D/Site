@@ -1,8 +1,56 @@
+<!doctype html>
+<html lang="fr">
 
-<?php $title = 'Ajouter medecin'; ?>
-<?php ob_start(); ?>
+<head>
+    <meta charset="utf-8">
+    <title>IOTnov</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="script.js"></script>-->
+</head>
 
+<?php require_once "menu.php"; ?>
 <?php
+if (isset($_SESSION['idUtilisateur'])) {
+    $db_host = "localhost";
+    $db_user = "root";
+    $db_pass = "";
+    $db_name = "appinfo";
+    $bdd = new mysqli($db_host, $db_user, $db_pass, $db_name);
+    $value = $bdd->prepare("SELECT * FROM utilisateur WHERE idUtilisateur = ?");
+    $value->bind_param('s', $_SESSION['idUtilisateur']);
+    $value->execute();
+    $result = $value->get_result();
+    $user = $result->fetch_object();
+    if ($user->role == "administrateur") {
+    } else {
+        header("Location: login.php");
+    }
+} else {
+    // Redirect them to the login page
+    header("Location: login.php");
+}
+$db_host = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "appinfo";
+$bdd = new mysqli($db_host, $db_user, $db_pass, $db_name);
+$username = $email = "";
+
+try {
+
+    if (isset($_GET['idM'])) {
+        $first = $bdd->prepare("UPDATE medecin SET idCentre = ? WHERE idMedecin = ?");
+        $idMedecin = $_GET["idM"];
+        $idCentreT = $_GET['idC'];
+
+        $first->bind_param('ss', $idCentreT, $_GET["idM"]);
+        $first->execute();
+        header("Location: centre.php?id=" . $idCentreT);
+    }
+} catch (Exception $e) {
+    print_r($e);
+}
+
 
 $nom = "";
 $prenom = "";
@@ -12,6 +60,51 @@ $email = "";
 $password_1 = "";
 $password_2 = "";
 $errors = "";
+
+
+if (isset($_POST['enregistrerMed'])) {
+    // receive all input values from the form
+    $nom = mysqli_real_escape_string($bdd, $_POST['nom']);
+    $prenom = mysqli_real_escape_string($bdd, $_POST['prenom']);
+    $adresse = mysqli_real_escape_string($bdd, $_POST['adresse']);
+    $numeroSS = mysqli_real_escape_string($bdd, $_POST['numeroSS']);
+    $email = mysqli_real_escape_string($bdd, $_POST['email']);
+    $password_1 = mysqli_real_escape_string($bdd, $_POST['password_1']);
+    $password_2 = mysqli_real_escape_string($bdd, $_POST['password_2']);
+    if ($password_1 != $password_2) {
+        $errors = "The two passwords do not match";
+    }
+    $password_hashed_1 = password_hash($password_1, PASSWORD_DEFAULT) ;
+    // first check the database to make sure 
+    // a user does not already exist with the same username and/or email
+    $alreadyExistQ = "SELECT * FROM utilisateur WHERE mail='$email' LIMIT 1";
+    $result = mysqli_query($bdd, $alreadyExistQ);
+    $user = mysqli_fetch_assoc($result);
+
+    if ($user) { // if user exists
+        if ($user['mail'] === $email) {
+            $errors = "email already exists";
+        }
+    }
+
+    // Finally, register user if there are no errors in the form
+    if ($errors == "") {
+        $query = "INSERT INTO Utilisateur (mail,prenom,nom,adresse,role,motdepasse) VALUES('$email', '$prenom', '$nom','$adresse','medecin', '$password_hashed_1')";
+        mysqli_query($bdd, $query);
+        $Reqbdd2 = $bdd->prepare("SELECT * FROM utilisateur WHERE mail = ?");
+        $Reqbdd2->bind_param('s', $email);
+        $Reqbdd2->execute();
+        $resultReq2 = $Reqbdd2->get_result();
+        $medecin = $resultReq2->fetch_object();
+        $idUser = "";
+        $idCentre = $_GET["idC"];
+        $idUser = $medecin->idUtilisateur;
+        $query2 = "INSERT INTO medecin (idUtilisateur,idCentre,numeroSS) VALUES('$idUser', '$idCentre', '$numeroSS')";
+        mysqli_query($bdd, $query2);
+
+        header("Location: admin.php");
+    }
+}
 
 ?>
 
@@ -30,7 +123,7 @@ $errors = "";
                     </h1>
                     <br>
                     <br>
-                    <form method="post" action="index.php?action=ajoutMedecin&idC=<?php echo $_GET['idC']; ?>">
+                    <form method="post" action="ajoutMedecin.php?idC=<?php echo $_GET['idC']; ?>">
                         <div class="groupe_medecin">
                             <input type="text" name="prenom" required minlength="1" value="<?php echo $prenom; ?>">
                             <span data-placeholder="Prénom"></span>
@@ -104,27 +197,28 @@ $errors = "";
                     </h1>
                     <br>
                     <br>
-
-                    <?php 
-                        foreach($listeMedecinsSansCentre as $medecin){
-                            ?>
-                            <a href="index.php?action=ajoutMedecin&idC=<?php echo $idCentre; ?>&idU=<?php echo $medecin["idUtilisateur"]; ?>" class="ancienMedecin" name=<?php $medecin["idUtilisateur"]; ?>><?php echo "-Dr. ", $medecin["prenom"], " ", $medecin["nom"], " (", $medecin["adresse"], ")"; ?></a>                        
-                            <br><br>
-                            <?php } ?>
-                            
-                    
+                    <?php
+                    $medecinRQ = $bdd->prepare("SELECT * FROM medecin WHERE idCentre= ?");
+                    $id0 = 0;
+                    $medecinRQ->bind_param('s', $id0);
+                    $medecinRQ->execute();
+                    $medecin = $medecinRQ->get_result();
+                    while ($row = $medecin->fetch_array()) {
+                        $medecinInfoRQ = $bdd->prepare("SELECT * FROM utilisateur WHERE idUtilisateur= ?");
+                        $medecinInfoRQ->bind_param('s', $row["idUtilisateur"]);
+                        $medecinInfoRQ->execute();
+                        $medecinInfoR = $medecinInfoRQ->get_result();
+                        $medecinInfo = $medecinInfoR->fetch_array();
+                    ?><a href="ajoutMedecin.php?idC=<?php echo $_GET["idC"]; ?>&idM=<?php echo $row["idMedecin"]; ?>" class="ancienMedecin" name=<?php $row["idUtilisateur"]; ?>><?php echo "-Dr. ", $medecinInfo["prenom"], " ", $medecinInfo["nom"], " (", $medecinInfo["adresse"], ")"; ?></a>
+                        <br><br><?php
+                            }
+                                ?>
                 </div>
             </div>
             <br>
             <br>
             <div id="boxCentre1">
-            
-                <br>
-                <a href="index.php?action=centre&id=<?php echo $_GET["idC"]; ?>" id="erreur_boutonr">Retour</a>
-                <br>
-                <br>
-                <br>
-                
+                <a href="centre.php?id=<?php echo $_GET["idC"]; ?>" id="erreur_boutonr">Retour</a>
             </div>
             <br>
             <br>
@@ -143,5 +237,8 @@ $errors = "";
       }
     });
   </script>
-<?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+
+</body>
+<?php require_once "footer.php"; ?>
+
+</html>

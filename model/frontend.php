@@ -207,7 +207,7 @@ function  userFromSession($bdd)
 
 
 
-    //$value->execute();
+    $value->execute();
     $result = $value->get_result();
     $user = $result->fetch_object();
     return $user;

@@ -93,7 +93,7 @@
       <label for="mail"></label>
       <div class="input_container">
         <i class="fas fa-envelope"></i>
-        <input type="mail" name="email">
+        <input type="mail" name="email" required>
         <span data-placeholder="Email"></span>
         <span class="error"> <?php echo $mailErr; ?></span>
       </div>
@@ -110,23 +110,29 @@
       <input type="submit" value="Se connecter" class='logbtn'>
       <span class="result"><?php echo $resultat; ?> </span>
       <br><br>
-      <span>Forgot <a href="#"> Username / Password ?</a></span>
+      <span>Forgot <a href="#"> <FONT COLOR="orange"> Username / Password ? </FONT></a></span>
 
     </div>
   </form>
 
   <script type="text/javascript">
     document.querySelectorAll(".input_container input").forEach(coco => {
-      coco.onfocus = function() {
+      coco.onfocus = function() 
+      {
         coco.classList.add("focus");
+        coco.style.borderColor="rgb(250, 200, 106)";
       }
 
       coco.onblur = function() {
-        if (coco.value === "")
+        if (coco.value === ""){
           coco.classList.remove("focus");
+          coco.style.borderColor="#837a7a";
+        }
       }
     });
+
   </script>
+
   <?php require_once "footer.php"; ?>
 </body>
 

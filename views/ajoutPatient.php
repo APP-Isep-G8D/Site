@@ -130,38 +130,62 @@ if (isset($_POST['enregistrerMed'])) {
                     <br>
                     <form method="post" action="ajoutPatient.php">
                         <div class="groupe_medecin">
-                            <label>Prénom</label>
                             <input type="text" name="prenom" required minlength="1" value="<?php echo $prenom; ?>">
+                            <span data-placeholder="Prénom"></span>
                         </div>
 
+                       
+                        <br>
+
+
                         <div class="groupe_medecin">
-                            <label>Nom</label>
                             <input type="text" name="nom" required minlength="1" value="<?php echo $nom; ?>">
+                            <span data-placeholder="Nom"></span>
                         </div>
 
+                        
+                        <br>
+
+
                         <div class="groupe_medecin">
-                            <label>Adresse</label>
                             <input type="text" name="adresse" required minlength="1" value="<?php echo $adresse; ?>">
+                            <span data-placeholder="Adresse"></span>
                         </div>
 
+                        
+                        <br>
+
+
                         <div class="groupe_medecin">
-                            <label>Numéro de Sécurité Sociale</label>
                             <input type="text" name="numeroSS" required minlength="1" value="<?php echo $numeroSS; ?>">
+                            <span data-placeholder="Numéro de Sécurité Sociale"></span>
                         </div>
 
+                        
+                        <br>
+
+
                         <div class="groupe_medecin">
-                            <label>Email</label>
                             <input type="email" required minlength="1" name="email" value="<?php echo $email; ?>">
+                            <span data-placeholder="Email"></span>
                         </div>
 
+                       
+                        <br>
+
+
                         <div class="groupe_medecin">
-                            <label>Mot de passe</label>
                             <input type="password" required minlength="1" name="password_1">
+                            <span data-placeholder="Mot de passe"></span>
                         </div>
 
+                        
+                        <br>
+
+
                         <div class="groupe_medecin">
-                            <label>Confirmer Mot de passe</label>
                             <input type="password" required minlength="1" name="password_2">
+                            <span data-placeholder="Confirmer Mot de passe"></span>
                         </div>
                         <?php echo $errors; ?>
                         <br>
@@ -205,6 +229,24 @@ if (isset($_POST['enregistrerMed'])) {
             <br>
         </div>
     </div>
+
+    <script type="text/javascript">
+    document.querySelectorAll(".groupe_medecin input").forEach(coco => {
+      coco.onfocus = function() {
+        coco.classList.add("focus");
+        coco.style.borderColor="orange";
+      }
+
+      coco.onblur = function() {
+        if (coco.value === "") {
+          coco.classList.remove("focus");
+          coco.style.borderColor="white";
+        }
+      }
+    });
+    </script>
+
+
 </body>
 <?php require_once "footer.php"; ?>
 

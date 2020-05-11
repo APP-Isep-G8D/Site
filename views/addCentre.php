@@ -83,15 +83,17 @@ if (isset($_POST['enregistrerMed'])) {
                 <br>
                 <br>
                 <form method="post" action="addCentre.php">
-                    <div class="input-group" style="color: white">
-                        <label><b>Nom &nbsp&nbsp&nbsp&nbsp</b> </label>
-                        <input type="text" name="nom" required minlength="1" value="<?php echo $nom; ?>">
-                    </div>
+                <div class="groupe_medecin">
+                    <input type="text" name="nom" value="<?php echo $nom; ?>">
+                    <span data-placeholder="Nom"></span>
+                </div>
 
-                    <div class="input-group" style="color: white">
-                        <label><b>Adresse</b> </label>
-                        <input type="text" name="adresse" required minlength="1" value="<?php echo $adresse; ?>">
-                    </div>
+                <br>
+
+                <div class="groupe_medecin">
+                    <input type="text" name="adresse" value="<?php echo $adresse; ?>">
+                    <span data-placeholder="Adresse"></span>
+                </div>
 
                     <?php echo $errors; ?>
 
@@ -111,6 +113,20 @@ if (isset($_POST['enregistrerMed'])) {
 
     </div>
 
+    <script type="text/javascript">
+    document.querySelectorAll(".groupe_medecin input").forEach(coco => {
+      coco.onfocus = function() {
+        coco.classList.add("focus");
+        coco.style.borderColor="orange";
+      }
+
+      coco.onblur = function() {
+        if (coco.value === "")
+          coco.classList.remove("focus");
+          coco.style.borderColor="white";
+      }
+    });
+    </script>
 
 </body>
 <?php require_once "footer.php"; ?>

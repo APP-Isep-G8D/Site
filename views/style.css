@@ -1126,15 +1126,15 @@ hr.trait6 {
 }
 
 #pageadmin_titre1 {
-	text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white;
-	color: orange;
+	/*text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white;*/
+	color: white;
 	font-weight: bolder;
 
 }
 
 #pageadmin_titre2 {
-	text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white;
-	color: #64a4ed;
+	/*text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white;*/
+	color: white;
 	font-weight: bolder;
 
 }
@@ -1208,7 +1208,6 @@ hr.trait6 {
 }
 
 .groupe_medecin{
-	border-bottom: 2px solid white;
 	position: relative;
 	width: 85%;
 	margin: 0 0;
@@ -1218,21 +1217,27 @@ hr.trait6 {
 	font-size: 20px;
 	color: white;
 	border: none;
-	width: 80%;
+	width: 100%;
 	outline: none;
 	background: none;
-	padding: 0 0px;
+	padding-bottom: 10px;
+	padding-left: 30px;
 	height: 40px;
+	margin-left: 0;
+	border-bottom: 2px solid white;
+	border-left: 2px solid white;
+	border-radius: 0 0 0 10px;
 }
 
 .groupe_medecin span::before{
 	content: attr(data-placeholder);
 	position: absolute;
+	padding-left: 20px;
 	font-size: 23px;
-	top:50%;
-	left: 5px;
-	color: rgb(250, 200, 106);
-	transform: translateY(-10%);
+	top:40%;
+	left: 0x;
+	color: white;
+	transform: translateY(-30%);
 	transition: 0.5s;
 	pointer-events: none;
 }
@@ -1243,8 +1248,8 @@ hr.trait6 {
 
 #ajoutBoitier{
 	text-align: center;
-	text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white;
-	color: orange;
+	/*text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white;*/
+	color: white;
 	margin: 0;
 	font-weight: bolder;
 }

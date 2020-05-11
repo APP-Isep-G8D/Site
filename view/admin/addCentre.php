@@ -26,8 +26,8 @@ addCentreM();
                         <span data-placeholder="Nom"></span>
                     </div>
                     <div class="input-group" style="color: white">
-                        <label><b>Enseigne</b></label>
-                        <input type="text" name="enseigne"placeholder="Cerballiance" required minlength="1" >*
+                        <input type="text" name="enseigne"required minlength="1" >*
+                        <span data-placeholder="Enseigne"></span>
                     </div>
 
                     <div class="input-group" style="color: white">

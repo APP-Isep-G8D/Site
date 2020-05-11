@@ -31,7 +31,7 @@
     <input type="submit" value="Se connecter" class='logbtn'>
     
     <br><br>
-    <span>Forgot <a href="#"> Username / Password ?</a></span>
+    <span><a href="#"><font color = "orange"> Mot de passe </font> </a> oublié ?</span>
 
   </div>
 </form>

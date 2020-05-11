@@ -27,11 +27,9 @@ html,body{
 }
 
 .input_container {
-	border-bottom: 2px solid #837a7a;
 	position: relative;
 	margin: 0 0;
 }
-
 
 .input_container input{
 	font-size: 20px;
@@ -40,24 +38,24 @@ html,body{
 	width: 100%;
 	outline: none;
 	background: none;
-	padding: 0 0px;
+	padding-bottom: 10px;
+	padding-left: 10px;
 	height: 40px;
-}
-
-input:focus {
-	background: none;
+	margin-left: 0;
+	border-bottom: 2px solid #837a7a;
 }
 
 .input_container span::before{
 	content: attr(data-placeholder);
 	position: absolute;
-	top:50%;
+	top:30%;
 	left: 5px;
 	color: #837a7a;
 	transform: translateY(-50%);
-	transition: 0.5s;
+	transition: 0.7s;
 	pointer-events: none;
 }
+
 
 .focus + span::before{
 	top: -5px;

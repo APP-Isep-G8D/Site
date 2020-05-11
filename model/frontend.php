@@ -188,7 +188,7 @@ function dbConnect()
     try {
         $db_host = "localhost";
         $db_user = "root";
-        $db_pass = "";
+        $db_pass = "root";
         $db_name = "appinfo";
         $bdd = new mysqli($db_host, $db_user, $db_pass, $db_name);
         return $bdd;
@@ -207,7 +207,7 @@ function  userFromSession($bdd)
 
 
 
-    //$value->execute();
+    $value->execute();
     $result = $value->get_result();
     $user = $result->fetch_object();
     return $user;

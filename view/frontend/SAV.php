@@ -61,7 +61,7 @@
                         Des techniciens de maintenance disponibles <b>7j/7</b> de <b>5h à 23h</b>
                     </li>
                     <li>
-                        L'envoie et le prêt de materiels de remplacement en cas de panne.
+                        L'envoi et le prêt de materiels de remplacement en cas de panne.
                     </li>
                     <li>
                         Échange du produit, <b>sans surcoût</b> s'il est défectueux dans les 15 jours suivant l'achat.

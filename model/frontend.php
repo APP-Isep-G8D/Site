@@ -1,4 +1,5 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -42,9 +43,11 @@ function postComment($postId, $author, $comment)
 
 
 */
-function loginM(){
+
+function loginM()
+{
     try {
-        $bdd=dbConnect();
+        $bdd = dbConnect();
 
         $mail = $mdp = " ";
         $mailErr = $mdpErr = " ";
@@ -54,23 +57,17 @@ function loginM(){
             //Test de l'entrée de l'email
             if (empty($_POST["email"])) {
                 $mailErr = "Une adresse mail est demandée";
-            } 
-            else 
-            {
+            } else {
                 $mail = htmlspecialchars($_POST["email"]);
                 if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-                $mailErr = "Mauvais format d'adresse mail";
+                    $mailErr = "Mauvais format d'adresse mail";
                 }
             }
 
             //Test de l'entrée du mdp
-            if (empty($_POST["motdepasse"])) 
-            {
+            if (empty($_POST["motdepasse"])) {
                 $mdpErr = "Un mot de passe est demandée";
-            }
-
-            else 
-            {
+            } else {
                 $mdp = trim($_POST["motdepasse"]);
                 $mdp = stripslashes($_POST["motdepasse"]);
                 $mdp = htmlspecialchars($_POST["motdepasse"]);
@@ -82,58 +79,51 @@ function loginM(){
             $req->execute();
             $result = $req->get_result();
             $user = $result->fetch_object();
-            if ( isset( $user ) ){
-                if ($_POST['motdepasse'] == $user->motdepasse) 
-                {
+            if (isset($user)) {
+                if ($_POST['motdepasse'] == $user->motdepasse) {
                     $_SESSION['idUtilisateur'] = $user->idUtilisateur;
                     $resultat = "Connexion réussie";
                     header("Location: index.php?action=redirect");
-                } 
-                else 
-                {
+                } else {
                     $resultat = "email ou mot de passe incorect";
                 }
-            }
-            else{
+            } else {
                 $resultat = "email ou mot de passe incorect";
             }
         }
-} 
-catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
     }
-return $resultat;
+    return $resultat;
 }
 
 
 
-function profilRedirect(){
-    if ( isset( $_SESSION['idUtilisateur'] ) ) {
-        $bdd=dbConnect();
+function profilRedirect()
+{
+    if (isset($_SESSION['idUtilisateur'])) {
+        $bdd = dbConnect();
         $user = userFromSession($bdd);
-        if($user->role == "administrateur"){
+        if ($user->role == "administrateur") {
             header("Location: index.php?action=admin");
-        }
-        elseif($user->role == "medecin"){
+        } elseif ($user->role == "medecin") {
             header("Location: index.php?action=medecin");
-        }
-        else{
+        } else {
             header("Location: index.php?action=patient");
         }
     } else {
         // Redirect them to the login page
         header("Location: index.php?action=login");
     }
-    
 }
 
 
-function logoutUser(){
- //logout.php  
- session_start();
- session_destroy();
- header("location:main.php");
-
+function logoutUser()
+{
+    //logout.php  
+    session_start();
+    session_destroy();
+    header("location:main.php");
 }
 
 
@@ -176,59 +166,58 @@ function envoyerMail($objet, $message, $envoyeur)
     }
 }
 
-function MenuConnected(){
+function MenuConnected()
+{
     if (isset($_SESSION['idUtilisateur'])) {
         $loginMsg = "Mon profil";
-        $header="header2";
+        $header = "header2";
         $profilconnecte = "Se déconnecter";
-        return array($loginMsg,$profilconnecte,$header);
-    
-    }
-    else {
+        return array($loginMsg, $profilconnecte, $header);
+    } else {
         // Redirect them to the login page
         $loginMsg = "Se connecter";
         $profilconnecte = "";
-        $header="header3";
-        return array($loginMsg,$profilconnecte,$header);
+        $header = "header3";
+        return array($loginMsg, $profilconnecte, $header);
     }
 }
 
 
 function dbConnect()
 {
-    try
-    {
+    try {
         $db_host = "localhost";
         $db_user = "root";
-        $db_pass = "";
+        $db_pass = "root";
         $db_name = "appinfo";
         $bdd = new mysqli($db_host, $db_user, $db_pass, $db_name);
         return $bdd;
-    }
-    catch(Exception $e)
-    {
-        die('Erreur : '.$e->getMessage());
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
     }
 }
 
-function  userFromSession($bdd){
-    $bdd=dbConnect();
+function  userFromSession($bdd)
+{
+    $bdd = dbConnect();
     $value = $bdd->prepare("SELECT * FROM utilisateur WHERE idUtilisateur = ?");
     $value->bind_param('s', $_SESSION['idUtilisateur']);
-    $value->execute();
+
+
+
+
+
+    //$value->execute();
     $result = $value->get_result();
     $user = $result->fetch_object();
     return $user;
 }
 
-function isConnected(){
-    if (isset($_SESSION['idUtilisateur'])) 
-    {
-       return true;
-    }
-    else{
+function isConnected()
+{
+    if (isset($_SESSION['idUtilisateur'])) {
+        return true;
+    } else {
         return false;
     }
 }
-
-

@@ -37,7 +37,7 @@ $errors = "";
                         </div>
 
                         <br>
-                        <br>
+                        
 
 
                         <div class="groupe_medecin">
@@ -46,7 +46,7 @@ $errors = "";
                         </div>
 
                         <br>
-                        <br>
+                        
 
 
                         <div class="groupe_medecin">
@@ -55,7 +55,7 @@ $errors = "";
                         </div>
 
                         <br>
-                        <br>
+                        
 
 
                         <div class="groupe_medecin">
@@ -64,7 +64,7 @@ $errors = "";
                         </div>
 
                         <br>
-                        <br>
+                        
 
 
                         <div class="groupe_medecin">
@@ -73,7 +73,7 @@ $errors = "";
                         </div>
 
                         <br>
-                        <br>
+                      
 
 
                         <div class="groupe_medecin">
@@ -82,7 +82,7 @@ $errors = "";
                         </div>
 
                         <br>
-                        <br>
+                      
 
 
                         <div class="groupe_medecin">
@@ -131,17 +131,7 @@ $errors = "";
         </div>
     </div>
 
-    <script type="text/javascript">
-    document.querySelectorAll(".groupe_medecin input").forEach(coco => {
-      coco.onfocus = function() {
-        coco.classList.add("focus");
-      }
+    <script type="text/javascript" src="public/js/form.js"></script>
 
-      coco.onblur = function() {
-        if (coco.value === "")
-          coco.classList.remove("focus");
-      }
-    });
-  </script>
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

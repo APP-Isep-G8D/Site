@@ -30,38 +30,38 @@ $errors = "";
                 <br>
                 <form method="post" action="index.php?action=ajoutPatient">
                     <div class="groupe_medecin">
-                        <label>Prénom</label>
                         <input type="text" name="prenom" required minlength="1" value="<?php echo $prenom; ?>">
+                        <span data-placeholder="Prénom"></span>
                     </div>
 
                     <div class="groupe_medecin">
-                        <label>Nom</label>
                         <input type="text" name="nom" required minlength="1" value="<?php echo $nom; ?>">
+                        <span data-placeholder="Nom"></span>
                     </div>
 
                     <div class="groupe_medecin">
-                        <label>Adresse</label>
                         <input type="text" name="adresse" required minlength="1" value="<?php echo $adresse; ?>">
+                        <span data-placeholder="Adresse"></span>
                     </div>
 
                     <div class="groupe_medecin">
-                        <label>Numéro de Sécurité Sociale</label>
                         <input type="text" name="numeroSS" required minlength="1" value="<?php echo $numeroSS; ?>">
+                        <span data-placeholder="Numéro de sécurité sociale"></span>
                     </div>
 
                     <div class="groupe_medecin">
-                        <label>Email</label>
                         <input type="email" required minlength="1" name="email" value="<?php echo $email; ?>">
+                        <span data-placeholder="Email"></span>
                     </div>
 
                     <div class="groupe_medecin">
-                        <label>Mot de passe</label>
                         <input type="password" required minlength="1" name="password_1">
+                        <span data-placeholder="Mot de passe"></span>
                     </div>
 
                     <div class="groupe_medecin">
-                        <label>Confirmer Mot de passe</label>
                         <input type="password" required minlength="1" name="password_2">
+                        <span data-placeholder="Confirmer mot de passe"></span>
                     </div>
                     <?php echo $errors; ?>
                     <br>
@@ -93,7 +93,7 @@ $errors = "";
         <br>
     </div>
 </div>
-<script type="text/javascript" src="public/js/login.js"></script>
+<script type="text/javascript" src="public/js/form.js"></script>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

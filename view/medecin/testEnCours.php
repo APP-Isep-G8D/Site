@@ -1,8 +1,8 @@
 <?php $title = 'test en cours'; ?>
 <?php ob_start(); ?>
 
-
-<div id="conteneurTest">
+<div id="conteneurTest2">
+  <div id="conteneurTest">
   <div id="chargement">
     Récupération des valeurs
   </div>
@@ -17,7 +17,7 @@
     <br>
     <br>
     <br>
-    <a onclick="location.reload()" id="erreur_boutonv">
+    <a onclick="location.reload()" id="erreur_bouton">
       Recommencer
     </a>
   </div>
@@ -30,6 +30,8 @@
 
   </div>
 </div>
+</div>
+
 
 <script type="text/javascript" src="public/js/pourcent.js"></script>
 

@@ -1569,7 +1569,7 @@ hr.trait6 {
 }
 
 .completion{
-	background-color: #64a4ed;
+	background-color: lightseagreen;
 	width: 0%;
 	justify-content: center;
 	color: white;
@@ -1579,10 +1579,18 @@ hr.trait6 {
 }
 
 #conteneurTest{
-	background-color: rgb(211, 211, 211,0.8);
+	background-color: #e6e6e6;
 	margin-left: 4%;
 	margin-right: 4%;
 	border-radius: 3em;
 	padding-top: 2%;
 	padding-bottom: 3%;
+}
+
+#conteneurTest2{
+	min-height:80vh ;
+	background-image: url("../images/dataViz2.jpg");
+	background-size: cover;
+	padding-top: 8%;
+
 }

@@ -33,7 +33,7 @@
     </div>
     <div class="paragraphe_SAV">
         <div class="titre_SAV">
-            CONTACTEZ&nbsp;NOUS
+            CONTACTEZ-NOUS
         </div>
         <hr class="new1">
         <p class="texte_paragraphe_SAV">

@@ -17,8 +17,8 @@ $numBoitier = "";
                 <h1>
                     Nouveau test :
                 </h1>
+                <br>
                 <form method="post" action="index.php?action=newTest&idP=<?php echo $_GET["idP"]?>">
-
                     <div class="input-group">
                         <label>Merci de selectionner le boitier à utiliser :</label>
                         <select name="idBoitier">
@@ -27,9 +27,10 @@ $numBoitier = "";
                             <?php } ?>
                         </select>
                     </div>
+                    <br>
                     <div class="input-group">
                         <br>
-                        <button id="erreur_boutong" type="submit" class="btn" name="enregistrerMed">Lancer le test</button>
+                        <button id="erreur_boutonv" type="submit" class="btn" name="enregistrerMed">Lancer le test</button>
                     </div>
                     <?php echo $message ?>
                 </form>

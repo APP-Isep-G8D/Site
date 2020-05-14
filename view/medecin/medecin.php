@@ -10,7 +10,9 @@
             <h1 id="pageadmin_titre1">
                 Mes informations :
             </h1>
+            <br>
             <hr class="trait3">
+            <br>
             <br>
             <p><b>
                     <font color="orange">Prénom :</font>
@@ -27,7 +29,9 @@
                 <h1 id="pageadmin_titre2">
                     Mes patients :
                 </h1>
+                <br>
                 <hr class="trait2">
+                <br>
                 <br>
                 <?php
                 

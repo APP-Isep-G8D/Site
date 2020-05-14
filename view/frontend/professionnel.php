@@ -1,4 +1,3 @@
-
 <?php $title = 'Professionnels'; ?>
 <?php ob_start(); ?>
 
@@ -7,7 +6,7 @@
 <div id="généralité">
   <div id="titre"> Le Capteurator </div>
   <div class="description_produit"> <br>
-    <img src="public/images/capteur.jpeg" class="image_texte_capteur" alt="image_capteur" title="Capteurator" style="width: 352px; height: 335px; ">
+    <img src="public/images/capteur.jpeg" class="image_texte_capteur" alt="image_capteur" title="Capteurator" >
     <dl class="texte_image" style="text-align: right;">
       <dd>
         <font size="+3"> Une&nbsp;carte&nbsp;mère <b>surpuissante</b>
@@ -24,7 +23,7 @@
   <br>
 </div>
 <div id="tonalité" style="background-color:#8FC5FF;">
-  <div id="titre"><span style="color: #980000;"> Capteur de tonalité </span></div>
+  <div id="titre"><span style="color: #980000;animation: fadein 2s; -moz-animation: fadein 2s; -webkit-animation: fadein 2s; -o-animation: fadein 2s;"> Capteur de tonalité </span></div>
   <div class="description_produit"> <br>
     <p class="texte_image" style="color: white; text-align: left;">
       <font size="+3">
@@ -35,13 +34,13 @@
           sonores peuvent être analysées jusqu'au <b>millième</b> de
           Hertz </span></font>
     </p>
-    <img src="public/images/tonalite.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
+    <img src="public/images/tonalite.png" class="image_texte" alt="image_capteur" title="Capteurator" >
   </div>
 </div>
 <div id="température">
-  <div id="titre"> Capteur de température </div>
+  <div id="titre" style="animation: fadein 2s; -moz-animation: fadein 2s; -webkit-animation: fadein 2s; -o-animation: fadein 2s;"> Capteur de température </div>
   <div class="description_produit"> <br>
-    <img src="public/images/temperature.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
+    <img src="public/images/temperature.png" class="image_texte" alt="image_capteur" title="Capteurator" >
     <p class="texte_image" style="text-align: right;">
       <font size="+3">
         Petit et incassable <br>
@@ -63,7 +62,7 @@
 <button id="gotop"><a href="#top">&#8743</a></button>
 
 <div id="cardiaque" style="background-color:#8FC5FF;">
-  <div id="titre"><span style="color: #980000;">Mesure du rythme cardiaque<br>
+  <div id="titre"><span style="color: #980000;animation: fadein 2s; -moz-animation: fadein 2s; -webkit-animation: fadein 2s; -o-animation: fadein 2s;">Mesure du rythme cardiaque<br>
     </span></div>
   <div class="description_produit"> <br>
     <p class="texte_image" style="color: white; text-align: left;">
@@ -74,13 +73,13 @@
           La prise en main est des plus simple, <b>la&nbsp;création&nbsp;et&nbsp;la&nbsp;simplification</b>
           au service de tous.</span></font>
     </p>
-    <img src="public/images/frequencecardiaque.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
+    <img src="public/images/frequencecardiaque.png" class="image_texte" alt="image_capteur" title="Capteurator" >
   </div>
 </div>
 <div id="reactivite">
-  <div id="titre"> Mesure de la réactivité </div>
+  <div id="titre" style="animation: fadein 2s; -moz-animation: fadein 2s; -webkit-animation: fadein 2s; -o-animation: fadein 2s;"> Mesure de la réactivité </div>
   <div class="description_produit"> <br>
-    <img src="public/images/reactivite.png" class="image_texte" alt="image_capteur" title="Capteurator" style="width: 269px; height: 263px;">
+    <img src="public/images/reactivite.png" class="image_texte" alt="image_capteur" title="Capteurator" >
     <p class="texte_image" style="text-align: right;">
       <font size="+3">
         Un afficheur, une DEL, un haut-parleur et 3 boutons pour des <b>milliers&nbsp;de&nbsp;combinaisons</b><br>

@@ -22,12 +22,7 @@
 
   <div id="erreur"> 
     La page que vous demandez est introuvable. 
-  </div>
-
-  
-    
- 
-  
+  </div> 
   <div>
     <br>
     

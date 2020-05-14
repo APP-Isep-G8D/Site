@@ -1556,4 +1556,19 @@ hr.trait6 {
 /*------------------------------------------------------------------------------------*/
 
 
+#progressBarre {
+	width:60em;
+	padding:2px;
+	background-color:white;
+	border:1px solid black;
+	text-align:center
+	
+}
 
+#chargement {
+	font-size: xx-large;
+	font-weight: bold;
+	padding-bottom: 3%;
+	color: orange;
+	
+}

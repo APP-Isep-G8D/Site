@@ -1592,5 +1592,22 @@ hr.trait6 {
 	background-image: url("../images/dataViz2.jpg");
 	background-size: cover;
 	padding-top: 8%;
+	padding-bottom: 5%;
 
+}
+
+#recommencer_test {
+	justify-content: center;
+	padding-top: 4%;
+	padding-bottom: 4%;
+}
+
+#recommencer_test img{
+	width: 5em;
+	height: 5em;
+	transition-duration: 1s;
+}
+
+#recommencer_test img:hover{
+	transform: rotate(720deg) scale(1.2);	
 }

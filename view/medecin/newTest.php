@@ -30,7 +30,12 @@ $numBoitier = "";
                     <br>
                     <div class="input-group">
                         <br>
-                        <button id="erreur_boutonv" type="submit" class="btn" name="enregistrerMed">Lancer le test</button>
+                        <a href="index.php?action=testEnCours" id="erreur_boutonv" type="submit" class="btn" name="enregistrerMed">Lancer le test</a>
+                    </div>
+                    <br>
+                    <br>
+                    <div id="boxCentre1">
+                        <a href="index.php?action=medecin" id="erreur_boutonr">Retour</a>
                     </div>
                     <?php echo $message ?>
                 </form>

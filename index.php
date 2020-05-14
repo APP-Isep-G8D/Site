@@ -93,6 +93,9 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'ajoutPatient') {
         ajoutPatient();
     }
+    elseif ($_GET['action'] == 'testEnCours') {
+        testEnCours();
+    }
     
     else{
         error();

@@ -74,3 +74,15 @@ function ajoutPatient(){
     }
 
 }
+
+function testEnCours(){
+    if(isMedecin()){
+        $bdd=dbConnect();
+        $user=userFromSession($bdd);
+        $medecin=getMedecinById($user->idUtilisateur,$bdd);
+        require("view/medecin/testEnCours.php");
+    }
+    else{
+        redirect();
+    }
+}

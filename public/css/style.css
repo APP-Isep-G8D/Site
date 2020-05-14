@@ -1566,4 +1566,11 @@ hr.trait6 {
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
 }
 
+.bar .completion {
+    position: relative;
+    font-size: 1em;
+    background: tomato;
+    height: 1em;
+    border-radius: 0.5em;
+}
 

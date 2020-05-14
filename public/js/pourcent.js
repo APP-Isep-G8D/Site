@@ -1,23 +1,20 @@
-var maxBarre = 1000;
-var completion = 0;
-var progressBarre;
-var intervalId;
-
-var initialisation = function () {
-    progressBarre = document.getElementById("progressBarre");
-    progressBarre.value = completion;
-    progressBarre.max = maxBarre;
-}
-
-var displayBarre = function () {
-    completion++;
-    if (completion > maxBarre) {
-        clearInterval(intervalId);
+function move() {
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width = width + 0.2;
+            elem.style.width = width + '%';
+            elem.innerHTML = Math.round(width) + '%';
+        }
     }
-    progressBarre.value = completion;
 }
 
 window.onload = function () {
-    initialisation();
-    intervalId = setInterval(displayBarre, 10);
+    //intervalId = setInterval(this.move, 1000);
+    //this.move();
+    this.setTimeout(this.move,1500)
 }

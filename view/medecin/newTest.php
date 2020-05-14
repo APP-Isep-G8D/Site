@@ -10,7 +10,6 @@ $numBoitier = "";
 
 ?>
 
-
     <div id="conteneurAddMed">
         <div id="itemMed">
             <div id="itemMed2" style="text-align:center;">

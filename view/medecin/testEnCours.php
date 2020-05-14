@@ -2,10 +2,10 @@
 <?php ob_start(); ?>
 
 <div class="chargement">
-  <div class="complétion"  style="width: 50%" data-perc="50%">
-
-  </div>
+ 
 </div>
+
+<script type="text/javascript" src="public/js/pourcent.js"></script>
 
 <?php $content = ob_get_clean(); ?>
 

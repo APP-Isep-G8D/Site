@@ -82,9 +82,9 @@ $errors = "";
                 </h1>
                 <br><br>
                 <?php
-                foreach ($listePatients as $patient){ ?>
-                <a href="index.php?action=ajoutPatient&idP=<?php echo $patient["idPatient"]; ?>&idM=<?php echo $patient["idMedecin"]; ?>" style="text-decoration:none;color:black;font-weight:bold;" name=<?php $patient["idUtilisateur"]; ?>><?php echo "", $patient["prenom"], " ", $patient["nom"], " (", $patient["adresse"], ")"; ?></a>
-                <br><br><?php } ?>
+                foreach ($listePatients as $patient) { ?>
+                    <a href="index.php?action=ajoutPatient&idP=<?php echo $patient["idPatient"]; ?>&idM=<?php echo $patient["idMedecin"]; ?>" style="text-decoration:none;color:black;font-weight:bold;" name=<?php $patient["idUtilisateur"]; ?>><?php echo "", $patient["prenom"], " ", $patient["nom"], " (", $patient["adresse"], ")"; ?></a>
+                    <br><br><?php } ?>
             </div>
         </div>
         <br>

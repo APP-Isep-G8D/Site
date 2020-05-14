@@ -9,7 +9,7 @@
         <?= htmlspecialchars($post['title']) ?>
         <em>le <?= $post['creation_date_fr'] ?></em>
     </h3>
-    
+
     <p>
         <?= nl2br(htmlspecialchars($post['content'])) ?>
     </p>
@@ -32,8 +32,7 @@
 </form>
 
 <?php
-while ($comment = $comments->fetch())
-{
+while ($comment = $comments->fetch()) {
 ?>
     <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
     <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>

@@ -6,7 +6,7 @@
 $id = $centre->numero;
 $nom = $centre->nom;
 $adresse = $centre->adresse;
-$region=$centre->region;
+$region = $centre->region;
 ?>
 
 
@@ -27,11 +27,11 @@ $region=$centre->region;
             <div id="SepConteneurCentre">
                 <div id="infoCentreBoitier">
                     <p>Liste des boitiers utilisés : </p>
-                    
+
                     <hr class="trait5">
                     <br>
                     <br>
-                    
+
                     <?php foreach ($listeBoitiers as $boitier) { ?>
                         <a class="verifBoitier" href="index.php?action=verifDelBoitier&idB=<?php echo $boitier["idBoitier"]; ?>"><?php echo "Id boitier: #", $boitier["idBoitier"], "<br>", "<br>" ?></a>
                     <?php } ?>
@@ -41,13 +41,13 @@ $region=$centre->region;
                         <br>
                         <a href="index.php?action=ajoutBoitier&idC=<?php echo $_GET["id"] ?>" id="erreur_bouton">Ajouter un boitier</a>
                     </div>
-                    
+
                 </div>
                 <hr class="trait4">
 
                 <div id="infoCentreMedecins">
                     <p>Liste des médecins : </p>
-                    
+
                     <hr class="trait5">
                     <br>
                     <br>

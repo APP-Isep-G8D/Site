@@ -1,4 +1,6 @@
 function move() {
+
+
     var elem = document.getElementById("myBar");
     var width = 1;
     var id = setInterval(frame, 10);
@@ -14,7 +16,5 @@ function move() {
 }
 
 window.onload = function () {
-    //intervalId = setInterval(this.move, 1000);
-    //this.move();
-    this.setTimeout(this.move,1500)
+    this.setTimeout(this.move, 1500)
 }

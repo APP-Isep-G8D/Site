@@ -6,7 +6,7 @@ $username = $email = "";
 $adresse = "";
 $nom = "";
 $numBoitier = "";
-$errors="";
+$errors = "";
 addCentreM();
 ?>
 
@@ -22,11 +22,11 @@ addCentreM();
                 <br>
                 <form method="post" action="index.php?action=ajoutCentre">
                     <div class="input-group" style="color: white">
-                        <input type="text" name="nom" required minlength="1" >*
+                        <input type="text" name="nom" required minlength="1">*
                         <span data-placeholder="Nom"></span>
                     </div>
                     <div class="input-group" style="color: white">
-                        <input type="text" name="enseigne"required minlength="1" >*
+                        <input type="text" name="enseigne" required minlength="1">*
                         <span data-placeholder="Enseigne"></span>
                     </div>
 
@@ -68,6 +68,6 @@ addCentreM();
         </div>
 
     </div>
-<?php $content = ob_get_clean(); ?>
+    <?php $content = ob_get_clean(); ?>
 
-<?php require('template.php'); ?>
+    <?php require('template.php'); ?>

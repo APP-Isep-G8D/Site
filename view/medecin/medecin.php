@@ -34,10 +34,10 @@
                 <br>
                 <br>
                 <?php
-                
+
                 foreach ($listePatients as $patient) { ?>
                     <a class="listePatients" href="index.php?action=profilPatient&idP=<?php echo $patient["idPatient"]; ?>"><?php echo  "- ", $patient["prenom"], " ", $patient["nom"], " (numéro : ", $patient["numeroSS"], ")"; ?></a>
-                <br><br><?php } ?>
+                    <br><br><?php } ?>
             </div>
 
             <div id="buttonAdminCentre">

@@ -1,4 +1,3 @@
-
 <?php $title = 'Se connecter'; ?>
 <?php ob_start(); ?>
 
@@ -29,9 +28,11 @@
     <label for="sign"></label>
     <span class="result"><?php echo $resultat ?></span>
     <input type="submit" value="Se connecter" class='logbtn'>
-    
+
     <br><br>
-    <span><a href="#"><font color = "orange"> Mot de passe </font> </a> oublié ?</span>
+    <span><a href="#">
+        <font color="orange"> Mot de passe </font>
+      </a> oublié ?</span>
 
   </div>
 </form>

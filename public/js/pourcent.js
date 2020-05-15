@@ -23,12 +23,12 @@ function va_et_vient() {
     else {
         document.getElementById("recommencer_test").style.display = 'none';
         document.getElementById("correct").style.display = 'none';
-       
+
     }
 }
 
 window.onload = function () {
     this.va_et_vient();
     this.setTimeout(this.move, 1500);
-    
+
 }

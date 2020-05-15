@@ -1616,4 +1616,9 @@ hr.trait6 {
 #correct{
 	width: 6em;
 	height: 6em;
+	transition-duration: 2s;
+}
+
+.rotation-image {
+    transform: rotate(360deg);
 }

@@ -1600,6 +1600,8 @@ hr.trait6 {
 	justify-content: center;
 	padding-top: 4%;
 	padding-bottom: 4%;
+	font-weight: bold;
+	color: deepskyblue;
 }
 
 #recommencer_test img{
@@ -1613,12 +1615,12 @@ hr.trait6 {
 	transform: rotate(720deg) scale(1.2);	
 }
 
-#correct{
+#correct {
 	width: 6em;
 	height: 6em;
-	transition-duration: 2s;
+	transform: rotate(0deg);
+	font-weight: bold;
+	color: green;
+	
 }
 
-.rotation-image {
-    transform: rotate(360deg);
-}

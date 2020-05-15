@@ -4,21 +4,28 @@
 <div id="conteneurTest2">
   <div id="conteneurTest">
     <div id="chargement">
-      Récupération des valeurs
+      Récupération des données
     </div>
 
     <div style="margin-left: 20%;margin-right: 20%;padding-bottom: 4%;">
-    <br>
+      <br>
       <div class="bordure">
         <div id="myBar" class="completion">0%</div>
       </div>
-      <img src="public/images/correct.png" id="correct">
+      <div id="correct">
+        <img src="public/images/correct.png" id="correct">
+        <br>
+        Les données ont été sauvegardées
+      </div>
+
     </div>
 
     <div id="recommencer_test">
       <a onclick="location.reload()">
         <img src="public/images/restart_button.png">
       </a>
+      <br>
+      Recommencer
     </div>
 
     <div id="retour" style="padding-top: 4%;">

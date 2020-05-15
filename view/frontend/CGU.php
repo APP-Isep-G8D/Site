@@ -6,7 +6,7 @@
 	</div>
 	<p>
 		<div id="CGU">
-			Les sociétés Infinite Mesures et IotNov déclinent toutes responsabilités en cas de blessures lors de l'utilisation des capteurs fournis dans le cadre des tests. Les valeurs des tests doivent être interprétées par des médecins et des spécialistes et sont indicatives.
+			Les sociétés Infinite Mesures et IotNov déclinent toutes responsabilités en cas de blessures lors de l'utilisation des capteurs fournis dans le cadre des tests. Les valeurs des tests doivent être interprétées par des médecins et des spécialistes, et sont indicatives.
 			<br>
 			Restez chez vous jusqu'à la fin du confinement s'il vous plaît.
 			<br>

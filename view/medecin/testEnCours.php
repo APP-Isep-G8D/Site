@@ -12,6 +12,7 @@
       <div class="bordure">
         <div id="myBar" class="completion">0%</div>
       </div>
+      <img src="public/images/correct.png" id="correct">
     </div>
 
     <div id="recommencer_test">

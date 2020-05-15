@@ -1612,3 +1612,8 @@ hr.trait6 {
 #recommencer_test img:hover{
 	transform: rotate(720deg) scale(1.2);	
 }
+
+#correct{
+	width: 6em;
+	height: 6em;
+}

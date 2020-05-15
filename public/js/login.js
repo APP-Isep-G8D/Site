@@ -8,9 +8,10 @@ document.querySelectorAll(".input_container input").forEach(coco =>
 
     coco.onblur = function() 
     {
-      if (coco.value === ""){
-      coco.classList.remove("focus");
-      coco.style.borderColor="#837a7a";
+      if (coco.value === "")
+      {
+        coco.classList.remove("focus");
+        coco.style.borderColor="#837a7a";
+      }
     }
-  }
 });

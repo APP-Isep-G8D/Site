@@ -10,7 +10,7 @@
             <img src="public/images/mail.png" class="contacter_image" style="width: 140px; height: 100px;">
         </a>
         <p>
-        <font size="+1">infinitemeasures.society@gmail.com</font>
+            <font size="+1">infinitemeasures.society@gmail.com</font>
         </p>
     </div>
 
@@ -32,7 +32,7 @@
             <p>
                 <font size="+1">Linkedin</font>
             </p>
-         </div>
+        </div>
         <div id="contacter_block">
             <a href="https://www.facebook.com/Infinite-Measures-107016680954018/"><img src="public/images/logoFacebook.png" class="contacter_image"></a>
             <p>
@@ -45,7 +45,3 @@
 <?php $content = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>
-
-
-
-

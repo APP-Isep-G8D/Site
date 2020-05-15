@@ -30,59 +30,71 @@ function addComment($postId, $author, $comment)
     }
 }
 */
-function error(){
+function error()
+{
     require('view/frontend/error.php');
 }
 
-function faq(){
+function faq()
+{
     require('view/frontend/faq.php');
 }
 
-function contactus(){
+function contactus()
+{
     require('view/frontend/nousContacter.php');
 }
 
-function professionnel(){
+function professionnel()
+{
     require('view/frontend/professionnel.php');
 }
 
-function main(){
+function main()
+{
     require('view/frontend/main.php');
 }
 
-function sav(){
+function sav()
+{
     require('view/frontend/SAV.php');
 }
-function cgu(){
+function cgu()
+{
     require('view/frontend/CGU.php');
 }
-function envoiMail(){
-    
+function envoiMail()
+{
+
     require('view/frontend/envoiMail.php');
 }
-function patienter(){
+function patienter()
+{
     require('view/frontend/patienter.php');
 }
 
-function menu(){
-    $menu=MenuConnected();
+function menu()
+{
+    $menu = MenuConnected();
     require("view/frontend/menu.php");
 }
-function logout(){
+function logout()
+{
     logoutUser();
     header("location:index.php");
 }
-function login(){
-    if(isConnected()){
+function login()
+{
+    if (isConnected()) {
 
         redirect();
-    }
-    else{
-        $resultat=loginM();
+    } else {
+        $resultat = loginM();
         require("view/frontend/login.php");
     }
 }
 
-function redirect(){
+function redirect()
+{
     profilRedirect();
 }

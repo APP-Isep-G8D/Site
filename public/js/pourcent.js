@@ -13,12 +13,6 @@ function move() {
         }
     }
 }
-
-function retourner() {
-    var img = document.getElementById("correct");
-    img.setAttribute("class", "rotation-image");
-}
-
 function va_et_vient() {
     if (document.getElementById("recommencer_test").style.display == 'none') {
         document.getElementById("recommencer_test").style.display = 'inline';

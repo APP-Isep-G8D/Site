@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title><?= $title ?></title>
-        <link href="public/css/style.css" rel="stylesheet" /> 
-        <link href="public/css/LoginStyle.css" rel="stylesheet" /> 
 
-    </head>
-        
-    <body>
-        <div id="main">
-            <div id="entete">
-                <?php menu();?>
-            </div>
+<head>
+    <meta charset="utf-8" />
+    <title><?= $title ?></title>
+    <link href="public/css/style.css" rel="stylesheet" />
+    <link href="public/css/LoginStyle.css" rel="stylesheet" />
 
-            <div id = "core">
-                <?= $content ?>
-            </div>
-            <div id="pied">
-                <?php require("view/frontend/footer.php"); ?>
-            </div>
+</head>
+
+<body>
+    <div id="main">
+        <div id="entete">
+            <?php menu(); ?>
         </div>
-    </body>
+
+        <div id="core">
+            <?= $content ?>
+        </div>
+        <div id="pied">
+            <?php require("view/frontend/footer.php"); ?>
+        </div>
+    </div>
+</body>
+
 </html>

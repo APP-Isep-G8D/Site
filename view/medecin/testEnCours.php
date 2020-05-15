@@ -7,7 +7,7 @@
       Récupération des valeurs
     </div>
 
-    <div style="margin-left: 20%;margin-right: 20%;">
+    <div style="margin-left: 20%;margin-right: 20%;padding-bottom: 4%;">
     <br>
       <div class="bordure">
         <div id="myBar" class="completion">0%</div>
@@ -20,7 +20,7 @@
       </a>
     </div>
 
-    <div id="retour">
+    <div id="retour" style="padding-top: 4%;">
       <a style="font-size:large" href="<?php echo $_SERVER['HTTP_REFERER']; ?>" id="erreur_boutonr">Retour</a>
 
     </div>

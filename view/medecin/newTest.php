@@ -17,6 +17,9 @@ $numBoitier = "";
                 Nouveau test :
             </h1>
             <br>
+            <hr class="trait3">
+            <br>
+            <br>
             <form method="post" action="index.php?action=newTest&idP=<?php echo $_GET["idP"] ?>">
                 <div class="input-group">
                     <label>Merci de selectionner le boitier à utiliser :</label>

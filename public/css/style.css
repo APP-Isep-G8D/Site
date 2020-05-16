@@ -1072,7 +1072,44 @@ p {
 	display: block;
   	align-items: center;
 	padding-top: 1%;
+	animation: translation5 1s;
+	-moz-animation: translation5 1s; /* Firefox */
+	-webkit-animation: translation5 1s; /* Safari et Chrome */
+	-o-animation: translation5 1s; /* Opera */
 }
+@keyframes translation5 {
+    from {
+		transform: translate(-100%);
+    }
+    to {
+		transform: translate(0);
+    }
+}
+@-moz-keyframes translation5 { /* sur Firefox */
+    from {
+		transform: translate(-100%);
+    }
+    to {
+		transform: translate(0);
+    }
+}
+@-webkit-keyframes translation5 { /* sur Safari et Chrome */
+    from {
+		transform: translate(-100%);
+    }
+    to {
+		transform: translate(0);
+    }
+}
+@-o-keyframes translation5 { /* sur Opera */
+    from {
+		transform: translate(-100%);
+    }
+    to {
+		transform: translate(0);
+    }
+}
+
 
 .mailEnvoye {
 	display: flex;
@@ -1129,10 +1166,47 @@ p {
 	transform: scale(1.1);
 }
 
+@keyframes translation4 {
+    from {
+		transform: translate(150%);
+    }
+    to {
+		transform: translate(0);
+    }
+}
+@-moz-keyframes translation4 { /* sur Firefox */
+    from {
+		transform: translate(150%);
+    }
+    to {
+		transform: translate(0);
+    }
+}
+@-webkit-keyframes translation4 { /* sur Safari et Chrome */
+    from {
+		transform: translate(150%);
+    }
+    to {
+		transform: translate(0);
+    }
+}
+@-o-keyframes translation4 { /* sur Opera */
+    from {
+		transform: translate(150%);
+    }
+    to {
+		transform: translate(0);
+    }
+}
+
 #contacter_block {
 	display: block;
 	width: 25%;
 	height: 120%;
+	animation: translation4 1s;
+	-moz-animation: translation4 1s; /* Firefox */
+	-webkit-animation: translation4 1s; /* Safari et Chrome */
+	-o-animation: translation4 1s; /* Opera */
 }
 
 /*------------------------------------------------------------------------------------*/

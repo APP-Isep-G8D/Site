@@ -35,7 +35,6 @@
   </div>
 </div>
 
-
 <script type="text/javascript" src="public/js/pourcent.js"></script>
 
 <?php $content = ob_get_clean(); ?>

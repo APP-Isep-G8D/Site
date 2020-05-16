@@ -1701,6 +1701,42 @@ hr.trait6 {
 	transform: rotate(0deg);
 	font-weight: bold;
 	color: green;
-	
+	animation: translation3 2s;
+	-moz-animation: translation3 2s; /* Firefox */
+	-webkit-animation: translation3 2s; /* Safari et Chrome */
+	-o-animation: translation3 2s; /* Opera */
+}
+
+@keyframes translation3 {
+    from {
+		transform: translate(100%) rotate(0deg);
+    }
+    to {
+		transform: translate(0) rotate(360deg);
+    }
+}
+@-moz-keyframes translation3 { /* sur Firefox */
+    from {
+		transform: translate(100%) rotate(0deg);
+    }
+    to {
+		transform: translate(0) rotate(360deg);
+    }
+}
+@-webkit-keyframes translation3 { /* sur Safari et Chrome */
+    from {
+		transform: translate(100%) rotate(0deg);
+    }
+    to {
+		transform: translate(0) rotate(360deg);
+    }
+}
+@-o-keyframes translation3 { /* sur Opera */
+    from {
+		transform: translate(100%) rotate(0deg);
+    }
+    to {
+		transform: translate(0) rotate(360deg);
+    }
 }
 

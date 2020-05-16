@@ -170,8 +170,8 @@ function MenuConnected()
 {
     if (isset($_SESSION['idUtilisateur'])) {
         $loginMsg = "Mon profil";
-        $header = "header2";
         $profilconnecte = "Se déconnecter";
+        $header = "header3";
         return array($loginMsg, $profilconnecte, $header);
     } else {
         // Redirect them to the login page

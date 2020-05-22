@@ -64,6 +64,12 @@ if (isset($_GET['action'])) {
         case ('ajoutCentre'):
             ajoutCentre();
             break;
+        case ('carte'):
+            carte();
+            break;
+        case ('liste'):
+            liste();
+            break;
         case ('delCentre'):
             if (isset($_GET['id']) && centreExist($_GET['id'])) {
                 delCentre($_GET["id"]);

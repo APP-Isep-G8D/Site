@@ -62,10 +62,10 @@ header{
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	animation: translation 1s;
-	-moz-animation: translation 1s; /* Firefox */
-	-webkit-animation: translation 1s; /* Safari et Chrome */
-	-o-animation: translation 1s; /* Opera */
+	animation: fadein 1s;
+	-moz-animation: fadein 1s; /* Firefox */
+	-webkit-animation: fadein 1s; /* Safari et Chrome */
+	-o-animation: fadein 1s; /* Opera */
 }
 
 #entete{
@@ -253,10 +253,10 @@ header{
 #footer{
 	height: auto;
 	width: 100%;
-	animation: translation2 1s;
-	-moz-animation: translation2 1s; /* Firefox */
-	-webkit-animation: translation2 1s; /* Safari et Chrome */
-	-o-animation: translation2 1s; /* Opera */
+	animation: fadein 1s;
+	-moz-animation: fadein 1s; /* Firefox */
+	-webkit-animation: fadein 1s; /* Safari et Chrome */
+	-o-animation: fadein 1s; /* Opera */
 }
 
 #pied{

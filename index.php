@@ -95,7 +95,7 @@ if (isset($_GET['action'])) {
         case ('testEnCours'):
             testEnCours();
             break;
-        case ('profil'):
+        case ('patient'):
             patient();
             break;
         default:

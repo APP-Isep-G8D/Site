@@ -1,4 +1,4 @@
-<?php $title = 'profil'; ?>
+<?php $title = 'patient'; ?>
 <?php ob_start(); ?>
 
 <div id="conteneurProfil">

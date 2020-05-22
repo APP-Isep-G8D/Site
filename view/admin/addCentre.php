@@ -43,13 +43,13 @@ addCentreM();
                     </div>
 
                     <div class="groupe_medecin">
-                        <input type="text" name="ville" required minlength="1">
-                        <span data-placeholder="Ville"></span>
+                        <input type="text" name="codeP" required minlength="1" onblur="verifPrenom(this)">
+                        <span data-placeholder="Code postal"></span>
                     </div>
 
                     <div class="groupe_medecin">
-                        <input type="text" name="codeP" required minlength="1">
-                        <span data-placeholder="Code postal"></span>
+                        <input type="text" name="ville" required minlength="1">
+                        <span data-placeholder="Ville"></span>
                     </div>
 
                     <div class="groupe_medecin">
@@ -78,6 +78,13 @@ addCentreM();
     </div>
 
     <script type="text/javascript" src="public/js/form.js"></script>
+    <script>
+        document.querySelectorAll(".groupe_medecin").forEach(coco =>
+        {
+            coco.style.width="95%";
+        });
+    </script>
+
 
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

@@ -15,24 +15,14 @@ document.querySelectorAll(".groupe_medecin input").forEach(coco =>
       }
     }
 });
-popo = document.querySelector(".groupe_medecin span");
-toto = getComputedElement(popo,"::before");
-toto.style.color = "orange";
 
-/*
-document.querySelectorAll(".groupe_medecin").forEach(tailleInput =>
+function verifPrenom(champ)
 {
-  tailleInput.onfocus = function() 
-  {
-    tailleInput.style.color="orange";
-  }
-
-  tailleInput.onblur = function() 
-  {
-    if (tailleInput.value === "") 
-    {
-      tailleInput.style.color="white";
-    }
-  }
-});
-*/
+   var regex = /\d{5}/;
+   if(!regex.test(champ.value))
+   {
+     document.querySelector(".groupe_medecin input").style.color="red";
+   } else {
+     document.querySelector(".groupe_medecin input").style.color="white";
+   }
+}

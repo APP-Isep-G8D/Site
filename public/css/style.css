@@ -1678,6 +1678,20 @@ hr.trait6 {
 	border-radius: 5%;
 }
 
+#retourcarte{
+	padding: 10px 30px;
+	background: #65A0FF;
+	color: #FFFFFF;
+	border-radius: 11px;
+	border:2px solid transparent;
+	text-decoration:none;
+	opacity: 1;
+}
+
+map area{
+	outline : 0;
+}
+
 /*------------------------------------------------------------------------------------*/
 
 

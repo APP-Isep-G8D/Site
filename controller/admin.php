@@ -126,3 +126,21 @@ function removeMedecin()
         redirect();
     }
 }
+function carte()
+{
+    if(isAdmin()){
+        require("view/admin/CarteApp2.php");
+    }
+    else{
+        redirect();
+    }
+}
+function liste()
+{
+    if (isAdmin()){
+        $bdd=dbConnect();
+        $user=userFromSession($bdd);
+        $region=$_GET["id"];
+        require("view/admin/liste.php");
+    }
+}

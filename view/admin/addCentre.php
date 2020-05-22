@@ -52,9 +52,24 @@ addCentreM();
                         <span data-placeholder="Code postal"></span>
                     </div>
 
-                    <div class="groupe_medecin">
-                        <input type="text" name="region" required minlength="1">
-                        <span data-placeholder="Région"></span>
+                    <div class="input-group">
+                        <label>Region</label>
+                        <select name="region">
+                        <option value="">--Veuillez choisir la région du centre--</option>
+                        <option value="Auvergne-Rhones-Alpes">Auvergne-Rhones-Alpes</option>
+                        <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
+                        <option value="Bretagne">Bretagne</option>
+                        <option value="Centre-Val-de-Loire">Centre-Val-De-Loire</option>
+                        <option value="Corse">Corse</option>
+                        <option value="Grand-Est">Grand-Est</option>
+                        <option value="Hauts-de-France">Hauts-de-France</option>
+                        <option value="Ile-de-France">Ile-de-France</option>
+                        <option value="Normandie">Normandie</option>
+                        <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
+                        <option value="Occitanie">Occitanie</option>
+                        <option value="Pays-de-la-Loire">Pays-de-la-Loire</option>
+                        <option value="Provences-Alpes-Cotes-Dazur">Provences-Alpes-Cotes-D'azur</option>                                        
+                    </select>
                     </div>
 
                     <?php echo $errors; ?>

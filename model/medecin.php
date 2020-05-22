@@ -1,22 +1,21 @@
 <?php
-function isMedecin(){
-    if(isConnected()){
-        $bdd=dbConnect();
+function isMedecin()
+{
+    if (isConnected()) {
+        $bdd = dbConnect();
         $user = userFromSession($bdd);
-        if($user->role == "medecin"){
-           return true;
-        }
-        else{
+        if ($user->role == "medecin") {
+            return true;
+        } else {
             return false;
         }
-
-    }
-    else{
+    } else {
         return false;
     }
 }
 
-function getMedecinById($id,$bdd){
+function getMedecinById($id, $bdd)
+{
     $medecinRQ = $bdd->prepare("SELECT * FROM medecin WHERE idUtilisateur= ?");
     $medecinRQ->bind_param('s', $id);
     $medecinRQ->execute();
@@ -25,36 +24,36 @@ function getMedecinById($id,$bdd){
     return $medecin;
 }
 
-function getListPatientOfMedecin($bdd,$idM,$idCentre){
-    $ListePatient=array();
+function getListPatientOfMedecin($bdd, $idM, $idCentre)
+{
+    $ListePatient = array();
     $patients = $bdd->prepare("SELECT * FROM patient WHERE idMedecin= ? AND idCentre= ?");
-    $patients->bind_param('ss',$idM,$idCentre);
+    $patients->bind_param('ss', $idM, $idCentre);
     $patients->execute();
     $medecinR = $patients->get_result();
-    
+
     while ($row = $medecinR->fetch_array()) {
         $patientRQ = $bdd->prepare("SELECT * FROM utilisateur WHERE idUtilisateur= ?");
         $patientRQ->bind_param('s', $row["idUtilisateur"]);
         $patientRQ->execute();
         $patientR = $patientRQ->get_result();
         $patient = $patientR->fetch_array();
-        $patient["idPatient"]=$row["idPatient"];
-        $patient["idMedecin"]=$row["idMedecin"];
-        $patient["numeroSS"]=$row["numeroSS"];
-        array_push($ListePatient,$patient);
+        $patient["idPatient"] = $row["idPatient"];
+        $patient["idMedecin"] = $row["idMedecin"];
+        $patient["numeroSS"] = $row["numeroSS"];
+        array_push($ListePatient, $patient);
     }
     return $ListePatient;
-    
-
 }
 
-function getUserByIdP($bdd){
+function getUserByIdP($bdd)
+{
     $value = $bdd->prepare("SELECT * FROM patient WHERE idPatient = ?");
     $value->bind_param('s', $_GET["idP"]);
     $value->execute();
     $result = $value->get_result();
     $patient = $result->fetch_array();
-    
+
     $value2 = $bdd->prepare("SELECT * FROM utilisateur WHERE idUtilisateur = ?");
     $value2->bind_param('s', $patient["idUtilisateur"]);
     $value2->execute();
@@ -62,8 +61,9 @@ function getUserByIdP($bdd){
     $patientInfo = $result2->fetch_array();
 }
 
-function getListTests($bdd){
-    $listeTests=array();
+function getListTests($bdd)
+{
+    $listeTests = array();
     $tests = $bdd->prepare("SELECT * FROM test WHERE idPatient=?");
     $tests->bind_param('s', $_GET["idP"]);
     $tests->execute();
@@ -71,21 +71,22 @@ function getListTests($bdd){
 
 
     while ($test = $testR->fetch_array()) {
-        array_push($listeTests,$test);
+        array_push($listeTests, $test);
     }
     return $listeTests;
 }
-function verifyAcessTest($bdd,$user){
+function verifyAcessTest($bdd, $user)
+{
     if (isset($_SESSION['idUtilisateur'])) {
-       
-    
-    
+
+
+
         $value = $bdd->prepare("SELECT * FROM medecin WHERE idUtilisateur = ?");
         $value->bind_param('s', $user->idUtilisateur);
         $value->execute();
         $result = $value->get_result();
         $medecin = $result->fetch_object();
-    /*
+        /*
         $value = $bdd->prepare("SELECT * FROM patient WHERE idUtilisateur = ?");
         $value->bind_param('s', $user->idUtilisateur);
         $value->execute();
@@ -98,15 +99,14 @@ function verifyAcessTest($bdd,$user){
         $value->execute();
         $result = $value->get_result();
         $test = $result->fetch_array();
-    
 
-    
+
+
         if ($user->role == "medecin" && $test["idMedecin"] == $medecin->idMedecin) {
             return true;
-        } 
+        }
         /*elseif ($user->role == "patient" && $test["idPatient"] == $patient->idPatient) {
-        } */
-        else {
+        } */ else {
             return false;
         }
     } else {
@@ -115,8 +115,9 @@ function verifyAcessTest($bdd,$user){
     }
 }
 
-function getTestResults($bdd){
-    $testResults=array();
+function getTestResults($bdd)
+{
+    $testResults = array();
     $idTest = $_GET["idTest"];
 
 
@@ -132,60 +133,62 @@ function getTestResults($bdd){
     $mesuresR = $mesuresQ->get_result();
     $mesures = $mesuresR->fetch_array();
 
-    array_push($testResults,$mesures);
-    array_push($testResults,$test);
+    array_push($testResults, $mesures);
+    array_push($testResults, $test);
     return $testResults;
-
 }
 
 
 
 
-function newTestM($bdd,$medecin){
+function newTestM($bdd, $medecin)
+{
     if (isset($_POST['idBoitier'])) {
         // receive all input values from the form
-        
+
         $idBoitier = $_POST["idBoitier"];
         $date = date("Y-m-d");                     // 2001-03-10(le format DATE de MySQL)
         $idP = $_GET["idP"];
         $idMedecin = $medecin["idMedecin"];
-        
+
         $query = "INSERT INTO test (date,idPatient,idMedecin) VALUES('$date', '$idP','$idMedecin')";
         mysqli_query($bdd, $query);
-        $idTest=$bdd->insert_id; // Cette ligne récupère le dernier id généré automatiquement ( celui du nouveau test médical)
+        $idTest = $bdd->insert_id; // Cette ligne récupère le dernier id généré automatiquement ( celui du nouveau test médical)
         $value = $bdd->prepare("SELECT * FROM test WHERE idTest = ?");
         $value->bind_param('s', $idTest);
         $value->execute();
         $result = $value->get_result();
         $testResult = $result->fetch_array();
-    
+
         $idTest = $testResult["idTest"];
-    
+
         $fq = $temp = $audio = 100;
         $reactivite = 100;
         $query = "INSERT INTO mesure (idTest,fq,temp,audio,reactivite) VALUES($idTest, $fq,$temp,$audio,$reactivite)";
         mysqli_query($bdd, $query);
-    
+
         header("Location: index.php?action=profilPatient&idP=" . $idP);
     }
 }
 
-function getListBoitier($bdd,$medecin){
+function getListBoitier($bdd, $medecin)
+{
     $idCentre = $medecin["idCentre"];
     $listeBoitiers = array();
     $value = $bdd->prepare("SELECT * FROM boitier WHERE idCentre = ?");
     $value->bind_param('s', $idCentre);
     $value->execute();
     $result = $value->get_result();
-    
-    while ($listBoitier = $result->fetch_array()){
-        array_push($listeBoitiers,$listBoitier["idBoitier"]);
+
+    while ($listBoitier = $result->fetch_array()) {
+        array_push($listeBoitiers, $listBoitier["idBoitier"]);
     }
     return $listeBoitiers;
 }
 
-function addPatient($medecin){
-    $bdd=dbConnect();
+function addPatient($medecin)
+{
+    $bdd = dbConnect();
     $username = $email = "";
 
     try {
@@ -249,9 +252,9 @@ function addPatient($medecin){
             $resultReq2 = $Reqbdd2->get_result();
             $patient = $resultReq2->fetch_object();
             $idUser = "";
-            
+
             $idUser = $patient->idUtilisateur;
-            $idMedecin=$medecin["idMedecin"];
+            $idMedecin = $medecin["idMedecin"];
             $idCentre = $medecin["idCentre"];
             $query2 = "INSERT INTO patient (idUtilisateur,idCentre,numeroSS,idMedecin) VALUES('$idUser', '$idCentre', '$numeroSS','$idMedecin')";
             mysqli_query($bdd, $query2);
@@ -259,28 +262,28 @@ function addPatient($medecin){
             header("Location: index.php?action=medecin");
         }
     }
-
 }
 
-function getListPatientWithoutMedecin($medecin){
-    $listePatientSmedecin=array();
-    $bdd=dbConnect();
-    $id=$medecin["idCentre"];
-    $idMedecin=$medecin["idMedecin"];
+function getListPatientWithoutMedecin($medecin)
+{
+    $listePatientSmedecin = array();
+    $bdd = dbConnect();
+    $id = $medecin["idCentre"];
+    $idMedecin = $medecin["idMedecin"];
     $patientsRQ = $bdd->prepare("SELECT * FROM patient WHERE idCentre= ? AND idMedecin NOT LIKE ?");
-    $patientsRQ->bind_param('ss', $id,$idMedecin);
+    $patientsRQ->bind_param('ss', $id, $idMedecin);
     $patientsRQ->execute();
     $patients = $patientsRQ->get_result();
     while ($patient = $patients->fetch_array()) {
         $userRQ = $bdd->prepare("SELECT * FROM utilisateur WHERE idUtilisateur= ?");
-        $idUSer=$patient['idUtilisateur'];
+        $idUSer = $patient['idUtilisateur'];
         $userRQ->bind_param('s', $idUSer);
         $userRQ->execute();
         $users = $userRQ->get_result();
         $user = $users->fetch_array();
-        $user["idPatient"]=$patient["idPatient"];
-        $user["idMedecin"]=$patient["idMedecin"];
-        array_push($listePatientSmedecin,$user);
+        $user["idPatient"] = $patient["idPatient"];
+        $user["idMedecin"] = $patient["idMedecin"];
+        array_push($listePatientSmedecin, $user);
     }
-    return $listePatientSmedecin;        
+    return $listePatientSmedecin;
 }

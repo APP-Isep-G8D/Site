@@ -169,13 +169,13 @@ function envoyerMail($objet, $message, $envoyeur)
 function MenuConnected()
 {
     if (isset($_SESSION['idUtilisateur'])) {
-        $loginMsg = "Mon profil";
-        $profilconnecte = "Se déconnecter";
+        $loginMsg = "Mon profil";
+        $profilconnecte = "Se déconnecter";
         $header = "header3";
         return array($loginMsg, $profilconnecte, $header);
     } else {
         // Redirect them to the login page
-        $loginMsg = "Se connecter";
+        $loginMsg = "Se connecter";
         $profilconnecte = "";
         $header = "header3";
         return array($loginMsg, $profilconnecte, $header);

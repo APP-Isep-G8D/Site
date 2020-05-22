@@ -2,7 +2,7 @@
 	<a href="index.php?action=main"><img id="logo" class="erreur_image" src="public/images/im.gif"></a>
 	<a class="header2" href="index.php?action=main">Accueil</a>
 	<a class="header2" href="index.php?action=Professionnel">Professionnels</a>
-	<a class="header2" href="index.php?action=contactus">Nous contacter</a>
+	<a class="header2" href="index.php?action=contactus">Nous contacter</a>
 	<a class="header2" href="index.php?action=faq">FAQ</a>
 	<button id="bouttonloupe" onclick="cacher('bouttonloupe'); montrer('recherche')">
 		<img class="loupe" src="public/images/loupe4.png">

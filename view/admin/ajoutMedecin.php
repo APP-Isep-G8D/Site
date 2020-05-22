@@ -1,4 +1,3 @@
-
 <?php $title = 'Ajouter medecin'; ?>
 <?php ob_start(); ?>
 
@@ -93,26 +92,26 @@ $errors = "";
                     <br>
                     <br>
 
-                    <?php 
-                        foreach($listeMedecinsSansCentre as $medecin){
-                            ?>
-                            <a href="index.php?action=ajoutMedecin&idC=<?php echo $idCentre; ?>&idU=<?php echo $medecin["idUtilisateur"]; ?>" class="ancienMedecin" name=<?php $medecin["idUtilisateur"]; ?>><?php echo "-Dr. ", $medecin["prenom"], " ", $medecin["nom"], " (", $medecin["adresse"], ")"; ?></a>                        
-                            <br><br>
-                            <?php } ?>
-                            
-                    
+                    <?php
+                    foreach ($listeMedecinsSansCentre as $medecin) {
+                    ?>
+                        <a href="index.php?action=ajoutMedecin&idC=<?php echo $idCentre; ?>&idU=<?php echo $medecin["idUtilisateur"]; ?>" class="ancienMedecin" name=<?php $medecin["idUtilisateur"]; ?>><?php echo "-Dr. ", $medecin["prenom"], " ", $medecin["nom"], " (", $medecin["adresse"], ")"; ?></a>
+                        <br><br>
+                    <?php } ?>
+
+
                 </div>
             </div>
             <br>
             <br>
             <div id="boxCentre1">
-            
+
                 <br>
                 <a href="index.php?action=centre&id=<?php echo $_GET["idC"]; ?>" id="erreur_boutonr">Retour</a>
                 <br>
                 <br>
                 <br>
-                
+
             </div>
             <br>
             <br>
@@ -121,5 +120,5 @@ $errors = "";
 
     <script type="text/javascript" src="public/js/form.js"></script>
 
-<?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+    <?php $content = ob_get_clean(); ?>
+    <?php require('template.php'); ?>

@@ -6,7 +6,7 @@ $username = $email = "";
 $adresse = "";
 $nom = "";
 $numBoitier = "";
-$errors="";
+$errors = "";
 addCentreM();
 ?>
 

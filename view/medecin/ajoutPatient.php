@@ -18,13 +18,16 @@ $errors = "";
 
 <div id="conteneurAddMed">
     <div id="itemMed">
+        <br>
         <h1 id="pageadmin_titre1">Ajout d'un patient : </h1>
+        <br>
         <hr class="trait3">
+        <br>
         <br>
         <div id="itemMed4">
             <div id="itemMed2">
                 <h1 id="ajoutBoitier">
-                    Nouveau patient :
+                    Nouveau patient :
                 </h1>
                 <br>
                 <br>
@@ -75,13 +78,13 @@ $errors = "";
             <hr class="trait6">
             <div id="itemMed3">
                 <h1 id="ajoutBoitier">
-                    Autre(s) patient(s) du centre :
+                    Autre(s) patient(s) du centre :
                 </h1>
                 <br><br>
                 <?php
-                foreach ($listePatients as $patient){ ?>
-                <a href="index.php?action=ajoutPatient&idP=<?php echo $patient["idPatient"]; ?>&idM=<?php echo $patient["idMedecin"]; ?>" style="text-decoration:none;color:black;font-weight:bold;" name=<?php $patient["idUtilisateur"]; ?>><?php echo "", $patient["prenom"], " ", $patient["nom"], " (", $patient["adresse"], ")"; ?></a>
-                <br><br><?php } ?>
+                foreach ($listePatients as $patient) { ?>
+                    <a href="index.php?action=ajoutPatient&idP=<?php echo $patient["idPatient"]; ?>&idM=<?php echo $patient["idMedecin"]; ?>" style="text-decoration:none;color:black;font-weight:bold;" name=<?php $patient["idUtilisateur"]; ?>><?php echo "", $patient["prenom"], " ", $patient["nom"], " (", $patient["adresse"], ")"; ?></a>
+                    <br><br><?php } ?>
             </div>
         </div>
         <br>

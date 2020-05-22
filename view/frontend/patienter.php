@@ -9,7 +9,7 @@
     <br>
     <br>
     <div id="erreur"> Le Mail a été envoyé </div>
-    
+
     <hr class="trait2">
     <br>
     <br>

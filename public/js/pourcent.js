@@ -13,17 +13,12 @@ function move() {
         }
     }
 }
-
-function retourner() {
-    var img = document.getElementById("correct");
-    img.setAttribute("class", "rotation-image");
-}
-
 function va_et_vient() {
     if (document.getElementById("recommencer_test").style.display == 'none') {
         document.getElementById("recommencer_test").style.display = 'inline';
         document.getElementById("correct").style.display = 'inline';
         document.getElementById("myBar").style.display = 'none';
+        document.getElementById("correct").style.animation = 'translation3 2s';
     }
     else {
         document.getElementById("recommencer_test").style.display = 'none';

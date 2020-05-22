@@ -15,8 +15,10 @@ $adresse = $user->adresse;
 			<h1 id="pageadmin_titre1">
 				Mes informations :
 			</h1>
+			<br>
 			<hr class="trait3">
-			
+			<br>
+			<br>
 			<p><b>
 					<font color="orange">Prénom :</font>
 				</b><?php echo $prenom; ?></p>
@@ -31,7 +33,9 @@ $adresse = $user->adresse;
 			<div id="listeCentres">
 				<h1 id="pageadmin_titre2">
 					Liste des centres :
+					<br>
 				</h1>
+				<br>
 				<hr class="trait2">
 				<br>
 				<br>

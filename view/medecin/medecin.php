@@ -10,7 +10,9 @@
             <h1 id="pageadmin_titre1">
                 Mes informations :
             </h1>
+            <br>
             <hr class="trait3">
+            <br>
             <br>
             <p><b>
                     <font color="orange">Prénom :</font>
@@ -27,13 +29,15 @@
                 <h1 id="pageadmin_titre2">
                     Mes patients :
                 </h1>
+                <br>
                 <hr class="trait2">
                 <br>
+                <br>
                 <?php
-                
+
                 foreach ($listePatients as $patient) { ?>
                     <a class="listePatients" href="index.php?action=profilPatient&idP=<?php echo $patient["idPatient"]; ?>"><?php echo  "- ", $patient["prenom"], " ", $patient["nom"], " (numéro : ", $patient["numeroSS"], ")"; ?></a>
-                <br><br><?php } ?>
+                    <br><br><?php } ?>
             </div>
 
             <div id="buttonAdminCentre">

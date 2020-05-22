@@ -1,135 +1,128 @@
 <?php
 require('model/admin.php');
 
-function admin(){
-    if(isAdmin()){
-        $bdd=dbConnect();
-        $user=userFromSession($bdd);
+function admin()
+{
+    if (isAdmin()) {
+        $bdd = dbConnect();
+        $user = userFromSession($bdd);
         require("view/admin/admin.php");
-    }
-    else{
+    } else {
         redirect();
     }
 }
 
-function centre(){
-    if(isAdmin()){
-        $bdd=dbConnect();
-        $user=userFromSession($bdd);
-        $centre=getCentre($_GET["id"],$bdd);
-        $listeBoitiers=getBoitierQueryByCentre($bdd,$_GET["id"]);
-        $medecinList=getListMedecinByCentre($bdd,$_GET["id"]);
+function centre()
+{
+    if (isAdmin()) {
+        $bdd = dbConnect();
+        $user = userFromSession($bdd);
+        $centre = getCentre($_GET["id"], $bdd);
+        $listeBoitiers = getBoitierQueryByCentre($bdd, $_GET["id"]);
+        $medecinList = getListMedecinByCentre($bdd, $_GET["id"]);
         require("view/admin/centre.php");
-    }
-    else{
+    } else {
         redirect();
     }
-
 }
 
-function ajoutBoitier(){
-    if(isAdmin()){
-        $errors="";
+function ajoutBoitier()
+{
+    if (isAdmin()) {
+        $errors = "";
         addBoitier();
-        
+
         require("view/admin/ajoutBoitier.php");
-    }
-    else{
+    } else {
         redirect();
     }
-
 }
-function verifDelBoitier(){
-    if(isAdmin()){
+function verifDelBoitier()
+{
+    if (isAdmin()) {
         $listeInfoBoitier = verifDelBoiterM();
-        $boitier=$listeInfoBoitier[0];
-        $centre=$listeInfoBoitier[1];
+        $boitier = $listeInfoBoitier[0];
+        $centre = $listeInfoBoitier[1];
         require("view/admin/verifDelBoitier.php");
-    }
-    else{
+    } else {
         redirect();
     }
-
 }
-function medSupp(){
-    if(isAdmin()){
-       
-    }
-    else{
+function medSupp()
+{
+    if (isAdmin()) {
+    } else {
         redirect();
     }
 }
 
-function verifDelCentre(){
-    if(isAdmin()){
+function verifDelCentre()
+{
+    if (isAdmin()) {
         require("view/admin/verifDelCentre.php");
-    }
-    else{
+    } else {
         redirect();
     }
 }
-function ajoutCentre(){
-    if(isAdmin()){
+function ajoutCentre()
+{
+    if (isAdmin()) {
         require("view/admin/addCentre.php");
-
-    }
-    else{
+    } else {
         redirect();
     }
 }
 
-function delCentre(){
-    if(isAdmin()){
+function delCentre()
+{
+    if (isAdmin()) {
         delCentreM();
-
-    }
-    else{
+    } else {
         redirect();
     }
 }
 
-function ajoutMedecin(){
-    if(isAdmin()){
+function ajoutMedecin()
+{
+    if (isAdmin()) {
         addMedecin();
-        $id=$_GET["idC"];
-        $listeMedecinsSansCentre=getListMedecinWithoutCentre();
-        $idCentre=$id;
+        $id = $_GET["idC"];
+        $listeMedecinsSansCentre = getListMedecinWithoutCentre();
+        $idCentre = $id;
 
         require("view/admin/ajoutMedecin.php");
-
-    }
-    else{
+    } else {
         redirect();
     }
 }
 
-function removeBoitier(){
-    if(isAdmin()){
+function removeBoitier()
+{
+    if (isAdmin()) {
         removeBoitierM();
-    }
-    else{
+    } else {
         redirect();
     }
 }
 
-function verifDelMedecin(){
-    if(isAdmin()){
-        $listeInfoMedecin=verifDelMedecinM();
-        $idCentre=$listeInfoMedecin[0];
-        $user=$listeInfoMedecin[1];
+function verifDelMedecin()
+{
+    if (isAdmin()) {
+        $listeInfoMedecin = verifDelMedecinM();
+        $idCentre = $listeInfoMedecin[0];
+        $user = $listeInfoMedecin[1];
         require("view/admin/verifDelMedecin.php");
-    }
-    else{
+    } else {
         redirect();
     }
 }
 
 
-function removeMedecin(){
-    if(isAdmin()){
+function removeMedecin()
+{
+    if (isAdmin()) {
         removeMedecinM();
-    }
-    else{
+    } else {
         redirect();
     }
 }

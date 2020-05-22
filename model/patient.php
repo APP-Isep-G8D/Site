@@ -43,7 +43,7 @@ function verifyAcessPatient($bdd, $user)
     }
 }
 
-function getListTests($bdd)
+function getListTestsPatient($bdd)
 {
     $listeTests = array();
     $tests = $bdd->prepare("SELECT * FROM test WHERE idPatient=?");
@@ -57,7 +57,7 @@ function getListTests($bdd)
 }
 
 
-function getTestResults($bdd)
+function getTestResultsPatient($bdd)
 {
     $testResults = array();
     $idTest = $_GET["idTest"];

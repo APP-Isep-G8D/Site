@@ -9,8 +9,8 @@ function patient()
         $patient = getPatientbyId($user->idUtilisateur, $bdd);
         $idCentre = $patient["idCentre"];
         $idP = $patient["idPatient"];
-        $listeTests = getListTests($bdd);
-        require("view/medecin/patient.php");
+        $listeTests = getListTestsPatient($bdd);
+        require("view/patient/patient.php");
     } else {
         redirect();
     }

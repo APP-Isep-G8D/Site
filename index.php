@@ -4,6 +4,7 @@ session_start();
 require('controller/frontend.php');
 require('controller/admin.php');
 require('controller/medecin.php');
+require('controller/patient.php');
 
 if (isset($_GET['action'])) {
     switch ($_GET['action']) {

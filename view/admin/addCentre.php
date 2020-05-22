@@ -12,7 +12,7 @@ addCentreM();
 
 <body>
     <div id="conteneurAddMed">
-        <div id="itemMed">
+        <div id="formBox">
             <div id="itemMed2">
                 <h1 id="ajoutBoitier">
                     Ajouter un centre :
@@ -21,53 +21,63 @@ addCentreM();
                 <br>
                 <br>
                 <form method="post" action="index.php?action=ajoutCentre">
-                    <div class="input-group" style="color: white">
-                        <input type="text" name="nom" required minlength="1" >*
+
+                    <div class="groupe_medecin">
+                        <input type="text" name="nom" required minlength="1">
                         <span data-placeholder="Nom"></span>
                     </div>
-                    <div class="input-group" style="color: white">
-                        <input type="text" name="enseigne"required minlength="1" >*
+
+                    <div class="groupe_medecin">
+                        <input type="text" name="enseigne" required minlength="1">
                         <span data-placeholder="Enseigne"></span>
                     </div>
 
-                    <div class="input-group" style="color: white">
-                        <label><b>Numéro de rue</b> </label>
-                        <input type="text" name="numeroRue" required minlength="1" placeholder="15">*
-                    </div>
-                    <div class="input-group" style="color: white">
-                        <label><b>Rue</b> </label>
-                        <input type="text" name="rue" required minlength="1" placeholder="Rue Saint Martin">*
+                    <div class="groupe_medecin">
+                        <input type="text" name="numeroRue" required minlength="1">
+                        <span data-placeholder="Numéro de rue"></span>
                     </div>
 
-                    <div class="input-group" style="color: white">
-                        <label><b>Ville</b> </label>
-                        <input type="text" name="ville" required minlength="1" placeholder="Tours">*
+                    <div class="groupe_medecin">
+                        <input type="text" name="rue" required minlength="1">
+                        <span data-placeholder="Rue"></span>
                     </div>
-                    <div class="input-group" style="color: white">
-                        <label><b>code postal</b> </label>
-                        <input type="text" name="codeP" required minlength="1" placeholder="37000">*
+
+                    <div class="groupe_medecin">
+                        <input type="text" name="ville" required minlength="1">
+                        <span data-placeholder="Ville"></span>
                     </div>
-                    <div class="input-group" style="color: white">
-                        <label><b>Region</b> </label>
-                        <input type="text" name="region" required minlength="1" placeholder="Centre">*
+
+                    <div class="groupe_medecin">
+                        <input type="text" name="codeP" required minlength="1">
+                        <span data-placeholder="Code postal"></span>
                     </div>
+
+                    <div class="groupe_medecin">
+                        <input type="text" name="region" required minlength="1">
+                        <span data-placeholder="Région"></span>
+                    </div>
+
                     <?php echo $errors; ?>
 
                     <div class="input-group">
-                        <br>
                         <button id="erreur_boutong" type="submit" class="btn" name="enregistrerMed">Enregistrer le centre</button>
                     </div>
-
+                    <br>
+                
+                    <div id="boxCentre1">
+                        <a href="index.php?action=admin" id="erreur_boutonr">Retour</a>
+                    </div>
+                    <br>   
+                     
                 </form>
-                <br>
-                <br>
-                <div id="boxCentre1">
-                    <a href="index.php?action=admin" id="erreur_boutonr">Retour</a>
-                </div>
+               
+                
             </div>
         </div>
 
     </div>
-<?php $content = ob_get_clean(); ?>
 
+    <script type="text/javascript" src="public/js/form.js"></script>
+
+<?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

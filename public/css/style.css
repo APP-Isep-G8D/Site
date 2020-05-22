@@ -1496,7 +1496,6 @@ hr.trait6 {
 	border-radius: 5%;
 	color: white;
 	text-align: left;
-
 }
 
 #itemMed3{
@@ -1507,7 +1506,15 @@ hr.trait6 {
 	width: 50;
 }
 
-
+#formBox{
+	width: 40%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(100, 164, 237, 0.8);
+	margin: auto;
+	border-radius: 5%;
+}
 
 /*------------------------------------------------------------------------------------*/
 

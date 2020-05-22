@@ -202,11 +202,6 @@ function  userFromSession($bdd)
     $bdd = dbConnect();
     $value = $bdd->prepare("SELECT * FROM utilisateur WHERE idUtilisateur = ?");
     $value->bind_param('s', $_SESSION['idUtilisateur']);
-
-
-
-
-
     $value->execute();
     $result = $value->get_result();
     $user = $result->fetch_object();

@@ -15,6 +15,16 @@ function isPatient()
     }
 }
 
+function getPatientbyId($id, $bdd)
+{
+    $patientRQ = $bdd->prepare("SELECT * FROM patient WHERE idUtilisateur= ?");
+    $patientRQ->bind_param('s', $id);
+    $patientRQ->execute();
+    $patientR = $patientRQ->get_result();
+    $patient = $patientR->fetch_array();
+    return $patient;
+}
+
 function verifyAcessPatient($bdd, $user)
 {
     if (isset($_SESSION['idUtilisateur'])) {
@@ -78,14 +88,4 @@ function getTestResultsPatient($bdd)
     array_push($testResults, $mesures);
     array_push($testResults, $test);
     return $testResults;
-}
-
-function getPatientbyId($id, $bdd)
-{
-    $patientRQ = $bdd->prepare("SELECT * FROM patient WHERE idUtilisateur= ?");
-    $patientRQ->bind_param('s', $id);
-    $patientRQ->execute();
-    $patientR = $patientRQ->get_result();
-    $patient = $patientR->fetch_array();
-    return $patient;
 }

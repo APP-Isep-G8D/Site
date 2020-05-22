@@ -1,6 +1,13 @@
 <?php $title = 'patient'; ?>
 <?php ob_start(); ?>
 
+<?php
+$nom = $prenom = $adresse = $numeroSecu = "OUI";
+$nom = $user->nom;
+$prenom = $user->prenom;
+$adresse = $user->adresse;
+?>
+
 <div id="conteneurProfil">
     <div id="infoProfil">
         <h1 id="pageadmin_titre1">
@@ -11,16 +18,16 @@
         <br>
         <p><b>
                 <font color="orange">Prénom :</font>
-            </b><?php echo $user->$prenom; ?></p>
+            </b><?php echo $prenom; ?></p>
         <p><b>
                 <font color="orange">Nom :</font>
-            </b><?php echo $user->$nom; ?></p>
+            </b><?php echo $nom; ?></p>
         <p><b>
                 <font color="orange">Adresse :</font>
-            </b><?php echo $user->$adresse; ?></p>
+            </b><?php echo $adresse; ?></p>
         <p><b>
                 <font color="orange">Numéro de Sécurité Sociale :</font>
-            </b><?php echo $user->$numeroSecu; ?></p>
+            </b><?php echo $numeroSecu; ?></p>
     </div>
     <div id="listeTests">
         <h1 id="pageadmin_titre2">
@@ -31,14 +38,13 @@
         <br>
         <div class="listePreview">
             <?php
-            $testQ = $bdd->query("SELECT * FROM test WHERE idPatient=$idPatient");
-            while ($test = $testQ->fetch_array()) {
+            foreach ($listeTests as $test) {
                 $idTest = $test["idTest"];
             ?>
                 <div class="previewTest">
                     <a style="color: #4488f3" href="test.php?idTest=<?php echo $idTest; ?>"><?php echo $test["date"] ?></a>
                     <br>
-                    <a href="test.php?idTest=<?php echo $idTest; ?>"><img src="testIcon.png" alt="apercu image"></a>
+                    <a href="index.php?action=test&idTest=<?php echo $idTest; ?>"><img src="public/images/testIcon.png"></a>
                     <br>
                     <br>
                     <a style="color: #50b5a9" href="test.php?idTest=<?php echo $idTest; ?>">Résultats obtenus : <font color="#a51a4f"><?php echo  $test["resultat"] ?></font></a>

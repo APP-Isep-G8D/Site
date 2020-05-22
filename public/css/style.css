@@ -1423,6 +1423,12 @@ hr.trait6 {
 	margin: 0 0;
 }
 
+.groupe_medecin label{
+	font-size: 23px;
+	padding-left: 14px;
+	z-index: -2;
+}
+
 .groupe_medecin input{
 	font-size: 20px;
 	color: white;
@@ -1439,6 +1445,31 @@ hr.trait6 {
 	border-bottom: 2px solid white;
 	border-left: 2px solid white;
 	border-radius: 0 0 0 10px;
+}
+
+.groupe_medecin select{
+	font-size: 20px;
+	color: white;
+	border: none;
+	width: 100%;
+	outline: none;
+	background: none;
+	padding-bottom: 10px;
+	padding-left: 23px;
+	height: 40px;
+	margin-left: 0;
+	margin-top: 18px;
+	margin-bottom: 30px;
+	border-bottom: 2px solid white;
+	border-left: 2px solid white;
+	border-radius: 0 0 0 10px;
+}
+
+
+
+.groupe_medecin select option{
+	color: black;
+	font-size: 23px;
 }
 
 .groupe_medecin span::before{

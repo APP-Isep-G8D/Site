@@ -52,8 +52,8 @@ addCentreM();
                         <span data-placeholder="Ville"></span>
                     </div>
 
-                    <div class="input-group">
-                        <label>Region</label>
+                    <div class="groupe_medecin">
+                        <label>Région</label>
                         <select name="region">
                         <option value="">--Veuillez choisir la région du centre--</option>
                         <option value="Auvergne-Rhones-Alpes">Auvergne-Rhones-Alpes</option>
@@ -68,8 +68,9 @@ addCentreM();
                         <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
                         <option value="Occitanie">Occitanie</option>
                         <option value="Pays-de-la-Loire">Pays-de-la-Loire</option>
-                        <option value="Provences-Alpes-Cotes-Dazur">Provences-Alpes-Cotes-D'azur</option>                                        
-                    </select>
+                        <option value="Provences-Alpes-Cotes-Dazur">Provences-Alpes-Cotes-D'azur</option>                                       
+                        </select>
+                        
                     </div>
 
                     <?php echo $errors; ?>

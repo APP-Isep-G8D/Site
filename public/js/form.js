@@ -16,13 +16,18 @@ document.querySelectorAll(".groupe_medecin input").forEach(coco =>
     }
 });
 
-function verifPrenom(champ)
+toto = document.querySelector(".groupe_medecin select"); 
+toto.onfocus = function() 
 {
-   var regex = /\d{5}/;
-   if(!regex.test(champ.value))
-   {
-     document.querySelector(".groupe_medecin input").style.color="red";
-   } else {
-     document.querySelector(".groupe_medecin input").style.color="white";
-   }
+  toto.classList.add("focus");
+  toto.style.borderColor="orange";
+}
+
+toto.onblur = function() 
+{
+  if (toto.value === "") 
+  {
+    toto.classList.remove("focus");
+    toto.style.borderColor="white";
+  }
 }

@@ -42,7 +42,7 @@ $lieux=$_GET['id'];
     </br>
     </br>
     </br>
-    <a href="index.php?action=carte" id="retourcarte">Retour vers la carte</a>
+    <a href="index.php?action=carte" id="erreur_bouton">Retour vers la carte</a>
 
 </div>
 </body>

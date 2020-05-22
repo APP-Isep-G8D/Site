@@ -60,7 +60,8 @@ $adresse = $user->adresse;
 	<div id="conteneur2Admin">
 		<div id="mapAdmin">
 			<br>
-			<p style="color: white"> Bientôt : une carte interactive</p>
+			<a href="index.php?action=carte" id="liencarte"> La carte des centres </a>
+			</br>
 
 		</div>
 

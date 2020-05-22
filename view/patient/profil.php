@@ -1,4 +1,4 @@
-<?php $title = 'Admin'; ?>
+<?php $title = 'profil'; ?>
 <?php ob_start(); ?>
 
 <div id="conteneurProfil">
@@ -11,16 +11,16 @@
         <br>
         <p><b>
                 <font color="orange">Prénom :</font>
-            </b><?php echo $prenom; ?></p>
+            </b><?php echo $user->$prenom; ?></p>
         <p><b>
                 <font color="orange">Nom :</font>
-            </b><?php echo $nom; ?></p>
+            </b><?php echo $user->$nom; ?></p>
         <p><b>
                 <font color="orange">Adresse :</font>
-            </b><?php echo $adresse; ?></p>
+            </b><?php echo $user->$adresse; ?></p>
         <p><b>
                 <font color="orange">Numéro de Sécurité Sociale :</font>
-            </b><?php echo $numeroSecu; ?></p>
+            </b><?php echo $user->$numeroSecu; ?></p>
     </div>
     <div id="listeTests">
         <h1 id="pageadmin_titre2">

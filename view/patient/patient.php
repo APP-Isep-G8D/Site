@@ -2,10 +2,12 @@
 <?php ob_start(); ?>
 
 <?php
-$nom = $prenom = $adresse = $numeroSecu = "OUI";
+$nom = $prenom = $adresse = "OUI";
 $nom = $user->nom;
 $prenom = $user->prenom;
 $adresse = $user->adresse;
+$numeroSecu = $patient["numeroSS"];
+
 ?>
 
 <div id="conteneurProfil">

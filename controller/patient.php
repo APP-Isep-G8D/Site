@@ -7,9 +7,9 @@ function patient()
         $bdd = dbConnect();
         $user = userFromSession($bdd);
         $patient = getPatientbyId($user->idUtilisateur, $bdd);
-        $idCentre = $patient["idCentre"];
-        $idP = $patient["idPatient"];
-        $listeTests = getListTestsPatient($bdd);
+
+
+        $listeTests = getListTestsPatient($bdd, $patient);
         require("view/patient/patient.php");
     } else {
         redirect();

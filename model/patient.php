@@ -53,39 +53,16 @@ function verifyAcessPatient($bdd, $user)
     }
 }
 
-function getListTestsPatient($bdd)
+function getListTestsPatient($bdd, $patient)
 {
+    $idP = $patient["idPatient"];
     $listeTests = array();
     $tests = $bdd->prepare("SELECT * FROM test WHERE idPatient=?");
-    $tests->bind_param('s', $_GET["idP"]);
+    $tests->bind_param('s', $idP);
     $tests->execute();
     $testR = $tests->get_result();
     while ($test = $testR->fetch_array()) {
         array_push($listeTests, $test);
     }
     return $listeTests;
-}
-
-
-function getTestResultsPatient($bdd)
-{
-    $testResults = array();
-    $idTest = $_GET["idTest"];
-
-
-    $testQ = $bdd->prepare("SELECT * FROM test  WHERE idTest = ?");
-    $testQ->bind_param('s', $idTest);
-    $testQ->execute();
-    $testR = $testQ->get_result();
-    $test = $testR->fetch_array();
-
-    $mesuresQ = $bdd->prepare("SELECT * FROM mesure  WHERE idTest = ?");
-    $mesuresQ->bind_param('s', $idTest);
-    $mesuresQ->execute();
-    $mesuresR = $mesuresQ->get_result();
-    $mesures = $mesuresR->fetch_array();
-
-    array_push($testResults, $mesures);
-    array_push($testResults, $test);
-    return $testResults;
 }

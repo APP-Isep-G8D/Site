@@ -4,6 +4,7 @@ session_start();
 require('controller/frontend.php');
 require('controller/admin.php');
 require('controller/medecin.php');
+require('controller/patient.php');
 
 if (isset($_GET['action'])) {
     switch ($_GET['action']) {
@@ -100,6 +101,12 @@ if (isset($_GET['action'])) {
             break;
         case ('testEnCours'):
             testEnCours();
+            break;
+        case ('patient'):
+            patient();
+            break;
+        case ('accesTest'):
+            accesTest();
             break;
         default:
             error();

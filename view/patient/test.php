@@ -1,4 +1,4 @@
-<?php $title = 'Medecin'; ?>
+<?php $title = 'patient'; ?>
 <?php ob_start(); ?>
 
 
@@ -15,7 +15,6 @@ $dataPoints = array(
 
 );
 $nom = $prenom = $adresse = $numeroSecu = "OUI";
-$idPatient = $patient['idPatient'];
 ?>
 
 <div id="conteneurMainAdmin">
@@ -27,7 +26,7 @@ $idPatient = $patient['idPatient'];
             <br>
             <br>
             <div id="boxCentre1">
-                <a href="index.php?action=profilPatient&idP=<?php echo $idPatient ?>" id="erreur_boutong">Retour</a>
+                <a href="index.php?action=redirect" id="erreur_boutong">Retour</a>
             </div>
         </div>
     </div>

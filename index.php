@@ -99,6 +99,9 @@ if (isset($_GET['action'])) {
         case ('patient'):
             patient();
             break;
+        case ('accesTest'):
+            accesTest();
+            break;
         default:
             error();
             break;

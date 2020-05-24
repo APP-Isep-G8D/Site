@@ -60,6 +60,8 @@ function getUserByIdP($bdd)
     $value2->execute();
     $result2 = $value2->get_result();
     $patientInfo = $result2->fetch_array();
+
+    return $patient;
 }
 
 function getListTests($bdd)
@@ -151,8 +153,9 @@ function newTestM($bdd, $medecin)
         $date = date("Y-m-d");                     // 2001-03-10(le format DATE de MySQL)
         $idP = $_GET["idP"];
         $idMedecin = $medecin["idMedecin"];
+        $resultat = rand(0, 20);
 
-        $query = "INSERT INTO test (date,idPatient,idMedecin) VALUES('$date', '$idP','$idMedecin')";
+        $query = "INSERT INTO test (resultat,date,idPatient,idMedecin) VALUES('$resultat','$date', '$idP','$idMedecin')";
         mysqli_query($bdd, $query);
         $idTest = $bdd->insert_id; // Cette ligne récupère le dernier id généré automatiquement ( celui du nouveau test médical)
         $value = $bdd->prepare("SELECT * FROM test WHERE idTest = ?");
@@ -163,12 +166,14 @@ function newTestM($bdd, $medecin)
 
         $idTest = $testResult["idTest"];
 
-        $fq = $temp = $audio = 100;
-        $reactivite = 100;
+        $fq = rand(0, 100);
+        $temp = rand(0, 100);
+        $audio = rand(0, 100);
+        $reactivite = rand(0, 100);
         $query = "INSERT INTO mesure (idTest,fq,temp,audio,reactivite) VALUES($idTest, $fq,$temp,$audio,$reactivite)";
         mysqli_query($bdd, $query);
 
-        header("Location: index.php?action=profilPatient&idP=" . $idP);
+        header("Location: index.php?action=testEnCours&idP=" . $idP);
     }
 }
 

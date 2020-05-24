@@ -25,15 +25,9 @@ function getPatientbyId($id, $bdd)
     return $patient;
 }
 
-function verifyAcessPatient($bdd, $user)
+function verifyAcessPatient($bdd, $user, $patient)
 {
     if (isset($_SESSION['idUtilisateur'])) {
-
-        $value = $bdd->prepare("SELECT * FROM patient WHERE idUtilisateur = ?");
-        $value->bind_param('s', $user->idUtilisateur);
-        $value->execute();
-        $result = $value->get_result();
-        $patient = $result->fetch_object();
 
         $idTest = $_GET["idTest"];
         $value = $bdd->prepare("SELECT * FROM test WHERE idTest = ?");
@@ -42,7 +36,7 @@ function verifyAcessPatient($bdd, $user)
         $result = $value->get_result();
         $test = $result->fetch_array();
 
-        if ($user->role == "patient" && $test["idPatient"] == $patient->idPatient) {
+        if ($test["idPatient"] == $patient["idPatient"]) {
             return true;
         } else {
             return false;

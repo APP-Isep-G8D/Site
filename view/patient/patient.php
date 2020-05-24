@@ -44,12 +44,12 @@ $numeroSecu = $patient["numeroSS"];
                 $idTest = $test["idTest"];
             ?>
                 <div class="previewTest">
-                    <a style="color: #4488f3" href="test.php?idTest=<?php echo $idTest; ?>"><?php echo $test["date"] ?></a>
+                    <a style="color: #4488f3" href="index.php?action=accesTest&idTest=<?php echo $idTest; ?>"><?php echo $test["date"] ?></a>
                     <br>
-                    <a href="index.php?action=test&idTest=<?php echo $idTest; ?>"><img src="public/images/testIcon.png"></a>
+                    <a href="index.php?action=accesTest&idTest=<?php echo $idTest; ?>"><img src="public/images/testIcon.png"></a>
                     <br>
                     <br>
-                    <a style="color: #50b5a9" href="test.php?idTest=<?php echo $idTest; ?>">Résultats obtenus : <font color="#a51a4f"><?php echo  $test["resultat"] ?></font></a>
+                    <a style="color: #50b5a9" href="index.php?action=accesTest&idTest=<?php echo $idTest; ?>">Résultats obtenus : <font color="#a51a4f"><?php echo  $test["resultat"] ?></font></a>
                 </div>
             <?php
             }

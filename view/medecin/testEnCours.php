@@ -29,7 +29,7 @@
     </div>
 
     <div id="retour" style="padding-top: 4%;">
-      <a style="font-size:large" href="<?php echo $_SERVER['HTTP_REFERER']; ?>" id="erreur_boutonr">Retour</a>
+      <a style="font-size:large" href="index.php?action=profilPatient&idP=<?php echo $_GET['idP'] ?>" id="erreur_boutonr">Retour</a>
 
     </div>
   </div>

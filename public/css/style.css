@@ -1361,7 +1361,7 @@ hr.trait6 {
 	margin:2vh;
 	height: fit-content;
 	background-color: rgba(100, 164, 237, 0.8);
-	border-radius: 3%;
+	border-radius: 2em;
 	color: white;
 	
 }
@@ -1569,7 +1569,7 @@ hr.trait6 {
 #conteneurCentreC{
 	flex:1;
 	margin:2vh;
-	border-radius: 5%;
+	border-radius: 3em;
 	background-color: rgba(255, 165, 0, 0.8);
 	flex-direction: column;
 	padding-bottom: 2%;
@@ -1593,7 +1593,7 @@ hr.trait6 {
 	flex:2;
 	margin:2vh;
 	background-color: rgba(255, 165, 0, 0.8);
-	border-radius: 3%;
+	border-radius: 2em;
 
 	flex-direction: column;
 	padding-bottom: 2%;
@@ -1752,7 +1752,7 @@ map area{
 	background-color: rgb(211, 211, 211,0.9);
 	margin-left: 4%;
 	margin-right: 4%;
-	border-radius: 5%;
+	border-radius: 2em;
 	padding-top: 2%;
 	padding-bottom: 3%;
 

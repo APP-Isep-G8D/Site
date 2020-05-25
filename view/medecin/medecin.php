@@ -7,7 +7,7 @@
 <div id="conteneurMainAdmin">
     <div id="conteneur1Admin">
         <div id="infoAdmin">
-            <h1 id="pageadmin_titre1">
+            <h1 id="pageadmin_titre1" style="padding-top: 2%">
                 Mes informations :
             </h1>
             <br>

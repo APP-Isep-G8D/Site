@@ -15,13 +15,14 @@ $idPatient = $_GET["idP"];
 <div id="conteneurMainAdmin">
     <div id="conteneur3Admin">
         <div id="conteneurCentreC">
-            <div id="infoCentre">
+            <div id="infoCentre" style="padding-top: 1%">
                 <h1>
                     <?php echo " ", $prenom, " ", $nom ?>
                 </h1>
             </div>
-            <div style="color: white; font-weight: bold;">
+            <div style="color: white; font-weight: bold; padding-top:2%;">
                 <?php echo $adresse ?>
+                |
                 <?php echo $mail ?>
             </div>
             <br>

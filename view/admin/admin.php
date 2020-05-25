@@ -13,7 +13,7 @@ $adresse = $user->adresse;
 	<div id="conteneur1Admin">
 		<div id="infoAdmin">
 			<h1 id="pageadmin_titre1">
-				Mes informations :
+				Mes informations :
 			</h1>
 			<br>
 			<hr class="trait3">

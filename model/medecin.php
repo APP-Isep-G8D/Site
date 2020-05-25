@@ -61,7 +61,7 @@ function getUserByIdP($bdd)
     $result2 = $value2->get_result();
     $patientInfo = $result2->fetch_array();
 
-    return $patient;
+    return $patientInfo;
 }
 
 function getListTests($bdd)

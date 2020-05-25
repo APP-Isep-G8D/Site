@@ -1,4 +1,4 @@
-<?php $title = 'Medecin'; ?>
+<?php $title = 'patient'; ?>
 <?php ob_start(); ?>
 
 
@@ -14,16 +14,7 @@ $dataPoints = array(
     array("y" => $mesures["reactivite"], "label" => "Réactivité")
 
 );
-
-$dataPoints2 = array(
-    array("y" => 50, "label" => "Moyenne fréquence Cardiaque"),
-    array("y" => 40, "label" => "Température"),
-    array("y" => 65, "label" => "Cohérence audio"),
-    array("y" => 70, "label" => "Réactivité")
-);
-
 $nom = $prenom = $adresse = $numeroSecu = "OUI";
-$idPatient = $patient['idPatient'];
 ?>
 
 <div id="conteneurMainAdmin">
@@ -35,7 +26,7 @@ $idPatient = $patient['idPatient'];
             <br>
             <br>
             <div id="boxCentre1">
-                <a href="index.php?action=profilPatient&idP=<?php echo $idPatient ?>" id="erreur_boutong">Retour</a>
+                <a href="index.php?action=redirect" id="erreur_boutong">Retour</a>
             </div>
         </div>
     </div>
@@ -46,33 +37,21 @@ $idPatient = $patient['idPatient'];
     window.onload = function() {
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
-            theme: "dark2",
+            theme: "light2",
             title: {
                 text: "Test du <?php echo   $test["date"] ?>"
             },
             axisY: {
                 title: " Réussite (%)"
             },
-            data: [
-                {
-                    type: "column",
-                    color: "#6495ED",
-                    dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-                },
-	            {
-                    type: "splineArea",
-                    fillOpacity: .3, 
-                    color: "orange",
-		            name: "Moyenne",
-		            showInLegend: true,
-		            dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
-	}]
+            data: [{
+                type: "column",
+
+                dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+            }]
         });
-    
         chart.render();
     }
-
-
 </script>
 
 <?php $content = ob_get_clean(); ?>

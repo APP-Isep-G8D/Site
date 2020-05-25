@@ -6,6 +6,7 @@
     <title><?= $title ?></title>
     <link href="public/css/style.css" rel="stylesheet" />
     <link href="public/css/LoginStyle.css" rel="stylesheet" />
+    <link rel="icon" type="image/gif" href="public/images/im.gif" />
 
 </head>
 

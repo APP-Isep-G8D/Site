@@ -52,7 +52,7 @@ $adresse = $user->adresse;
 			<div id="buttonAdminCentre">
 				<br>
 				<br>
-				<a href="index.php?action=ajoutCentre" id="erreur_bouton">Ajouter un centre</a>
+				<a href="index.php?action=ajoutCentre" id="erreur_bouton">Ajouter un centre</a>
 			</div>
 
 		</div>

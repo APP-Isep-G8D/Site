@@ -35,42 +35,30 @@ $errors = "";
                             <span data-placeholder="Prénom"></span>
                         </div>
 
-                        <br>
-
                         <div class="groupe_medecin">
                             <input type="text" name="nom" required minlength="1" value="<?php echo $nom; ?>">
                             <span data-placeholder="Nom"></span>
                         </div>
-
-                        <br>
 
                         <div class="groupe_medecin">
                             <input type="text" name="adresse" required minlength="1" value="<?php echo $adresse; ?>">
                             <span data-placeholder="Adresse"></span>
                         </div>
 
-                        <br>
-
                         <div class="groupe_medecin">
                             <input type="number" name="numeroSS" required min="0" minlength="15" maxlength="15" value="<?php echo $numeroSS; ?>">
                             <span data-placeholder="Numéro de sécurité sociale"></span>
                         </div>
-
-                        <br>
 
                         <div class="groupe_medecin">
                             <input type="email" required minlength="1" name="email" value="<?php echo $email; ?>">
                             <span data-placeholder="Email"></span>
                         </div>
 
-                        <br>
-
                         <div class="groupe_medecin">
                             <input type="password" required minlength="1" name="password_1">
                             <span data-placeholder="Mot de passe"></span>
                         </div>
-
-                        <br>
 
                         <div class="groupe_medecin">
                             <input type="password" required minlength="1" name="password_2">

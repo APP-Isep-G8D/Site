@@ -33,10 +33,12 @@
 <br>
 <?php
 if (isset($_POST['message'])) {
-    $message = '<h1>Message envoyé depuis la page Contact de infinitemeasures.fr</h1>
+    $message = '<h1>Message envoyé depuis la page contact de louisdelatullaye.fr/projets/app/</h1>
         <p><b>Nom : </b>' . $_POST['nom'] . '<br>
         <b>Email : </b>' . $_POST['email'] . '<br>
-        <b>Message : </b>' . $_POST['message'] . '</p>';
+        <b>Objet : </b>' . $_POST['objet'] . '<br>
+        <b>Message : </b>' . $_POST['message'] .' <br><br>
+        <b> Ne pas répondre</b>' . '</p>';
 
     envoyerMail($_POST['objet'], $message, $_POST['email']);
 }

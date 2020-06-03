@@ -3,46 +3,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-/*
-Exemple de requêtes
-function getPosts()
-{
-    $db = dbConnect();
-    $req = $db->query('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts ORDER BY creation_date DESC LIMIT 0, 5');
 
-    return $req;
-}
-
-function getPost($postId)
-{
-    $db = dbConnect();
-    $req = $db->prepare('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts WHERE id = ?');
-    $req->execute(array($postId));
-    $post = $req->fetch();
-
-    return $post;
-}
-
-function getComments($postId)
-{
-    $db = dbConnect();
-    $comments = $db->prepare('SELECT id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE post_id = ? ORDER BY comment_date DESC');
-    $comments->execute(array($postId));
-
-    return $comments;
-}
-
-function postComment($postId, $author, $comment)
-{
-    $db = dbConnect();
-    $comments = $db->prepare('INSERT INTO comments(post_id, author, comment, comment_date) VALUES(?, ?, ?, NOW())');
-    $affectedLines = $comments->execute(array($postId, $author, $comment));
-
-    return $affectedLines;
-}
-
-
-*/
 
 function loginM()
 {
@@ -79,8 +40,11 @@ function loginM()
             $req->execute();
             $result = $req->get_result();
             $user = $result->fetch_object();
+            $hashed = $user->motdepasse;
+            $solution = $_POST['motdepasse'];
+
             if (isset($user)) {
-                if ($_POST['motdepasse'] == $user->motdepasse) {
+                if (password_verify($solution, $hashed)) {
                     $_SESSION['idUtilisateur'] = $user->idUtilisateur;
                     $resultat = "Connexion réussie";
                     header("Location: index.php?action=redirect");
@@ -139,23 +103,24 @@ function envoyerMail($objet, $message, $envoyeur)
         //Server settings
 
         $mail->SMTPDebug = 0; // Niveau de debug
+        $mail->CharSet = 'UTF-8';
         $mail->isSMTP(); // Utiliser SMTP
-        $mail->Host = 'smtp.gmail.com'; // Set the SMTP server to send through
+        $mail->Host = 'ssl0.ovh.net'; // Set the SMTP server to send through
         $mail->SMTPAuth = true; // Enable SMTP authentication
-        $mail->Username = 'bernardtapiisep@gmail.com'; // SMTP username
-        $mail->Password = 'aze123rty'; // SMTP password
-        $mail->SMTPSecure = 'ssl'; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $mail->Port = 465; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $mail->Username = ''; // SMTP username
+        $mail->Password = ''; // SMTP password
+        $mail->SMTPSecure = 'TLS'; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $mail->Port = 587; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //En-tete
-        $mail->setFrom($envoyeur, 'Envoyeur'); //Envoyeur
-        $mail->addAddress('infinitemeasures.society@gmail.com', 'Receveur'); // Receveur
+        $mail->setFrom('contact@chateaudepierrefitte.com', $envoyeur); //Envoyeur
+        $mail->addAddress('appinfog8d@gmail.com', 'Receveur'); // Receveur
         $mail->addReplyTo($envoyeur, 'Information'); //Répondre à
 
         // Contenue
         $mail->isHTML(true); // Format HTML
-        $mail->Subject = $objet; //Objet
-        $mail->Body = $message; //Texte
+        $mail->Subject = 'ticket : '. $envoyeur ; //Objet
+        $mail->Body = $message; //Texe
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients'; //Texte si non HTML
 
         $mail->send();
@@ -186,10 +151,10 @@ function MenuConnected()
 function dbConnect()
 {
     try {
-        $db_host = "localhost";
-        $db_user = "root";
+        $db_host = "";
+        $db_user = "";
         $db_pass = "";
-        $db_name = "appinfo";
+        $db_name = "";
         $bdd = new mysqli($db_host, $db_user, $db_pass, $db_name);
         return $bdd;
     } catch (Exception $e) {

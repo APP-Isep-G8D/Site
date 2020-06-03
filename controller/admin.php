@@ -59,6 +59,7 @@ function medSupp()
 function verifDelCentre()
 {
     if (isAdmin()) {
+        $bdd = dbConnect();
         require("view/admin/verifDelCentre.php");
     } else {
         redirect();

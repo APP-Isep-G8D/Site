@@ -18,12 +18,21 @@ function medecin()
 function profilPatient()
 {
     if (isMedecin()) {
+
         $bdd = dbConnect();
         $user = userFromSession($bdd);
         $medecin = getMedecinById($user->idUtilisateur, $bdd);
         $patient = getUserByIdP($bdd);
-        $listeTests = getListTests($bdd);
-        require("view/medecin/profilPatient.php");
+        $patientInfo = getPatientByIdP($bdd);
+        if($patientInfo["idMedecin"]==$medecin["idMedecin"]){
+            $listeTests = getListTests($bdd);
+            require("view/medecin/profilPatient.php");
+
+        }
+        else{
+            redirect();
+        }
+        
     } else {
         redirect();
     }

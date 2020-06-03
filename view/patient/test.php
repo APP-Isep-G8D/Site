@@ -14,7 +14,16 @@ $dataPoints = array(
     array("y" => $mesures["reactivite"], "label" => "Réactivité")
 
 );
+
+$dataPoints2 = array(
+    array("y" => 50, "label" => "Moyenne fréquence Cardiaque"),
+    array("y" => 40, "label" => "Température"),
+    array("y" => 65, "label" => "Cohérence audio"),
+    array("y" => 70, "label" => "Réactivité")
+);
+
 $nom = $prenom = $adresse = $numeroSecu = "OUI";
+
 ?>
 
 <div id="conteneurMainAdmin">
@@ -37,21 +46,32 @@ $nom = $prenom = $adresse = $numeroSecu = "OUI";
     window.onload = function() {
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
-            theme: "light2",
+            theme: "dark2",
             title: {
                 text: "Test du <?php echo   $test["date"] ?>"
             },
             axisY: {
                 title: " Réussite (%)"
             },
-            data: [{
-                type: "column",
-
-                dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-            }]
+            data: [
+                {
+                    type: "column",
+                    color: "#6495ED",
+                    dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+                },
+                {
+                    type: "splineArea",
+                    fillOpacity: .3, 
+                    color: "orange",
+                    name: "Moyenne",
+                    showInLegend: true,
+                    dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+    }]
         });
+    
         chart.render();
     }
+
 </script>
 
 <?php $content = ob_get_clean(); ?>

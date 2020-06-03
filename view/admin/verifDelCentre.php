@@ -4,11 +4,7 @@
 <?php
 
 $nom = $prenom = $adresse = $numeroSecu = "OUI";
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "appinfo";
-$bdd = new mysqli($db_host, $db_user, $db_pass, $db_name);
+
 $idCentre = $_GET["idC"];
 $boitierQ = $bdd->query("SELECT * FROM centremedical WHERE numero=$idCentre");
 $centre = $boitierQ->fetch_array();

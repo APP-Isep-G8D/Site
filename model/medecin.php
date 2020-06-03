@@ -63,6 +63,15 @@ function getUserByIdP($bdd)
 
     return $patientInfo;
 }
+function getPatientByIdP($bdd)
+{
+    $value = $bdd->prepare("SELECT * FROM patient WHERE idPatient = ?");
+    $value->bind_param('s', $_GET["idP"]);
+    $value->execute();
+    $result = $value->get_result();
+    $patient = $result->fetch_array();
+    return $patient;
+}
 
 function getListTests($bdd)
 {
@@ -236,6 +245,8 @@ function addPatient($medecin)
             $errors = "The two passwords do not match";
         }
 
+        $password_hashed_1 = password_hash($password_1, PASSWORD_DEFAULT);
+
         // first check the database to make sure 
         // a user does not already exist with the same username and/or email
         $alreadyExistQ = "SELECT * FROM utilisateur WHERE mail='$email' LIMIT 1";
@@ -250,7 +261,7 @@ function addPatient($medecin)
 
         // Finally, register user if there are no errors in the form
         if ($errors == "") {
-            $query = "INSERT INTO Utilisateur (mail,prenom,nom,adresse,role,motdepasse) VALUES('$email', '$prenom', '$nom','$adresse','patient', '$password_1')";
+            $query = "INSERT INTO utilisateur (mail,prenom,nom,adresse,role,motdepasse) VALUES('$email', '$prenom', '$nom','$adresse','patient','$password_hashed_1')";
             mysqli_query($bdd, $query);
             $Reqbdd2 = $bdd->prepare("SELECT * FROM utilisateur WHERE mail = ?");
             $Reqbdd2->bind_param('s', $email);

@@ -13,7 +13,7 @@ $adresse = $user->adresse;
 	<div id="conteneur1Admin">
 		<div id="infoAdmin">
 			<h1 id="pageadmin_titre1">
-				Mes informations :
+				Mes informations :
 			</h1>
 			<br>
 			<hr class="trait3">
@@ -60,7 +60,7 @@ $adresse = $user->adresse;
 	<div id="conteneur2Admin">
 		<div id="mapAdmin">
 			<br>
-			<a href="index.php?action=carte" id="liencarte"> La carte des centres </a>
+			<a href="index.php?action=carte"> La carte des centres </a>
 			</br>
 
 		</div>

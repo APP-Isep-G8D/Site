@@ -166,6 +166,7 @@ function addMedecin(){
         if ($password_1 != $password_2) {
             $errors = "The two passwords do not match";
         }
+        $password_hashed_1 = password_hash($password_1, PASSWORD_DEFAULT);
 
         $alreadyExistQ = "SELECT * FROM utilisateur WHERE mail='$email' LIMIT 1";
         $result = mysqli_query($bdd, $alreadyExistQ);
@@ -179,8 +180,9 @@ function addMedecin(){
 
         // Finally, register user if there are no errors in the form
         if ($errors == "") {
-            $query = "INSERT INTO Utilisateur (mail,prenom,nom,adresse,role,motdepasse) VALUES('$email', '$prenom', '$nom','$adresse','medecin', '$password_1')";
+            $query = "INSERT INTO utilisateur (mail,prenom,nom,adresse,role,motdepasse) VALUES('$email', '$prenom', '$nom','$adresse','medecin','$password_hashed_1')";
             mysqli_query($bdd, $query);
+            
             $Reqbdd2 = $bdd->prepare("SELECT * FROM utilisateur WHERE mail = ?");
             $Reqbdd2->bind_param('s', $email);
             $Reqbdd2->execute();

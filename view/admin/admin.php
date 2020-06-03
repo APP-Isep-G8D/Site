@@ -52,7 +52,7 @@ $adresse = $user->adresse;
 			<div id="buttonAdminCentre">
 				<br>
 				<br>
-				<a href="index.php?action=ajoutCentre" id="erreur_bouton">Ajouter un centre</a>
+				<a href="index.php?action=ajoutCentre" id="erreur_bouton">Ajouter un centre</a>
 			</div>
 
 		</div>
@@ -60,7 +60,7 @@ $adresse = $user->adresse;
 	<div id="conteneur2Admin">
 		<div id="mapAdmin">
 			<br>
-			<a href="index.php?action=carte" id="liencarte"> La carte des centres </a>
+			<a href="index.php?action=carte"> La carte des centres </a>
 			</br>
 
 		</div>

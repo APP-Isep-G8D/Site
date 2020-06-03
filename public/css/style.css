@@ -1585,8 +1585,19 @@ hr.trait6 {
 	flex:1;
 	margin:2vh;
 	background-color: rgba(100, 164, 237, 0.8);
-	border-radius: 10%;
+	border-radius: 3em;
+	color: white;
+	font-weight: bold;
+	padding-bottom: 1%;
+}
 
+#mapAdmin a{
+	color: white;
+	font-weight: bold;
+}
+
+#mapAdmin a:hover{
+	color: orange;
 }
 
 #conteneurCentreAdmin{
@@ -1721,6 +1732,11 @@ hr.trait6 {
 
 map area{
 	outline : 0;
+}
+
+#liste{
+	color: orange;
+	font-weight: bold;
 }
 
 /*------------------------------------------------------------------------------------*/
